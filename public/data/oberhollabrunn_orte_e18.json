@@ -1,4 +1,4 @@
-
+[
    {
       "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
       "features":[
@@ -1311,3 +1311,4 @@
       ],
       "type":"FeatureCollection"
    }
+]
