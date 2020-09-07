@@ -1,10 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import DataStore from './store/DataStore';
+
+// A simple start helper that loads the data and then switches to the app
+const Launcher = () => {
+
+  const [ isLoading, setIsLoading ] = useState(true);
+
+  const store = new DataStore();
+  store.load().then(() => setIsLoading(false));
+
+  return (
+    <>
+      { isLoading ? <div>Loading</div> : <App store={store} /> }
+    </>
+  )
+
+}
 
 ReactDOM.render(
-  <App />,
+  <Launcher />,
   document.getElementById('root')
 );
 
