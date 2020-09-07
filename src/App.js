@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Navigator } from 'react-onsenui';
+import SplashPage from './splash/SplashPage';
+
+import 'onsenui/css/onsenui.css';
+import 'onsenui/css/onsen-css-components.css';
 
 function App() {
+
+  const renderPage = (route, navigator) => {
+    const props = route.props || {};
+    props.navigator = navigator;
+    return React.createElement(route.component, props);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Navigator
+      renderPage={renderPage}
+      initialRoute={{ component: SplashPage }} 
+      animation="slide"
+      swipeable />
   );
+
 }
 
 export default App;
