@@ -1,5 +1,6 @@
 import React from 'react';
 import { FixedSizeList as List } from 'react-window';
+import { Ripple } from 'react-onsenui';
 import AutoSizer from 'react-virtualized-auto-sizer';
 
 const ResultList = props => {
@@ -13,6 +14,7 @@ const ResultList = props => {
       className="search-result" 
       style={style}
       onClick={() => onSelect(props.results[index])}>
+      <Ripple modifier="light-gray" />
 
       {props.results[index].properties.title}
     </div>
