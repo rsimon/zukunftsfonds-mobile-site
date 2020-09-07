@@ -1,0 +1,1313 @@
+
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6260",
+            "crmClass":"crm:E18_Physical_Thing",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Kirlibaba"
+            },
+            "relations":[
+               {
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "relationType":"crm:P2_has_type"
+               },
+               {
+                  "label":"Location of Kirlibaba",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6261",
+                  "relationType":"crm:P53_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature",
+            "types":[
+               {
+                  "hierarchy":"Case Study",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 "
+               }
+            ]
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6254",
+            "crmClass":"crm:E18_Physical_Thing",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Werenczenka"
+            },
+            "relations":[
+               {
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "relationType":"crm:P2_has_type"
+               },
+               {
+                  "label":"Location of Werenczenka",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6255",
+                  "relationType":"crm:P53_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature",
+            "types":[
+               {
+                  "hierarchy":"Case Study",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 "
+               }
+            ]
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6245",
+            "crmClass":"crm:E18_Physical_Thing",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Petrantz"
+            },
+            "relations":[
+               {
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "relationType":"crm:P2_has_type"
+               },
+               {
+                  "label":"Location of Petrantz",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6246",
+                  "relationType":"crm:P53_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature",
+            "types":[
+               {
+                  "hierarchy":"Case Study",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 "
+               }
+            ]
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6236",
+            "crmClass":"crm:E18_Physical_Thing",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Konictyn"
+            },
+            "relations":[
+               {
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "relationType":"crm:P2_has_type"
+               },
+               {
+                  "label":"Location of Konictyn",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6237",
+                  "relationType":"crm:P53_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature",
+            "types":[
+               {
+                  "hierarchy":"Case Study",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 "
+               }
+            ]
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6231",
+            "crmClass":"crm:E18_Physical_Thing",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Unter Wiekow"
+            },
+            "relations":[
+               {
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "relationType":"crm:P2_has_type"
+               },
+               {
+                  "label":"Location of Unter Wiekow",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6232",
+                  "relationType":"crm:P53_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature",
+            "types":[
+               {
+                  "hierarchy":"Case Study",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 "
+               }
+            ]
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6223",
+            "crmClass":"crm:E18_Physical_Thing",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Stanesty"
+            },
+            "relations":[
+               {
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "relationType":"crm:P2_has_type"
+               },
+               {
+                  "label":"Location of Stanesty",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6224",
+                  "relationType":"crm:P53_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature",
+            "types":[
+               {
+                  "hierarchy":"Case Study",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 "
+               }
+            ]
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6210",
+            "crmClass":"crm:E18_Physical_Thing",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Gernowitz"
+            },
+            "relations":[
+               {
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "relationType":"crm:P2_has_type"
+               },
+               {
+                  "label":"Location of Gernowitz",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6211",
+                  "relationType":"crm:P53_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature",
+            "types":[
+               {
+                  "hierarchy":"Case Study",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 "
+               }
+            ]
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6201",
+            "crmClass":"crm:E18_Physical_Thing",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Suczawa"
+            },
+            "relations":[
+               {
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "relationType":"crm:P2_has_type"
+               },
+               {
+                  "label":"Location of Suczawa",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6202",
+                  "relationType":"crm:P53_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature",
+            "types":[
+               {
+                  "hierarchy":"Case Study",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 "
+               }
+            ]
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6193",
+            "crmClass":"crm:E18_Physical_Thing",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Czahor"
+            },
+            "relations":[
+               {
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "relationType":"crm:P2_has_type"
+               },
+               {
+                  "label":"Location of Czahor",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6194",
+                  "relationType":"crm:P53_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature",
+            "types":[
+               {
+                  "hierarchy":"Case Study",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 "
+               }
+            ]
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6187",
+            "crmClass":"crm:E18_Physical_Thing",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Kudzsiv "
+            },
+            "relations":[
+               {
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "relationType":"crm:P2_has_type"
+               },
+               {
+                  "label":"Location of Kudzsiv",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6188",
+                  "relationType":"crm:P53_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature",
+            "types":[
+               {
+                  "hierarchy":"Case Study",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 "
+               }
+            ]
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6178",
+            "crmClass":"crm:E18_Physical_Thing",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Petroutz an der Sereth"
+            },
+            "relations":[
+               {
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "relationType":"crm:P2_has_type"
+               },
+               {
+                  "label":"Location of Petroutz an der Sereth",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6179",
+                  "relationType":"crm:P53_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature",
+            "types":[
+               {
+                  "hierarchy":"Case Study",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 "
+               }
+            ]
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6168",
+            "crmClass":"crm:E18_Physical_Thing",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Zadowa"
+            },
+            "relations":[
+               {
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "relationType":"crm:P2_has_type"
+               },
+               {
+                  "label":"Location of Zadowa",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6169",
+                  "relationType":"crm:P53_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature",
+            "types":[
+               {
+                  "hierarchy":"Case Study",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 "
+               }
+            ]
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6161",
+            "crmClass":"crm:E18_Physical_Thing",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Dorna-Watra"
+            },
+            "relations":[
+               {
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "relationType":"crm:P2_has_type"
+               },
+               {
+                  "label":"Location of DornaWatra",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6162",
+                  "relationType":"crm:P53_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature",
+            "types":[
+               {
+                  "hierarchy":"Case Study",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 "
+               }
+            ]
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6154",
+            "crmClass":"crm:E18_Physical_Thing",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Unter Wikow"
+            },
+            "relations":[
+               {
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "relationType":"crm:P2_has_type"
+               },
+               {
+                  "label":"Location of Unter Wikow",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6155",
+                  "relationType":"crm:P53_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature",
+            "types":[
+               {
+                  "hierarchy":"Case Study",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 "
+               }
+            ]
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6147",
+            "crmClass":"crm:E18_Physical_Thing",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Dobrohostow"
+            },
+            "relations":[
+               {
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "relationType":"crm:P2_has_type"
+               },
+               {
+                  "label":"Location of Dobrohostow",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6148",
+                  "relationType":"crm:P53_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature",
+            "types":[
+               {
+                  "hierarchy":"Case Study",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 "
+               }
+            ]
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6141",
+            "crmClass":"crm:E18_Physical_Thing",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Fundul Moldowey "
+            },
+            "relations":[
+               {
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "relationType":"crm:P2_has_type"
+               },
+               {
+                  "label":"Location of Fundul Moldowey",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6142",
+                  "relationType":"crm:P53_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature",
+            "types":[
+               {
+                  "hierarchy":"Case Study",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 "
+               }
+            ]
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6129",
+            "crmClass":"crm:E18_Physical_Thing",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Kopasnicza"
+            },
+            "relations":[
+               {
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "relationType":"crm:P2_has_type"
+               },
+               {
+                  "label":"Location of Kopasnicza",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6130",
+                  "relationType":"crm:P53_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature",
+            "types":[
+               {
+                  "hierarchy":"Case Study",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 "
+               }
+            ]
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6115",
+            "crmClass":"crm:E18_Physical_Thing",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Hliboka"
+            },
+            "relations":[
+               {
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "relationType":"crm:P2_has_type"
+               },
+               {
+                  "label":"Location of Hliboka",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6116",
+                  "relationType":"crm:P53_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature",
+            "types":[
+               {
+                  "hierarchy":"Case Study",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 "
+               }
+            ]
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6099",
+            "crmClass":"crm:E18_Physical_Thing",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Taroscheni"
+            },
+            "relations":[
+               {
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "relationType":"crm:P2_has_type"
+               },
+               {
+                  "label":"Location of Taroscheni",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6100",
+                  "relationType":"crm:P53_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature",
+            "types":[
+               {
+                  "hierarchy":"Case Study",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 "
+               }
+            ]
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6093",
+            "crmClass":"crm:E18_Physical_Thing",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Arbora"
+            },
+            "relations":[
+               {
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "relationType":"crm:P2_has_type"
+               },
+               {
+                  "label":"Location of Arbora",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6094",
+                  "relationType":"crm:P53_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature",
+            "types":[
+               {
+                  "hierarchy":"Case Study",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 "
+               }
+            ]
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6058",
+            "crmClass":"crm:E18_Physical_Thing",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Hawrylestie "
+            },
+            "relations":[
+               {
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "relationType":"crm:P2_has_type"
+               },
+               {
+                  "label":"Location of Hawrylestie",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6059",
+                  "relationType":"crm:P53_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature",
+            "types":[
+               {
+                  "hierarchy":"Case Study",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 "
+               }
+            ]
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6050",
+            "crmClass":"crm:E18_Physical_Thing",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Panka"
+            },
+            "relations":[
+               {
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "relationType":"crm:P2_has_type"
+               },
+               {
+                  "label":"Location of Panka",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6051",
+                  "relationType":"crm:P53_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature",
+            "types":[
+               {
+                  "hierarchy":"Case Study",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 "
+               }
+            ]
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6042",
+            "crmClass":"crm:E18_Physical_Thing",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Moldauische Banilla "
+            },
+            "relations":[
+               {
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "relationType":"crm:P2_has_type"
+               },
+               {
+                  "label":"Location of Moldauische Banilla",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6043",
+                  "relationType":"crm:P53_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature",
+            "types":[
+               {
+                  "hierarchy":"Case Study",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 "
+               }
+            ]
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6034",
+            "crmClass":"crm:E18_Physical_Thing",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Bucsoaia"
+            },
+            "relations":[
+               {
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "relationType":"crm:P2_has_type"
+               },
+               {
+                  "label":"Location of Bucsoaia",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6035",
+                  "relationType":"crm:P53_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature",
+            "types":[
+               {
+                  "hierarchy":"Case Study",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 "
+               }
+            ]
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6027",
+            "crmClass":"crm:E18_Physical_Thing",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Mardzina"
+            },
+            "relations":[
+               {
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "relationType":"crm:P2_has_type"
+               },
+               {
+                  "label":"Location of Mardzina",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6028",
+                  "relationType":"crm:P53_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature",
+            "types":[
+               {
+                  "hierarchy":"Case Study",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 "
+               }
+            ]
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6017",
+            "crmClass":"crm:E18_Physical_Thing",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Keschwana "
+            },
+            "relations":[
+               {
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "relationType":"crm:P2_has_type"
+               },
+               {
+                  "label":"Location of Keschwana",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6018",
+                  "relationType":"crm:P53_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature",
+            "types":[
+               {
+                  "hierarchy":"Case Study",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 "
+               }
+            ]
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6006",
+            "crmClass":"crm:E18_Physical_Thing",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Wama"
+            },
+            "relations":[
+               {
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "relationType":"crm:P2_has_type"
+               },
+               {
+                  "label":"Location of Wama",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6007",
+                  "relationType":"crm:P53_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature",
+            "types":[
+               {
+                  "hierarchy":"Case Study",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 "
+               }
+            ]
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6000",
+            "crmClass":"crm:E18_Physical_Thing",
+            "description":[
+               {
+                  "value":"Mit dem Ausbruch des Ersten Weltkriegs am 28. Juli 1914 gelang es der Armee des Zarenreiches Rußland zunächst, in der Bukowina und in Ostgalizien tief auf das Staatsgebiet Österreich-Ungarns einzudringen. Dies hatte zur Folge, dass die dortige (zu einem beträchtlichen Teil orthodoxe) Bevölkerung floh / fliehen musste und in der Folge in andere Teile der Monarchie evakuiert werden musste. Die Statthalterei von Niederösterreich (damals das Erzherzogtum Österreich unter der Enns) erließ ein Rundschreiben an alle Bezirkshauptmannschaften und fragte an, ob die Möglichkeit zur Aufnahme dieser Kriegsflüchtlinge bestünde. Oberhollabrunn (jetzt Teil der Stadt Hollabrunn, Niederösterreich) war wegen des Bedarfs an Hilfskräften in der Landwirtschaft dazu bereit. Im Februar 1915 befand sich rund eine halbe Million Kriegsflüchtlinge aus Galizien in verschiedenen Teilen der Monarchie, davon rund 25.000 in Niederösterreich. Die große Anzahl von Flüchtlingen auf dem Gebiet von Oberhollabrunn führte schließlich zur Überlegung, ebendort ein eigenes Flüchtlingslager zu errichten. Einer der führenden Initiatoren dieser Idee war der damalige Bürgermeister von Oberhollabrunn, Dr. Rudolf Kolisko (1859-1942, Bürgermeister 1908-1919), der Gemeindegrundstücke südlich bzw. südöstlich des Ortes zur Verfügung stellen wollte, damit diese infrastrukturell zu einem Flüchtlingslager ausgebaut würden, das nach dem Krieg als Stadterweiterungsgebiet (Stichwort: Gartenstadt) einverleibt werden sollte. Das Lager war für 5.000 Flüchtlinge konzipiert. Bürgermeister Kolisko unterstützte die zentralen Behörden der Monarchie tatkräftig im Wege seiner Stadtgemeinde, indem er eine Wasserleitung, einen Hauptsammelkanal und eine Schmalspurbahn vom Stationsgebäude der Nordwestbahn bis zum Lager errichten ließ sowie die Elektrifizierung des Areals gewährleistete. An Unterkünften wurden einerseits Familienhäuser in fester Bauweise und andererseits Baracken aus Holz erbaut. Es entstand eine komplette, autarke Infrastruktur mit Gebäuden für die Lagerverwaltung, mit einer Schule, einer Wäscherei, Werkstätten, Wachhäusern, Ställen für Rinder und Schweine, Wirtschaftsgebäuden, einer Quarantänebaracke, einer Spitalsbaracke, einem Feuerwehrzeughaus, einer Kirche und mit einem Gasthaus. Insgesamt wurden rund 109 Objekte errichtet. Im Sommer 1916 war das Flüchtlingslager in Betrieb und beherbergte im September 1916 bereits 2.000 Flüchtlinge aus Ostgalizien und der Bukowina. Eine große Gefahr für die Flüchtlinge ging von Krankheiten, hier vor allem vom Flecktyphus, aus. Die Mortalität im Lager dürfte (wie generell in der Bevölkerung der Monarchie im Verlaufe des Krieges) sehr hoch gewesen sein, was die Evidenz der Totenscheine der verstorbenen Orthodoxen erahnen lässt, die wir in unserem Projekt im Detail erforschen.\nAufgelassen wurde das Flüchtlingslager Oberhollabrunn, das zur Zeit der stärksten Belegung über 4.000 Flüchtlinge beherbergte, schließlich Ende April 1918 und wurde mit der Ausrufung der Ersten Republik am 12. November 1918 einer neuen Verwendung zugeführt. Ab Dezember 1918 wurden Kinder zwischen 14 und 16 Jahren seitens der Stadt Wien zwecks Erholung in den verlassenen Gebäuden untergebracht, womit ein neues Kapitel der Geschichte begann."
+               }
+            ],
+            "geometry":{
+               "coordinates":[
+                  [
+                     [
+                        16.0787464443944,
+                        48.5530326317785
+                     ],
+                     [
+                        16.0811497036718,
+                        48.5533024957076
+                     ],
+                     [
+                        16.0831238095067,
+                        48.5536433744027
+                     ],
+                     [
+                        16.0845185581945,
+                        48.5531462588715
+                     ],
+                     [
+                        16.0848618809484,
+                        48.5527769698864
+                     ],
+                     [
+                        16.084432727506,
+                        48.5510157084154
+                     ],
+                     [
+                        16.0839821163915,
+                        48.5499503995455
+                     ],
+                     [
+                        16.0833598439,
+                        48.549368021215
+                     ],
+                     [
+                        16.0829521481298,
+                        48.5485583621558
+                     ],
+                     [
+                        16.0815144840978,
+                        48.5479049436447
+                     ],
+                     [
+                        16.0806347195409,
+                        48.54718049152
+                     ],
+                     [
+                        16.0793472592138,
+                        48.5470952611764
+                     ],
+                     [
+                        16.0787464443944,
+                        48.5530326317785
+                     ]
+                  ]
+               ],
+               "title":"Oberhollabrunn",
+               "type":"Polygon"
+            },
+            "properties":{
+               "title":"Oberhollabrunn"
+            },
+            "relations":[
+               {
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "relationType":"crm:P2_has_type"
+               },
+               {
+                  "label":"Location of Oberhollabrunn",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6001",
+                  "relationType":"crm:P53_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature",
+            "types":[
+               {
+                  "hierarchy":"Case Study",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 "
+               }
+            ]
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/5997",
+            "crmClass":"crm:E18_Physical_Thing",
+            "geometry":{
+               "coordinates":[
+                  [
+                     [
+                        23.2255873272135,
+                        45.8992474861798
+                     ],
+                     [
+                        23.2244286129191,
+                        45.8999941247095
+                     ],
+                     [
+                        23.2241711208537,
+                        45.9011887254736
+                     ],
+                     [
+                        23.221896607609,
+                        45.9017860162171
+                     ],
+                     [
+                        23.2206091472819,
+                        45.9039660729015
+                     ],
+                     [
+                        23.2211241314128,
+                        45.9051605882044
+                     ],
+                     [
+                        23.2244286129191,
+                        45.9075495417029
+                     ],
+                     [
+                        23.2280764171794,
+                        45.9066835579391
+                     ],
+                     [
+                        23.2298359462931,
+                        45.9076092642231
+                     ],
+                     [
+                        23.231252152653,
+                        45.9074599578021
+                     ],
+                     [
+                        23.2322821209147,
+                        45.9070418976868
+                     ],
+                     [
+                        23.2317242214396,
+                        45.9059071472168
+                     ],
+                     [
+                        23.2296642849162,
+                        45.9051904507577
+                     ],
+                     [
+                        23.2273039409831,
+                        45.9048918245022
+                     ],
+                     [
+                        23.225673157902,
+                        45.9055786624883
+                     ],
+                     [
+                        23.2241282055094,
+                        45.9058474228653
+                     ],
+                     [
+                        23.224042374821,
+                        45.9052501758161
+                     ],
+                     [
+                        23.2245144436076,
+                        45.9035479864732
+                     ],
+                     [
+                        23.2262310573771,
+                        45.9036973034162
+                     ],
+                     [
+                        23.2269606182292,
+                        45.9029805784273
+                     ],
+                     [
+                        23.2266172954753,
+                        45.902144387579
+                     ],
+                     [
+                        23.2264027187541,
+                        45.9013977779648
+                     ],
+                     [
+                        23.2255873272135,
+                        45.9011887254736
+                     ],
+                     [
+                        23.226574380131,
+                        45.9000837206584
+                     ],
+                     [
+                        23.2255873272135,
+                        45.8992474861798
+                     ]
+                  ]
+               ],
+               "title":"Gelmar",
+               "type":"Polygon"
+            },
+            "names":[
+               {
+                  "alias":"Gelmar"
+               }
+            ],
+            "properties":{
+               "title":"Gyalmár"
+            },
+            "relations":[
+               {
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "relationType":"crm:P2_has_type"
+               },
+               {
+                  "label":"Gelmar",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6004",
+                  "relationType":"crm:P1_is_identified_by"
+               },
+               {
+                  "label":"Location of Gyalmár",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5998",
+                  "relationType":"crm:P53_has_former_or_current_location"
+               },
+               {
+                  "label":"Settlement",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/59",
+                  "relationType":"crm:P2_has_type"
+               }
+            ],
+            "type":"Feature",
+            "types":[
+               {
+                  "hierarchy":"Case Study",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5980",
+                  "label":"Auf der Flucht in der Monarchie – das Schicksal der orthodoxen Flüchtlinge im Lager Oberhollabrunn 1914-1918 "
+               },
+               {
+                  "hierarchy":"Place",
+                  "identifier":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/59",
+                  "label":"Settlement"
+               }
+            ]
+         }
+      ],
+      "type":"FeatureCollection"
+   }
