@@ -7,13 +7,19 @@ import axios from 'axios';
 export default class DataStore {
 
   constructor() {
-    this.places = [];
+    this.items = [];
   }
 
   load() {
     return axios.get('/data/oberhollabrunn_orte_e18.json').then(response => {
-      this.places = response.data.reduce((places, next) => places.concat(next.features), []);
+      this.items = response.data.reduce((places, next) => places.concat(next.features), []);
+      console.log('loaded', this.items.length);
     });
+  }
+
+  findById(id) {
+    console.log(id, this.items);
+    return this.items.find(i => i['@id'] === id);
   }
   
 }

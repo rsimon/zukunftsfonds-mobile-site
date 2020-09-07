@@ -5,15 +5,11 @@ import AutoSizer from 'react-virtualized-auto-sizer';
 
 const ResultList = props => {
 
-  const onSelect = result => {
-    console.log(result);
-  }
-
   const Row = ({ index, style }) =>
     <div 
       className="search-result" 
       style={style}
-      onClick={() => onSelect(props.results[index])}>
+      onClick={() => props.onSelect(props.results[index])}>
       <Ripple modifier="light-gray" />
 
       {props.results[index].properties.title}

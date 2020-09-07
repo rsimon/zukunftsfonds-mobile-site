@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Icon, Page, SearchInput, Toolbar, ToolbarButton } from 'react-onsenui';
 import ResultList from './ResultList';
+import PlaceProfile from '../profiles/PlaceProfile';
 
 const SearchPage = props => {
 
@@ -11,8 +12,12 @@ const SearchPage = props => {
     const query = evt.target.value.toLowerCase();
     setSearch(query);
 
-    const results = props.store.places.filter(p => p.properties.title.toLowerCase().startsWith(query));
+    const results = props.store.items.filter(p => p.properties.title.toLowerCase().startsWith(query));
     setResults(results);
+  }
+
+  const onSelectResult = result => {
+    props.navigator.pushPage({ component: PlaceProfile, item: result });
   }
 
   const onClose = () => {
@@ -36,7 +41,9 @@ const SearchPage = props => {
         </Toolbar>
       }>
 
-      <ResultList results={results} />
+      <ResultList
+        results={results} 
+        onSelect={onSelectResult} />
     </Page>
   )
 

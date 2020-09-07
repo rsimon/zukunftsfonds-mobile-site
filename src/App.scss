@@ -6,3 +6,16 @@
   }
 
 }
+
+.profile.place {
+
+  .map-container {
+    width:100%;
+    position:relative;
+
+    .leaflet-container {
+      height:200px;
+    }
+  }
+
+}
