@@ -8,9 +8,10 @@ const PlaceProfile = props => {
 
   const { item } = props;
 
+  console.log(item);
+
   // TODO get centroid instead!
   const center = item?.geometry?.coordinates[0][0].slice().reverse();
-  console.log(center);
 
   return (
     <Page 
@@ -39,6 +40,9 @@ const PlaceProfile = props => {
           <GeoJSON data={item} />
         </Map>
       </div>
+      { item.description.map((d, idx) => 
+        <div key={idx} className="description">{d.value}</div>
+      )}
     </Page>
   )
 
