@@ -10,10 +10,15 @@ const SearchPage = props => {
 
   const onSearch = evt => {
     const query = evt.target.value.toLowerCase();
-    setSearch(query);
 
-    const results = props.store.searchAll(query);
-    setResults(results);
+    // For some weird reason, OnsenUI SearchInput also triggers
+    // onChange when losing focus, causing an unwanted re-render
+    if (search !== query) {
+      setSearch(query);
+
+      const results = props.store.searchAll(query);
+      setResults(results);
+    }
   }
 
   const onSelectResult = result => {

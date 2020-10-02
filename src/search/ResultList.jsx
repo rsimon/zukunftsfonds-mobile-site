@@ -10,6 +10,7 @@ const ResultList = props => {
       className="search-result" 
       style={style}
       onClick={() => props.onSelect(props.results[index])}>
+
       <Ripple modifier="light-gray" />
 
       {props.results[index].properties.title}
