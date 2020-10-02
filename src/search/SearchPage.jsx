@@ -1,7 +1,15 @@
 import React, { useState } from 'react';
 import { Icon, Page, SearchInput, Toolbar, ToolbarButton } from 'react-onsenui';
 import ResultList from './ResultList';
+import ActorProfile from '../profiles/ActorProfile';
 import PlaceProfile from '../profiles/PlaceProfile';
+
+import './SearchPage.scss';
+
+const PROFILE_COMPONENTS = {
+  'crm:E18_Physical_Thing': PlaceProfile,
+  'crm:E21_Person': ActorProfile
+}
 
 const SearchPage = props => {
 
@@ -22,7 +30,10 @@ const SearchPage = props => {
   }
 
   const onSelectResult = result => {
-    props.navigator.pushPage({ component: PlaceProfile, item: result });
+    props.navigator.pushPage({ 
+      component: PROFILE_COMPONENTS[result.crmClass], 
+      item: result 
+    });
   }
 
   const onClose = () => {
