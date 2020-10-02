@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { BackButton, Page, Toolbar } from 'react-onsenui';
 import { GeoJSON, Map, TileLayer } from 'react-leaflet';
 import bbox from '@turf/bbox';
+import { getActors, navigateTo } from './Utils';
 
 import 'leaflet/dist/leaflet.css';
 
@@ -17,9 +18,7 @@ const PlaceProfile = props => {
 
   const mapRef = useRef();
 
-  const { item } = props;
-
-  console.log(item['@id']);
+  const { item, navigator, store } = props;
 
   useEffect(() => {
     if (mapRef.current) {
@@ -27,6 +26,8 @@ const PlaceProfile = props => {
       map.fitBounds(getBounds(item));
     }
   }, [ item ]);
+
+  const actors = getActors(item, store);
 
   return (
     <Page 
@@ -54,8 +55,14 @@ const PlaceProfile = props => {
           <GeoJSON data={item} />
         </Map>
       </div>
-      { item.description.map((d, idx) => 
+      {item.description.map((d, idx) => 
         <div key={idx} className="description">{d.value}</div>
+      )}
+
+      {actors.map((actor, idx) =>
+        <div key={idx} className="actor" onClick={navigateTo(actor, navigator)}>
+          <span className="title">{actor.properties.title}</span>
+        </div>
       )}
     </Page>
   )

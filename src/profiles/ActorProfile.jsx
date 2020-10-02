@@ -1,15 +1,12 @@
 import React from 'react';
 import { BackButton, Page, Toolbar } from 'react-onsenui';
-import { getResidences, getProfileComponent } from './Utils';
+import { getResidences, navigateTo } from './Utils';
 
 const ActorProfile = props => {
 
   const { item, store, navigator } = props;
 
   const residences = getResidences(item, store);
-
-  const navigateTo = item => _ =>
-    navigator.pushPage({ component: getProfileComponent(item), item });
 
   return (
     <Page 
@@ -30,7 +27,7 @@ const ActorProfile = props => {
       )}
 
       {residences.map((r, idx) =>
-        <div key={idx} className="residence" onClick={navigateTo(r)}>
+        <div key={idx} className="residence" onClick={navigateTo(r, navigator)}>
           <span className="title">{r.properties.title}</span>
           { r.geometry?.title && <span className="location">{r.geometry.title}</span> }
         </div>
