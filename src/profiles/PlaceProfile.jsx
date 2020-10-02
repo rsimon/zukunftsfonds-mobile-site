@@ -8,8 +8,8 @@ import 'leaflet/dist/leaflet.css';
 const getBounds = geojson => {
   const corners = bbox(geojson);
   return [ // Leaflet order
-    [ corners[1], corners[0]],
-    [ corners[3], corners[2]]
+    [ corners[1], corners[0] ],
+    [ corners[3], corners[2] ]
   ];
 }
 
@@ -18,6 +18,8 @@ const PlaceProfile = props => {
   const mapRef = useRef();
 
   const { item } = props;
+
+  console.log(item['@id']);
 
   useEffect(() => {
     if (mapRef.current) {

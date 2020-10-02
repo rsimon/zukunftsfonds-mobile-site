@@ -51,5 +51,12 @@ export default class DataStore {
   searchAll(query) {
     return this.search.search(query.toLowerCase());
   }
+
+  getPlaceForLocation(id) {
+    return this.places.find(place => place.relations.find(rel => 
+      rel.relationTo === id && rel.relationType === 'crm:P53_has_former_or_current_location'));
+  }
+
+  
   
 }
