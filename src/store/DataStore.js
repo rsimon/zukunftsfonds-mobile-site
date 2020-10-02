@@ -13,7 +13,13 @@ export default class DataStore {
     this.places = [];
 
     this.search = new JsSearch.Search('@id');   
-    this.search.addIndex([ 'properties', 'title' ]);  
+    this.search.tokenizer = {
+      tokenize(text) {
+        return text.split(/[\s,-]+/)
+      }
+    };
+
+    this.search.addIndex([ 'properties', 'title' ]); 
   }
 
   load() {
