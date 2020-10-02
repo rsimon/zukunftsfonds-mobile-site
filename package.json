@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@turf/bbox": "^6.0.1",
     "axios": "^0.20.0",
     "js-search": "^2.0.0",
     "leaflet": "^1.7.1",

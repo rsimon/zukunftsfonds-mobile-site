@@ -1,17 +1,30 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { BackButton, Page, Toolbar } from 'react-onsenui';
 import { GeoJSON, Map, TileLayer } from 'react-leaflet';
+import bbox from '@turf/bbox';
 
 import 'leaflet/dist/leaflet.css';
 
+const getBounds = geojson => {
+  const corners = bbox(geojson);
+  return [ // Leaflet order
+    [ corners[1], corners[0]],
+    [ corners[3], corners[2]]
+  ];
+}
+
 const PlaceProfile = props => {
+
+  const mapRef = useRef();
 
   const { item } = props;
 
-  console.log(item);
-
-  // TODO get centroid instead!
-  const center = item?.geometry?.coordinates[0][0].slice().reverse();
+  useEffect(() => {
+    if (mapRef.current) {
+      const map = mapRef.current.leafletElement;
+      map.fitBounds(getBounds(item));
+    }
+  }, [ item ]);
 
   return (
     <Page 
@@ -29,8 +42,7 @@ const PlaceProfile = props => {
 
       <div className="map-container">
         <Map 
-          center={center} 
-          zoom={13}
+          ref={mapRef}
           zoomControl={false}
           style={{height:'200px'}}>
           <TileLayer
