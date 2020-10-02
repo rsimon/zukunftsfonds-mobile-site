@@ -12,7 +12,7 @@ const SearchPage = props => {
     const query = evt.target.value.toLowerCase();
     setSearch(query);
 
-    const results = props.store.items.filter(p => p.properties.title.toLowerCase().startsWith(query));
+    const results = props.store.searchAll(query);
     setResults(results);
   }
 

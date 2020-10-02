@@ -1,4 +1,5 @@
 import axios from 'axios';
+import * as JsSearch from 'js-search';
 
 /**
  * Because (fortunately) our data is static, the data store
@@ -7,19 +8,42 @@ import axios from 'axios';
 export default class DataStore {
 
   constructor() {
-    this.items = [];
+    this.actors = [];
+    this.events = [];
+    this.places = [];
+
+    this.search = new JsSearch.Search('@id');   
+    this.search.addIndex([ 'properties', 'title' ]);  
   }
 
   load() {
-    return axios.get('/data/oberhollabrunn_orte_e18.json').then(response => {
-      this.items = response.data.reduce((places, next) => places.concat(next.features), []);
-      console.log('loaded', this.items.length);
+    const loadFile = entityType => 
+      axios.get(`/data/api/items_${entityType}.json`).then(response =>
+        response.data[0].reduce((items, next) => items.concat(next.features), []));
+    
+    const responses = Promise.all([
+      loadFile('actor'),
+      loadFile('event'),
+      loadFile('place')
+    ]);
+
+    return responses.then(arr => {
+      const [ actors, events, places ] = arr;
+      
+      this.actors = actors;
+      this.events = events;
+      this.places = places;
+
+      this.search.addDocuments([ ...actors, /* ...events ,*/ ...places ]);
     });
   }
 
   findById(id) {
-    console.log(id, this.items);
     return this.items.find(i => i['@id'] === id);
+  }
+
+  searchAll(query) {
+    return this.search.search(query.toLowerCase());
   }
   
 }

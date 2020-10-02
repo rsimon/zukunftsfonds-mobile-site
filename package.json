@@ -4,15 +4,17 @@
   "private": true,
   "dependencies": {
     "axios": "^0.20.0",
+    "js-search": "^2.0.0",
     "leaflet": "^1.7.1",
-    "onsenui": "^2.10.10",
+    "onsenui": "^2.11.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-leaflet": "^2.7.0",
     "react-onsenui": "^1.11.2",
     "react-scripts": "3.4.3",
     "react-virtualized-auto-sizer": "^1.0.2",
-    "react-window": "^1.8.5"
+    "react-window": "^1.8.5",
+    "uuid": "^8.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
