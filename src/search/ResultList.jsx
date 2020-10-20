@@ -14,9 +14,7 @@ const ICONS = {
 const ResultList = props => {
 
   const Row = ({ index, style }) => {
-
     const item = props.results[index];
-    console.log(item);
 
     return (<div 
       className="search-result" 

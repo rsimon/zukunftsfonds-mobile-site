@@ -1,21 +1,24 @@
-import React, { useState } from 'react';
-import { useRecoilValue } from 'recoil';
+import React from 'react';
 import { BackButton, Icon, Page, Input, Toolbar, ToolbarButton } from 'react-onsenui';
 import ResultList from './ResultList';
 import { getProfileComponent } from '../profiles/Utils';
-import { languageState } from '../store/State';
+import { useRecoilValue, useSetRecoilState } from 'recoil';
+import { languageState, searchQueryState, searchResultState } from '../store/State';
 import i18n from '../i18n';
 
 import './SearchPage.scss';
 
 const SearchPage = props => {
 
-  const [ search, setSearch ] = useState('');
-  
-  const [ results, setResults ] = useState([]);
-
   const language = useRecoilValue(languageState);
+
+  // We'll keep search state global, so we can persist across page navigation
+  const search = useRecoilValue(searchQueryState);
+  const setSearch = useSetRecoilState(searchQueryState);
   
+  const results = useRecoilValue(searchResultState);
+  const setResults = useSetRecoilState(searchResultState);
+
   const onSearch = evt => {
     const query = evt.target.value.toLowerCase();
 
@@ -35,7 +38,10 @@ const SearchPage = props => {
       item: result 
     });
 
-  const onClearSearch = () => setSearch('');
+  const onClearSearch = () => {
+    setSearch('');
+    setResults([]);
+  }
 
   return (
     <Page

@@ -1,6 +1,6 @@
 import React from 'react';
-import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { Icon, List, ListHeader, ListItem, Page, Radio } from 'react-onsenui';
+import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { languageState } from './store/State';
 import i18n from './i18n';
 import SearchPage from './search/SearchPage';
