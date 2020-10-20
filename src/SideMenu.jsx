@@ -4,6 +4,7 @@ import { useRecoilState } from 'recoil';
 import { languageState } from './store/State';
 import i18n from './i18n';
 import SearchPage from './search/SearchPage';
+import SplashPage from './splash/SplashPage';
 
 import './SideMenu.scss';
 
@@ -16,12 +17,19 @@ const SideMenu = props => {
     window.localStorage.setItem('zukunftsfonds.language', lang);
   }
 
+  const onHome = () => 
+    props.navigator.pushPage({ component: SplashPage });
+
   const onSearch = () =>
     props.navigator.pushPage({ component: SearchPage });
 
   return (
     <Page className="side-menu">
       <List>
+        <ListItem onClick={onHome}>
+          <Icon icon="md-home" />
+          <label>{i18n.t('Home', language)}</label>
+        </ListItem>
         <ListItem onClick={onSearch}>
           <Icon icon="md-search" />
           <label>{i18n.t('Search', language)}</label>
