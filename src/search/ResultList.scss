@@ -1,0 +1,25 @@
+.search-results {
+
+  div.search-result {
+    border-bottom:1px solid #ebe8e1;
+    display:flex;
+    align-items:center;
+    position:relative;
+
+    ons-icon {
+      font-size: 20px;
+      margin: 0   14px;
+      color: #c2b491;
+    }
+
+    label {
+      padding:0 14px 0 0;
+      width:100%;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+  }
+
+}
