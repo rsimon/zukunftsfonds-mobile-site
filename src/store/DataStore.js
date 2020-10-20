@@ -24,7 +24,7 @@ export default class DataStore {
 
   load() {
     const loadFile = entityType => 
-      axios.get(`/data/api/items_${entityType}.json`).then(response =>
+      axios.get(`data/api/items_${entityType}.json`).then(response =>
         response.data[0].reduce((items, next) => items.concat(next.features), []));
     
     const responses = Promise.all([

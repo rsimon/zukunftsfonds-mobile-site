@@ -1,0 +1,1595 @@
+[
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6261",
+            "crmClass":"crm:E53_Place",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Location of Kirlibaba"
+            },
+            "relations":[
+               {
+                  "label":"Kaleniez Valeria (1916-1917)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6263",
+                  "relationType":"crm:OA8i_begins_in"
+               },
+               {
+                  "label":"Kirlibaba",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6260",
+                  "relationType":"crm:P53i_has_former_or_current_location"
+               },
+               {
+                  "label":"Valeria Kaleniez wurde 1916 in Kirlibaba geboren. ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6265",
+                  "relationType":"crm:P7i_took_place_at"
+               }
+            ],
+            "type":"Feature"
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6255",
+            "crmClass":"crm:E53_Place",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Location of Werenczenka"
+            },
+            "relations":[
+               {
+                  "label":"Georg Spilei wurde 1885 in Werenczenka geboren. ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6258",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Spilei Georg (1885-1917)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6256",
+                  "relationType":"crm:OA8i_begins_in"
+               },
+               {
+                  "label":"Werenczenka",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6254",
+                  "relationType":"crm:P53i_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature"
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6246",
+            "crmClass":"crm:E53_Place",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Location of Petrantz"
+            },
+            "relations":[
+               {
+                  "label":"Andrä Wallasch wurde 1867 in Petrantz geboren.",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6249",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Petrantz",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6245",
+                  "relationType":"crm:P53i_has_former_or_current_location"
+               },
+               {
+                  "label":"Wallasch Andrä (1867-1917)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6247",
+                  "relationType":"crm:OA8i_begins_in"
+               }
+            ],
+            "type":"Feature"
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6237",
+            "crmClass":"crm:E53_Place",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Location of Konictyn"
+            },
+            "relations":[
+               {
+                  "label":"Golak Herasym (1897-1917)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6239",
+                  "relationType":"crm:OA8i_begins_in"
+               },
+               {
+                  "label":"Herasym Golak wurde 1897 in Konictyn geboren.",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6241",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Konictyn",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6236",
+                  "relationType":"crm:P53i_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature"
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6232",
+            "crmClass":"crm:E53_Place",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Location of Unter Wiekow"
+            },
+            "relations":[
+               {
+                  "label":"Ischan Nikolai (1881-1917)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6229",
+                  "relationType":"crm:OA8i_begins_in"
+               },
+               {
+                  "label":"Nikolai Ischan wurde 1881 in Unter-Wiekow geboren.",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6234",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Unter Wiekow",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6231",
+                  "relationType":"crm:P53i_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature"
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6224",
+            "crmClass":"crm:E53_Place",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Location of Stanesty"
+            },
+            "relations":[
+               {
+                  "label":"Kostink Nikolaus (1899-1917)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6225",
+                  "relationType":"crm:OA8i_begins_in"
+               },
+               {
+                  "label":"Nikolaus Kostink wurde 1899 in Stanesty geboren.",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6227",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Stanesty",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6223",
+                  "relationType":"crm:P53i_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature"
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6211",
+            "crmClass":"crm:E53_Place",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Location of Gernowitz"
+            },
+            "relations":[
+               {
+                  "label":"Gernowitz",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6210",
+                  "relationType":"crm:P53i_has_former_or_current_location"
+               },
+               {
+                  "label":"Heidiczuk Nicolai (1862-1917)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6213",
+                  "relationType":"crm:OA8i_begins_in"
+               },
+               {
+                  "label":"Nicolai Heidiczuk wurde 1862 in Gernowitz geboren.",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6215",
+                  "relationType":"crm:P7i_took_place_at"
+               }
+            ],
+            "type":"Feature"
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6202",
+            "crmClass":"crm:E53_Place",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Location of Suczawa"
+            },
+            "relations":[
+               {
+                  "label":"Anna Suciu geb. von Wolczynski (1864-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6205",
+                  "relationType":"crm:OA8i_begins_in"
+               },
+               {
+                  "label":"Anna Suciu geb. von Wolczynski wurde am 21. Juni 1864 in Suczawa geboren.",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6208",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Suczawa",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6201",
+                  "relationType":"crm:P53i_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature"
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6194",
+            "crmClass":"crm:E53_Place",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Location of Czahor"
+            },
+            "relations":[
+               {
+                  "label":"Czahor",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6193",
+                  "relationType":"crm:P53i_has_former_or_current_location"
+               },
+               {
+                  "label":"Jan Lisaniuk wurde 1853/54 in Czahor geboren.",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6198",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Lisaniuk Jan (1853/54-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6196",
+                  "relationType":"crm:OA8i_begins_in"
+               }
+            ],
+            "type":"Feature"
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6188",
+            "crmClass":"crm:E53_Place",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Location of Kudzsiv"
+            },
+            "relations":[
+               {
+                  "label":"Kudzsiv ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6187",
+                  "relationType":"crm:P53i_has_former_or_current_location"
+               },
+               {
+                  "label":"Lazar Paul (1884-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6189",
+                  "relationType":"crm:OA8i_begins_in"
+               },
+               {
+                  "label":"Paul Lazar wurde 1884 in Kudzsiv geboren.",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6191",
+                  "relationType":"crm:P7i_took_place_at"
+               }
+            ],
+            "type":"Feature"
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6179",
+            "crmClass":"crm:E53_Place",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Location of Petroutz an der Sereth"
+            },
+            "relations":[
+               {
+                  "label":"Balan Zacharias (1878-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6181",
+                  "relationType":"crm:OA8i_begins_in"
+               },
+               {
+                  "label":"Petroutz an der Sereth",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6178",
+                  "relationType":"crm:P53i_has_former_or_current_location"
+               },
+               {
+                  "label":"Zacharias Balan wurde 1878 in Petroutz an der Sereth geboren ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6183",
+                  "relationType":"crm:P7i_took_place_at"
+               }
+            ],
+            "type":"Feature"
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6169",
+            "crmClass":"crm:E53_Place",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Location of Zadowa"
+            },
+            "relations":[
+               {
+                  "label":"Zadowa",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6168",
+                  "relationType":"crm:P53i_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature"
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6162",
+            "crmClass":"crm:E53_Place",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Location of DornaWatra"
+            },
+            "relations":[
+               {
+                  "label":"Dorna-Watra",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6161",
+                  "relationType":"crm:P53i_has_former_or_current_location"
+               },
+               {
+                  "label":"Helena Popeskul wurde 1894/95 in Dorna-Watra geboren",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6165",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Minodora Moroshan wurde 1895 in Dorna-Watra geboren",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6219",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Moroshan Minodora (1895-1917)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6217",
+                  "relationType":"crm:OA8i_begins_in"
+               },
+               {
+                  "label":"Popeskul Helena (1894/95-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6163",
+                  "relationType":"crm:OA8i_begins_in"
+               }
+            ],
+            "type":"Feature"
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6155",
+            "crmClass":"crm:E53_Place",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Location of Unter Wikow"
+            },
+            "relations":[
+               {
+                  "label":"Aksenti Kristean (1851/52-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6157",
+                  "relationType":"crm:OA8i_begins_in"
+               },
+               {
+                  "label":"Kristean Aksenti wurde 1851/52 in Unter-Wikow geboren",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6159",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Unter Wikow",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6154",
+                  "relationType":"crm:P53i_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature"
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6148",
+            "crmClass":"crm:E53_Place",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Location of Dobrohostow"
+            },
+            "relations":[
+               {
+                  "label":"Dobrohostow",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6147",
+                  "relationType":"crm:P53i_has_former_or_current_location"
+               },
+               {
+                  "label":"Iwasko Theodor (1874-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6150",
+                  "relationType":"crm:OA8i_begins_in"
+               },
+               {
+                  "label":"Theodor Iwasko wurde 1874 in Dobrohostow geboren",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6152",
+                  "relationType":"crm:P7i_took_place_at"
+               }
+            ],
+            "type":"Feature"
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6142",
+            "crmClass":"crm:E53_Place",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Location of Fundul Moldowey"
+            },
+            "relations":[
+               {
+                  "label":"Fundul Moldowey ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6141",
+                  "relationType":"crm:P53i_has_former_or_current_location"
+               },
+               {
+                  "label":"Rebecka Sbranka wurde 1899/1900 in Fundul Moldowey geboren",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6145",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Sbranka Rebecka (1899/1900-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6143",
+                  "relationType":"crm:OA8i_begins_in"
+               }
+            ],
+            "type":"Feature"
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6130",
+            "crmClass":"crm:E53_Place",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Location of Kopasnicza"
+            },
+            "relations":[
+               {
+                  "label":"Kopasnicza",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6129",
+                  "relationType":"crm:P53i_has_former_or_current_location"
+               },
+               {
+                  "label":"Micic Svetosar (1889-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6131",
+                  "relationType":"crm:OA8i_begins_in"
+               },
+               {
+                  "label":"Svetosar Micic wurde 1889 in Kopasnicza geboren ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6133",
+                  "relationType":"crm:P7i_took_place_at"
+               }
+            ],
+            "type":"Feature"
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6116",
+            "crmClass":"crm:E53_Place",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Location of Hliboka"
+            },
+            "relations":[
+               {
+                  "label":"Gabriel Mazurek wurde 1880/81 in Hliboka geboren",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6119",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Hliboka",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6115",
+                  "relationType":"crm:P53i_has_former_or_current_location"
+               },
+               {
+                  "label":"Mazurek Gabriel (1880/81-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6117",
+                  "relationType":"crm:OA8i_begins_in"
+               }
+            ],
+            "type":"Feature"
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6100",
+            "crmClass":"crm:E53_Place",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Location of Taroscheni"
+            },
+            "relations":[
+               {
+                  "label":"Iwan Moskaliuk wurde 1881/82 in Taroscheni geboren",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6104",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Moskaliuk Iwan (1881/82-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6102",
+                  "relationType":"crm:OA8i_begins_in"
+               },
+               {
+                  "label":"Taroscheni",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6099",
+                  "relationType":"crm:P53i_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature"
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6094",
+            "crmClass":"crm:E53_Place",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Location of Arbora"
+            },
+            "relations":[
+               {
+                  "label":"Arbora",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6093",
+                  "relationType":"crm:P53i_has_former_or_current_location"
+               },
+               {
+                  "label":"Bernat Nicolai (1882/83-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6095",
+                  "relationType":"crm:OA8i_begins_in"
+               },
+               {
+                  "label":"Nicolai Bernat wurde 1882/83 in Arbora geboren",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6097",
+                  "relationType":"crm:P7i_took_place_at"
+               }
+            ],
+            "type":"Feature"
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6059",
+            "crmClass":"crm:E53_Place",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Location of Hawrylestie"
+            },
+            "relations":[
+               {
+                  "label":"German Maria (1898/99-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6064",
+                  "relationType":"crm:OA8i_begins_in"
+               },
+               {
+                  "label":"Hawrylestie ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6058",
+                  "relationType":"crm:P53i_has_former_or_current_location"
+               },
+               {
+                  "label":"Maria German wurde 1898/99 in Hawrylestie geboren",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6066",
+                  "relationType":"crm:P7i_took_place_at"
+               }
+            ],
+            "type":"Feature"
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6051",
+            "crmClass":"crm:E53_Place",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Location of Panka"
+            },
+            "relations":[
+               {
+                  "label":"Anastasia Lotaniuk wurde 1871/72 in Panka geboren.",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6056",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Lotaniuk Anastasia (1871/72-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6054",
+                  "relationType":"crm:OA8i_begins_in"
+               },
+               {
+                  "label":"Panka",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6050",
+                  "relationType":"crm:P53i_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature"
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6043",
+            "crmClass":"crm:E53_Place",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Location of Moldauische Banilla"
+            },
+            "relations":[
+               {
+                  "label":"Irnestine Preseszniuk wurde 1867/68 in der Ortschaft Moldauische Banilla geboren ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6176",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Kosmicz Wasyl (1877/78-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6046",
+                  "relationType":"crm:OA8i_begins_in"
+               },
+               {
+                  "label":"Luken Pzorney wurde 1865/66 in der Moldauischen Banilla geboren",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6139",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Moldauische Banilla ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6042",
+                  "relationType":"crm:P53i_has_former_or_current_location"
+               },
+               {
+                  "label":"Preseszniuk Irnestine (1867/68-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6174",
+                  "relationType":"crm:OA8i_begins_in"
+               },
+               {
+                  "label":"Pzorney Luken (1865/66-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6137",
+                  "relationType":"crm:OA8i_begins_in"
+               },
+               {
+                  "label":"Wasyl Kosmicz ist 1877/78 in dem Ort Moldauische Banilla geboren",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6048",
+                  "relationType":"crm:P7i_took_place_at"
+               }
+            ],
+            "type":"Feature"
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6035",
+            "crmClass":"crm:E53_Place",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Location of Bucsoaia"
+            },
+            "relations":[
+               {
+                  "label":"Bradazan Grigori (1849/50-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6037",
+                  "relationType":"crm:OA8i_begins_in"
+               },
+               {
+                  "label":"Bucsoaia",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6034",
+                  "relationType":"crm:P53i_has_former_or_current_location"
+               },
+               {
+                  "label":"Grigori Bradazan wurde 1849/50 in Bucsoaia geboren",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6041",
+                  "relationType":"crm:P7i_took_place_at"
+               }
+            ],
+            "type":"Feature"
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6028",
+            "crmClass":"crm:E53_Place",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Location of Mardzina"
+            },
+            "relations":[
+               {
+                  "label":"Buliga Johann (1892-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6030",
+                  "relationType":"crm:OA8i_begins_in"
+               },
+               {
+                  "label":"Johann Buliga ist im Jahr 1892 in Mardzina geboren",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6032",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Mardzina",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6027",
+                  "relationType":"crm:P53i_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature"
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6018",
+            "crmClass":"crm:E53_Place",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Location of Keschwana"
+            },
+            "relations":[
+               {
+                  "label":"Dragicz Philipp (1862-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6021",
+                  "relationType":"crm:OA8i_begins_in"
+               },
+               {
+                  "label":"Keschwana ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6017",
+                  "relationType":"crm:P53i_has_former_or_current_location"
+               },
+               {
+                  "label":"Philipp Dragicz ist im Jahr 1862 in Keschwana geboren",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6025",
+                  "relationType":"crm:P7i_took_place_at"
+               }
+            ],
+            "type":"Feature"
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6007",
+            "crmClass":"crm:E53_Place",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Location of Wama"
+            },
+            "relations":[
+               {
+                  "label":"Illie Johann (1896-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6008",
+                  "relationType":"crm:OA8i_begins_in"
+               },
+               {
+                  "label":"Johann Illie wurde im Jahre 1896 in Wama geboren ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6011",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Wama",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6006",
+                  "relationType":"crm:P53i_has_former_or_current_location"
+               }
+            ],
+            "type":"Feature"
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/6001",
+            "crmClass":"crm:E53_Place",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Location of Oberhollabrunn"
+            },
+            "relations":[
+               {
+                  "label":"Aksenti Kristean (1851/52-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6157",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Aksenti Kristean (1851/52-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6157",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Andrä Wallasch starb am 03. März 1917 im Flüchtlingslager Oberhollabrunn.",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6250",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Anna Suciu geb. von Wolczynski (1864-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6205",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Anna Suciu geb. von Wolczynski (1864-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6205",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Anna Suciu geb. von Wolczynski starb am 13. Februar 1918 in der Gassner Gasse in Oberhollabrunn",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6209",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Balan Zacharias (1878-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6181",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Balan Zacharias (1878-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6181",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Bernat Nicolai (1882/83-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6095",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Bernat Nicolai (1882/83-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6095",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Bradazan Grigori (1849/50-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6037",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Bradazan Grigori (1849/50-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6037",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Buliga Johann (1892-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6030",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Buliga Johann (1892-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6030",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Demeter (1918-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6170",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Demeter (1918-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6170",
+                  "relationType":"crm:OA8i_begins_in"
+               },
+               {
+                  "label":"Demeter (1918-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6170",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Demeter starb am 17. März 1918 im Flüchtlingslager Oberhollabrunn",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6173",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Demeter wurde am 17. März 1918 im Flüchtlingslager Oberhollabrunn geboren",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6172",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Domka Homenjuk ist am 29. Dezember 1916 im Flüchtlingslager Oberhollabrunn geboren",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6125",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Domka Homenjuk starb am 1. Juni 1917 im Flüchtlingslager Oberhollabrunn",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6126",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Dragicz Philipp (1862-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6021",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Dragicz Philipp (1862-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6021",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Gabriel Mazurek starb am 8. April 1918 im Flüchtlingslager Oberhollabrunn",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6120",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Georg Spilei starb am 2. März 1917 im Flüchtlingslager Oberhollabrunn.",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6259",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"German Maria (1898/99-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6064",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"German Maria (1898/99-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6064",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Golak Herasym (1897-1917)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6239",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Golak Herasym (1897-1917)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6239",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Grigori Bradazan ist am 12. Januar 1918 im Flühtlingslager Oberhollabrunn gestorben",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6040",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Heidiczuk Nicolai (1862-1917)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6213",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Heidiczuk Nicolai (1862-1917)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6213",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Helena Popeskul starb am 07. April 1918 im Flüchtlingslager Oberhollabrunn",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6166",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Herasym Golak starb am 07. August 1917 im Flüchtlingslager Oberhollabrunn ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6242",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Homenjuk Domka (1916-1917)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6123",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Homenjuk Domka (1916-1917)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6123",
+                  "relationType":"crm:OA8i_begins_in"
+               },
+               {
+                  "label":"Homenjuk Domka (1916-1917)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6123",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Illie Johann (1896-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6008",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Illie Johann (1896-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6008",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Irnestine Preseszniuk starb am 12. Februar 1918 im Flüchtlingslager Oberhollabrunn",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6177",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Ischan Nikolai (1881-1917)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6229",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Ischan Nikolai (1881-1917)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6229",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Iwan Moskaliuk ist am 27. Januar 1918 im Flüchtlingslager Oberhollabrunn ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6105",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Iwasko Theodor (1874-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6150",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Iwasko Theodor (1874-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6150",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Jan Lisaniuk starb am 9. Februar 1918 im Flüchtlingslager Oberhollabrunn",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6199",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Johann Buliga ist am 25. Juni 1918 im Flüchtlingslager Oberhollabrunn gestorben",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6033",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Johann Illie ist am 13. Juni 1918 im Flüchtlingsager Oberhollabrunn gestorben",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6010",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Juan Kranczowa ist am 13. Juni 1918 im Flüchtlingsager Oberhollabrunn gestorben",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6003",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Kaleniez Valeria (1916-1917)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6263",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Kaleniez Valeria (1916-1917)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6263",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Kosmicz Wasyl (1877/78-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6046",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Kosmicz Wasyl (1877/78-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6046",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Kostink Nikolaus (1899-1917)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6225",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Kostink Nikolaus (1899-1917)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6225",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Kranczowa Juan (1882-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5991",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Kranczowa Juan (1882-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5991",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Kristean Aksenti starb am 06. Februar 1918 im Flüchtlingslager Oberhollabrunn",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6160",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Lazar Paul (1884-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6189",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Lazar Paul (1884-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6189",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Lisaniuk Jan (1853/54-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6196",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Lisaniuk Jan (1853/54-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6196",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Lotaniuk Anastasia (1871/72-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6054",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Lotaniuk Anastasia (1871/72-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6054",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Luken Pzorney starb am 8. Mai 1918 im Flüchtlingslager Oberhollabrunn",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6140",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Maria German starb am 15. Januar 1918 im Flüchtlingslager Oberhollabrunn",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6067",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Maricevic Spiridion starb am 8. Januar 1918 im Flüchtlingslager Oberhollabrunn",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6111",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Mazurek Gabriel (1880/81-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6117",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Mazurek Gabriel (1880/81-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6117",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Micic Svetosar (1889-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6131",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Micic Svetosar (1889-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6131",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Minodora Moroshan starb am 19. Juni 1917 im Flüchtlingslager Oberhollabrunn",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6220",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Moroshan Minodora (1895-1917)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6217",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Moroshan Minodora (1895-1917)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6217",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Moskaliuk Iwan (1881/82-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6102",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Moskaliuk Iwan (1881/82-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6102",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Nicolai Bernat starb am 21. Januar 1918 im Flüchtlingslager Oberhollabrunn",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6098",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Nicolai Heidiczuk starb am 18. Juni 1917 im Flüchtlingslager Oberhollabrunn gestorben.",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6216",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Nikolai Ischan starb am 20. Juni 1917 im Flüchtlingslager Oberhollabrunn.",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6235",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Nikolaus Kostink starb am 18. Juni 1917 im Flüchtlingslager Oberhollabrunn.",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6228",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Oberhollabrunn",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6000",
+                  "relationType":"crm:P53i_has_former_or_current_location"
+               },
+               {
+                  "label":"Paul Lazar starb am 1. April 1918 im Flüchtlingslager Oberhollabrunn",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6192",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Philipp Dragicz ist am 20. Juni 1918 im Flüchtlingsager Oberhollabrunn gestorben",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6026",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Popeskul Helena (1894/95-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6163",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Popeskul Helena (1894/95-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6163",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Preseszniuk Irnestine (1867/68-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6174",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Preseszniuk Irnestine (1867/68-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6174",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Pzorney Luken (1865/66-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6137",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Pzorney Luken (1865/66-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6137",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Rebecka Sbranka starb am 15. Mai 1918 im Flüchtlingslager Oberhollabrunn",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6146",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Sbranka Rebecka (1899/1900-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6143",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Sbranka Rebecka (1899/1900-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6143",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Spilei Georg (1885-1917)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6256",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Spilei Georg (1885-1917)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6256",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Spiridion Maricevic (1840-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6108",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Spiridion Maricevic (1840-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6108",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Svetosar Micic starb am 16. April 1918 im Flüchtlingslager Oberhollabrunn",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6135",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Theodor Iwasko starb am 09. Mai 1918 im Flüchtlingslager Oberhollabrunn",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6153",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Valeria Kaleniez starb am 1. März 1917 im Flüchtlingslager Oberhollabrunn",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6266",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Wallasch Andrä (1867-1917)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6247",
+                  "relationType":"crm:P74i_has_current_or_former_residence"
+               },
+               {
+                  "label":"Wallasch Andrä (1867-1917)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6247",
+                  "relationType":"crm:OA9i_ends_in"
+               },
+               {
+                  "label":"Wasyl Kosmicz ist am 13. Januar 1918 im Flüchtlingslager Oberhollabrunn gestorben ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6049",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Zacharias Balan starb am 11. Juli 1918 im Flüchtlingslager Oberhollabrunn",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6184",
+                  "relationType":"crm:P7i_took_place_at"
+               }
+            ],
+            "type":"Feature"
+         }
+      ],
+      "type":"FeatureCollection"
+   },
+   {
+      "@context":"https://raw.githubusercontent.com/LinkedPasts/linked-places/master/linkedplaces-context-v1.jsonld",
+      "features":[
+         {
+            "@id":"https://openatlas.orthodoxes-europa.at/entity/5998",
+            "crmClass":"crm:E53_Place",
+            "geometry":{
+               "geometries":[
+
+               ],
+               "type":"GeometryCollection"
+            },
+            "properties":{
+               "title":"Location of Gyalmár"
+            },
+            "relations":[
+               {
+                  "label":"Gyalmár",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5997",
+                  "relationType":"crm:P53i_has_former_or_current_location"
+               },
+               {
+                  "label":"Juan Kranczowa wurde im Jahre 1882 in Gyalmár geboren ",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/6002",
+                  "relationType":"crm:P7i_took_place_at"
+               },
+               {
+                  "label":"Kranczowa Juan (1882-1918)",
+                  "relationTo":"https://openatlas.orthodoxes-europa.at/api/0.1/entity/5991",
+                  "relationType":"crm:OA8i_begins_in"
+               }
+            ],
+            "type":"Feature"
+         }
+      ],
+      "type":"FeatureCollection"
+   }
+]
