@@ -3,6 +3,7 @@ import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { Icon, List, ListHeader, ListItem, Page, Radio } from 'react-onsenui';
 import { languageState } from './store/State';
 import i18n from './i18n';
+import SearchPage from './search/SearchPage';
 
 import './SideMenu.scss';
 
@@ -12,10 +13,13 @@ const SideMenu = props => {
 
   const setLanguage = useSetRecoilState(languageState);
 
+  const onSearch = () =>
+    props.navigator.pushPage({ component: SearchPage });
+
   return (
     <Page className="side-menu">
       <List>
-        <ListItem>
+        <ListItem onClick={onSearch}>
           <Icon icon="md-search" />
           <label>{i18n.t('Search')}</label>
         </ListItem>

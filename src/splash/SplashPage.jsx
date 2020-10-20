@@ -9,10 +9,6 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 const SplashPage = props => {
 
   const [ isMenuOpen, setMenuOpen ] = useState(false);
-
-  const onSearch = () => {
-    props.navigator.pushPage({ component: SearchPage });
-  }
   
   const images = [
     <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Hollabrunn.jpg" />,
@@ -21,49 +17,50 @@ const SplashPage = props => {
   ];
 
   return (
-    <Splitter>
-      <SplitterContent>
-        <Page 
-          renderToolbar={() => 
-            <Toolbar>
-              <div className="center">
-                Die Orthodoxen in Österreich
-              </div>
-              <div className="right">
-                {/* <ToolbarButton onClick={onSearch}>
-                  <Icon icon="md-search" />
-                </ToolbarButton> */}
-                <ToolbarButton onClick={() => setMenuOpen(true)}>
-                  <Icon icon="md-menu" />
-                </ToolbarButton>
-              </div>
-            </Toolbar>
-          }>
+    <Page>
+      <Splitter>
+        <SplitterContent>
+          <Page 
+            renderToolbar={() => 
+              <Toolbar>
+                <div className="center">
+                  Die Orthodoxen in Österreich
+                </div>
+                <div className="right">
+                  <ToolbarButton onClick={() => setMenuOpen(true)}>
+                    <Icon icon="md-menu" />
+                  </ToolbarButton>
+                </div>
+              </Toolbar>
+            }>
 
-          <div style={{height:'300px', position:'relative' }}>
-            <AliceCarousel 
-              mouseTracking 
-              autoWidth
-              autoHeight
-              disableDotsControls
-              disableButtonsControls
-              paddingLeft={3}
-              paddingRight={3}
-              items={images} />
-          </div>
-        </Page>
-      </SplitterContent>
-      <SplitterSide
-        animation="overlay"
-        mode="collapse"
-        side="right"
-        collapse={true}
-        width="300px"
-        isOpen={isMenuOpen}
-        onClose={() => setMenuOpen(false)}>
-        <SideMenu />
-      </SplitterSide>
-    </Splitter>
+            <div style={{height:'300px', position:'relative' }}>
+              <AliceCarousel 
+                mouseTracking 
+                autoWidth
+                autoHeight
+                disableDotsControls
+                disableButtonsControls
+                paddingLeft={3}
+                paddingRight={3}
+                items={images} />
+            </div>
+          </Page>
+        </SplitterContent>
+        <SplitterSide
+          animation="overlay"
+          mode="collapse"
+          side="right"
+          collapse={true}
+          width="300px"
+          isOpen={isMenuOpen}
+          onClose={() => setMenuOpen(false)}>
+
+          <SideMenu navigator={props.navigator} />
+
+        </SplitterSide>
+      </Splitter>
+    </Page>
   )
 
 }
