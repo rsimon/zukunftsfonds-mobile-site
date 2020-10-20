@@ -1,3 +1,19 @@
+#root ons-page {
+
+  .page__background {
+    background-color:#fff;
+  }
+
+  ons-toolbar {
+    background-color:#a08952;
+
+    div, ons-toolbar-button {
+      color:#fff;
+    }
+  }
+
+}
+
 .profile {
 
   .description {

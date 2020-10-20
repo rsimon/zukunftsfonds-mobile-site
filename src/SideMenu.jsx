@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { List, ListHeader, ListItem, Page, Radio } from 'react-onsenui';
+import { Icon, List, ListHeader, ListItem, Page, Radio } from 'react-onsenui';
+
+import './SideMenu.scss';
 
 export default class SideMenu extends Component {
 
@@ -9,28 +11,50 @@ export default class SideMenu extends Component {
 
   render() {
     return (
-      <Page>
+      <Page className="side-menu">
         <List>
-          <ListHeader>Information</ListHeader>
+          <ListItem>
+            <Icon icon="md-search" />
+            <label>Suche</label>
+          </ListItem>
+        </List>
 
-          <ListItem modifier='longdivider'>About Us</ListItem>  
-          
-          <ListItem expandable>
-            <label>Projects</label>
-            <div className="expandable-content">
-              <ListItem>Orthodoxes Wien</ListItem>
-              <ListItem>Oberhollabrunn</ListItem>
+        <List>
+          <ListHeader>
+            <Icon icon="md-info-outline" />
+            <label>Information</label>
+          </ListHeader>
+
+          <ListItem>Help</ListItem>  
+
+          <ListItem className="projects">
+            <div>
+              <label>Projects</label>
+              <ul>
+                <li>Orthodoxes Wien</li>
+                <li>Oberhollabrunn</li>
+              </ul>
             </div>
           </ListItem>
+          
+          <ListItem>About Us</ListItem>
+        </List>
+        
+        <List>
+          <ListHeader>
+            <Icon icon="md-walk" />
+            <label>Walking Tours</label>
+          </ListHeader>
+          
+          <ListItem>Oberhollabrunn</ListItem>
+        </List>
 
-          <ListItem modifier='longdivider'>Help</ListItem>
-            
-          <ListHeader modifier='longdivider'>Walking Tours</ListHeader>
-
-          <ListItem modifier='longdivider'>Oberhollabrunn</ListItem>
-            
-          <ListHeader modifier='longdivider'>Language</ListHeader>
-
+        <List className="set-language">
+          <ListHeader>
+            <Icon icon="md-translate" />
+            <label>Language</label>
+          </ListHeader>
+          
           <ListItem>
             <label className="left">
               <Radio 
@@ -44,7 +68,6 @@ export default class SideMenu extends Component {
               English
             </label>
           </ListItem>
-
           <ListItem>
             <label className="left">
               <Radio 

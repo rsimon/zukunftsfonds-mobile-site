@@ -27,12 +27,12 @@ const SplashPage = props => {
           renderToolbar={() => 
             <Toolbar>
               <div className="center">
-                Splash Page Title
+                Die Orthodoxen in Österreich
               </div>
               <div className="right">
-                <ToolbarButton onClick={onSearch}>
+                {/* <ToolbarButton onClick={onSearch}>
                   <Icon icon="md-search" />
-                </ToolbarButton>
+                </ToolbarButton> */}
                 <ToolbarButton onClick={() => setMenuOpen(true)}>
                   <Icon icon="md-menu" />
                 </ToolbarButton>
@@ -58,7 +58,7 @@ const SplashPage = props => {
         mode="collapse"
         side="right"
         collapse={true}
-        width="80%"
+        width="300px"
         isOpen={isMenuOpen}
         onClose={() => setMenuOpen(false)}>
         <SideMenu />

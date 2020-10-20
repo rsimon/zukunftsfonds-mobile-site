@@ -1,0 +1,42 @@
+#root ons-page.side-menu {
+
+  ons-list-header {
+    background-color:#ebe8e1;
+    color:#333;
+  }
+
+  ons-list-item > div {
+    border-bottom:1px solid #ebe8e1;
+  }
+
+  ons-list-item, ons-list-header {
+
+    ons-icon {
+      font-size: 20px;
+      margin-right: 10px;
+      color: #333;
+      vertical-align:bottom;
+    }
+
+  }
+
+  ons-list-item.projects {
+
+    ul {
+      margin:0;
+      padding:0 0 4px 10px;
+      list-style-type:none;
+    }
+
+    li {
+      padding-top:16px;
+    }
+
+  }
+
+  ons-list.set-language ons-list-item label {
+    padding:10px 0 0 0;
+    min-height:36px;
+  }
+
+}
