@@ -1,31 +1,30 @@
 import React from 'react';
-import { BackButton, Icon, List, ListHeader, ListItem, Page, Toolbar } from 'react-onsenui';
+import { Icon, List, ListHeader, ListItem } from 'react-onsenui';
 import { getResidences, getTranslation, navigateTo } from './Utils';
+import { useRecoilValue } from 'recoil';
+import { languageState } from '../store/State';
+import PageWithMenu from '../PageWithMenu';
+import i18n from '../i18n';
 
 import './Profile.scss';
 
 const ActorProfile = props => {
+
+  const language = useRecoilValue(languageState);
 
   const { item, store, navigator } = props;
 
   const residences = getResidences(item, store);
 
   return (
-    <Page 
-      className="profile place"
-      renderToolbar={() => 
-        <Toolbar>
-          <div className="left">
-            <BackButton>Back</BackButton>
-          </div>
-          <div className="center">
-            { item.properties.title }
-          </div>
-        </Toolbar>
-      }>
+    <PageWithMenu 
+      backButton
+      className="profile actor"
+      title={item.properties.title}
+      navigator={props.navigator}>
 
       {item.description.map((d, idx) => 
-        <div key={idx} className="description">{getTranslation(d.value)}</div>
+        <div key={idx} className="description">{getTranslation(d.value, language)}</div>
       )}
 
       <List
@@ -34,7 +33,7 @@ const ActorProfile = props => {
         renderHeader={() =>
           <ListHeader>
             <Icon icon="md-pin" />
-            <label>Orte</label>
+            <label>{i18n.t('Places', language)}</label>
           </ListHeader>
         }
         renderRow={(r, idx) => 
@@ -42,7 +41,7 @@ const ActorProfile = props => {
             <span className="title">{r.properties.title}</span>
           </ListItem>
         } />
-    </Page>
+    </PageWithMenu>
   )
 
 }

@@ -39,6 +39,6 @@ export const getTranslation = (description, language) => {
   if (description.indexOf('------------') === -1) {
     return description;
   } else {
-    return language === 'de' ? description.split('------------')[1].trim() : description.split('------------')[0].trim();
+    return language === 'de' ? description.split('------------')[0].trim() : description.split('------------')[1].trim();
   }
 }

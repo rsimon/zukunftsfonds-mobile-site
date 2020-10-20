@@ -1,8 +1,12 @@
 import React, { useEffect, useRef } from 'react';
-import { Icon, BackButton, List, ListHeader, ListItem, Page, Toolbar } from 'react-onsenui';
+import { Icon, List, ListHeader, ListItem } from 'react-onsenui';
 import { GeoJSON, Map, TileLayer } from 'react-leaflet';
 import bbox from '@turf/bbox';
-import { getActors, navigateTo } from './Utils';
+import { useRecoilValue } from 'recoil';
+import { languageState } from '../store/State';
+import { getActors, getTranslation, navigateTo } from './Utils';
+import PageWithMenu from '../PageWithMenu';
+import i18n from '../i18n';
 
 import 'leaflet/dist/leaflet.css';
 import './Profile.scss';
@@ -16,6 +20,8 @@ const getBounds = geojson => {
 }
 
 const PlaceProfile = props => {
+
+  const language = useRecoilValue(languageState);
 
   const mapRef = useRef();
 
@@ -31,18 +37,11 @@ const PlaceProfile = props => {
   const actors = getActors(item, store);
 
   return (
-    <Page 
+    <PageWithMenu 
+      backButton
       className="profile place"
-      renderToolbar={() => 
-        <Toolbar>
-          <div className="left">
-            <BackButton>Back</BackButton>
-          </div>
-          <div className="center">
-            { item.properties.title }
-          </div>
-        </Toolbar>
-      }>
+      title={item.properties.title}
+      navigator={props.navigator}>
 
       <div className="map-container">
         <Map 
@@ -57,7 +56,7 @@ const PlaceProfile = props => {
         </Map>
       </div>
       {item.description.map((d, idx) => 
-        <div key={idx} className="description">{d.value}</div>
+        <div key={idx} className="description">{getTranslation(d.value, language)}</div>
       )}
 
       <List
@@ -66,7 +65,7 @@ const PlaceProfile = props => {
         renderHeader={() =>
           <ListHeader>
             <Icon icon="md-account" />
-            <label>Personen</label>
+            <label>{i18n.t('People', language)}</label>
           </ListHeader>
         }
         renderRow={(r, idx) => 
@@ -74,7 +73,7 @@ const PlaceProfile = props => {
             <span className="title">{r.properties.title}</span>
           </ListItem>
         } />
-    </Page>
+    </PageWithMenu>
   )
 
 }
