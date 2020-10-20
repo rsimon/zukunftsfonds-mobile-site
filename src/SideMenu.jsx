@@ -1,7 +1,8 @@
 import React from 'react';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
-import { languageState } from './store/State';
 import { Icon, List, ListHeader, ListItem, Page, Radio } from 'react-onsenui';
+import { languageState } from './store/State';
+import i18n from './i18n';
 
 import './SideMenu.scss';
 
@@ -16,21 +17,23 @@ const SideMenu = props => {
       <List>
         <ListItem>
           <Icon icon="md-search" />
-          <label>Suche</label>
+          <label>{i18n.t('Search')}</label>
         </ListItem>
       </List>
 
       <List>
         <ListHeader>
           <Icon icon="md-info-outline" />
-          <label>Information</label>
+          <label>{i18n.t('Information')}</label>
         </ListHeader>
 
-        <ListItem>Help</ListItem>  
+        <ListItem>
+          <label>{i18n.t('Help')}</label>
+        </ListItem>  
 
         <ListItem className="projects">
           <div>
-            <label>Projects</label>
+            <label>{i18n.t('Projects')}</label>
             <ul>
               <li>Orthodoxes Wien</li>
               <li>Oberhollabrunn</li>
@@ -38,22 +41,26 @@ const SideMenu = props => {
           </div>
         </ListItem>
         
-        <ListItem>About Us</ListItem>
+        <ListItem>
+          <label>{i18n.t('About Us')}</label>
+        </ListItem>
       </List>
       
       <List>
         <ListHeader>
           <Icon icon="md-walk" />
-          <label>Walking Tours</label>
+          <label>{i18n.t('Walking Tours')}</label>
         </ListHeader>
         
-        <ListItem>Oberhollabrunn</ListItem>
+        <ListItem>
+          <label>Oberhollabrunn</label>
+        </ListItem>
       </List>
 
       <List className="set-language">
         <ListHeader>
           <Icon icon="md-translate" />
-          <label>Language</label>
+          <label>{i18n.t('Language')}</label>
         </ListHeader>
         
         <ListItem>
@@ -61,8 +68,8 @@ const SideMenu = props => {
             <Radio 
               inputId='EN' 
               name='EN' 
-              onChange={() => setLanguage('EN')} 
-              checked={language === 'EN'} />
+              onChange={() => setLanguage('en')} 
+              checked={language === 'en'} />
           </label>
           
           <label htmlFor='EN' className="center">
@@ -74,8 +81,8 @@ const SideMenu = props => {
             <Radio 
               inputId='DE' 
               name='DE' 
-              onChange={() => setLanguage('DE')} 
-              checked={language === 'DE'} />
+              onChange={() => setLanguage('de')} 
+              checked={language === 'de'} />
           </label>
           
           <label htmlFor='DE' className="center">
