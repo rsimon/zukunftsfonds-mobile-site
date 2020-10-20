@@ -1,6 +1,3 @@
-import { useRecoilValue } from 'recoil';
-import { languageState } from '../store/State';
-
 class I18N {
 
   constructor() {
@@ -14,12 +11,9 @@ class I18N {
     this.messages[lang] = require(`./messages_${lang}.json`);
   }
 
-  t = label => {
-    const lang = useRecoilValue(languageState);
-
-    return lang in this.messages && label in this.messages[lang] ?
+  t = (label, lang) =>
+    lang in this.messages && label in this.messages[lang] ?
       this.messages[lang][label] : label;
-  }
 
 }
 

@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
-import { Icon, Page, SearchInput, Toolbar, ToolbarButton } from 'react-onsenui';
+import { useRecoilValue } from 'recoil';
+import { BackButton, Icon, Page, Input, Toolbar, ToolbarButton } from 'react-onsenui';
 import ResultList from './ResultList';
 import { getProfileComponent } from '../profiles/Utils';
+import { languageState } from '../store/State';
+import i18n from '../i18n';
 
 import './SearchPage.scss';
 
 const SearchPage = props => {
 
   const [ search, setSearch ] = useState('');
+  
   const [ results, setResults ] = useState([]);
 
+  const language = useRecoilValue(languageState);
+  
   const onSearch = evt => {
     const query = evt.target.value.toLowerCase();
 
@@ -23,29 +29,33 @@ const SearchPage = props => {
     }
   }
 
-  const onSelectResult = result => {
+  const onSelectResult = result =>
     props.navigator.pushPage({ 
       component: getProfileComponent(result), 
       item: result 
     });
-  }
 
-  const onClose = () => {
-    props.navigator.popPage();
-  }
+  const onClearSearch = () => setSearch('');
 
   return (
     <Page
       className="search"
       renderToolbar={() => 
         <Toolbar>
-          <SearchInput
-            value={search}
-            onChange={onSearch} />
+          <div className="left">
+            <BackButton />
+          </div>
+
+          <div className="center">
+            <Input
+              value={search}
+              placeholder={i18n.t('Search', language)}
+              onChange={onSearch} />
+          </div>
           
           <div className="right">
             <ToolbarButton>
-              <Icon icon="md-close" onClick={onClose} />
+              <Icon icon="md-close" onClick={onClearSearch} />
             </ToolbarButton>
           </div>
         </Toolbar>

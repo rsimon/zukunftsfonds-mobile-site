@@ -1,23 +1,30 @@
-.search {
+#root {
   
-  .search-results {
-    width:100%;
-    height:100%;
+  .search {
+  
+    .search-results {
+      width:100%;
+      height:100%;
+    }
+
   }
 
-}
+  ons-input {
+  
+    input[type=text] {
+      height:28px;
+      color:#fff;
+      border-bottom:1px solid #fff;
+    }
 
-ons-search-input {
-  padding:5px 10px;
- 
-  input[type='search'] {
-    background-color:transparent;
-    box-shadow:none;
-    border-radius:0;
-    border-bottom:1px solid #969696;
-    background-position:2px center;
-    padding:0 12px 0 30px;
-    height:40px;
+    input[type=text]:focus {
+      background-image:none;
+    }
+    
+    span {
+      color:rgba(255, 255, 255, 0.5);
+    }
+
   }
 
 }

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Icon, Page, Splitter, SplitterContent, SplitterSide, Toolbar, ToolbarButton } from 'react-onsenui';
 import AliceCarousel from 'react-alice-carousel';
-import SearchPage from '../search/SearchPage';
 import SideMenu from '../SideMenu';
 
 import 'react-alice-carousel/lib/alice-carousel.css';

@@ -21,23 +21,23 @@ const SideMenu = props => {
       <List>
         <ListItem onClick={onSearch}>
           <Icon icon="md-search" />
-          <label>{i18n.t('Search')}</label>
+          <label>{i18n.t('Search', language)}</label>
         </ListItem>
       </List>
 
       <List>
         <ListHeader>
           <Icon icon="md-info-outline" />
-          <label>{i18n.t('Information')}</label>
+          <label>{i18n.t('Information', language)}</label>
         </ListHeader>
 
         <ListItem>
-          <label>{i18n.t('Help')}</label>
+          <label>{i18n.t('Help', language)}</label>
         </ListItem>  
 
         <ListItem className="projects">
           <div>
-            <label>{i18n.t('Projects')}</label>
+            <label>{i18n.t('Projects', language)}</label>
             <ul>
               <li>Orthodoxes Wien</li>
               <li>Oberhollabrunn</li>
@@ -46,14 +46,14 @@ const SideMenu = props => {
         </ListItem>
         
         <ListItem>
-          <label>{i18n.t('About Us')}</label>
+          <label>{i18n.t('About Us', language)}</label>
         </ListItem>
       </List>
       
       <List>
         <ListHeader>
           <Icon icon="md-walk" />
-          <label>{i18n.t('Walking Tours')}</label>
+          <label>{i18n.t('Walking Tours', language)}</label>
         </ListHeader>
         
         <ListItem>
@@ -64,7 +64,7 @@ const SideMenu = props => {
       <List className="set-language">
         <ListHeader>
           <Icon icon="md-translate" />
-          <label>{i18n.t('Language')}</label>
+          <label>{i18n.t('Language', language)}</label>
         </ListHeader>
         
         <ListItem>
