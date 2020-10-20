@@ -1,4 +1,5 @@
 import React from 'react';
+import { RecoilRoot } from 'recoil';
 import { Navigator } from 'react-onsenui';
 import SplashPage from './splash/SplashPage';
 import 'onsenui/css/onsenui.css';
@@ -20,11 +21,13 @@ const App = props => {
     });
 
   return (
-    <Navigator
-      renderPage={renderPage}
-      initialRoute={{ component: SplashPage }} 
-      animation="slide"
-      swipeable />
+    <RecoilRoot>
+      <Navigator
+        renderPage={renderPage}
+        initialRoute={{ component: SplashPage }} 
+        animation="slide"
+        swipeable />
+    </RecoilRoot>
   );
 
 }
