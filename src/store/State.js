@@ -2,7 +2,7 @@ import { atom } from 'recoil';
 
 export const languageState = atom({
   key: 'language',
-  default: 'en'
+  default: window.localStorage.getItem('zukunftsfonds.language') || 'en'
 });
 
 export const searchQueryState = atom({

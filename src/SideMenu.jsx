@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon, List, ListHeader, ListItem, Page, Radio } from 'react-onsenui';
-import { useRecoilValue, useSetRecoilState } from 'recoil';
+import { useRecoilState } from 'recoil';
 import { languageState } from './store/State';
 import i18n from './i18n';
 import SearchPage from './search/SearchPage';
@@ -9,9 +9,12 @@ import './SideMenu.scss';
 
 const SideMenu = props => {
 
-  const language = useRecoilValue(languageState);
+  const [ language, setLanguage ] = useRecoilState(languageState);
 
-  const setLanguage = useSetRecoilState(languageState);
+  const onChangeLanguage = lang => {
+    setLanguage(lang);
+    window.localStorage.setItem('zukunftsfonds.language', lang);
+  }
 
   const onSearch = () =>
     props.navigator.pushPage({ component: SearchPage });
@@ -72,7 +75,7 @@ const SideMenu = props => {
             <Radio 
               inputId='EN' 
               name='EN' 
-              onChange={() => setLanguage('en')} 
+              onChange={() => onChangeLanguage('en')} 
               checked={language === 'en'} />
           </label>
           
@@ -85,7 +88,7 @@ const SideMenu = props => {
             <Radio 
               inputId='DE' 
               name='DE' 
-              onChange={() => setLanguage('de')} 
+              onChange={() => onChangeLanguage('de')} 
               checked={language === 'de'} />
           </label>
           
