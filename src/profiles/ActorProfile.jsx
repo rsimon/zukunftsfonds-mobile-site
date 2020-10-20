@@ -1,6 +1,8 @@
 import React from 'react';
-import { BackButton, Page, Toolbar } from 'react-onsenui';
-import { getResidences, navigateTo } from './Utils';
+import { BackButton, Icon, List, ListHeader, ListItem, Page, Toolbar } from 'react-onsenui';
+import { getResidences, getTranslation, navigateTo } from './Utils';
+
+import './Profile.scss';
 
 const ActorProfile = props => {
 
@@ -23,15 +25,23 @@ const ActorProfile = props => {
       }>
 
       {item.description.map((d, idx) => 
-        <div key={idx} className="description">{d.value}</div>
+        <div key={idx} className="description">{getTranslation(d.value)}</div>
       )}
 
-      {residences.map((r, idx) =>
-        <div key={idx} className="residence" onClick={navigateTo(r, navigator)}>
-          <span className="title">{r.properties.title}</span>
-          { r.geometry?.title && <span className="location">{r.geometry.title}</span> }
-        </div>
-      )}
+      <List
+        className="related places"
+        dataSource={residences}
+        renderHeader={() =>
+          <ListHeader>
+            <Icon icon="md-pin" />
+            <label>Orte</label>
+          </ListHeader>
+        }
+        renderRow={(r, idx) => 
+          <ListItem key={idx} className="related residence" onClick={navigateTo(r, navigator)}>
+            <span className="title">{r.properties.title}</span>
+          </ListItem>
+        } />
     </Page>
   )
 

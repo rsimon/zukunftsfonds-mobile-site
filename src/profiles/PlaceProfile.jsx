@@ -1,10 +1,11 @@
 import React, { useEffect, useRef } from 'react';
-import { BackButton, Page, Toolbar } from 'react-onsenui';
+import { Icon, BackButton, List, ListHeader, ListItem, Page, Toolbar } from 'react-onsenui';
 import { GeoJSON, Map, TileLayer } from 'react-leaflet';
 import bbox from '@turf/bbox';
 import { getActors, navigateTo } from './Utils';
 
 import 'leaflet/dist/leaflet.css';
+import './Profile.scss';
 
 const getBounds = geojson => {
   const corners = bbox(geojson);
@@ -59,11 +60,20 @@ const PlaceProfile = props => {
         <div key={idx} className="description">{d.value}</div>
       )}
 
-      {actors.map((actor, idx) =>
-        <div key={idx} className="actor" onClick={navigateTo(actor, navigator)}>
-          <span className="title">{actor.properties.title}</span>
-        </div>
-      )}
+      <List
+        className="related actors"
+        dataSource={actors}
+        renderHeader={() =>
+          <ListHeader>
+            <Icon icon="md-account" />
+            <label>Personen</label>
+          </ListHeader>
+        }
+        renderRow={(r, idx) => 
+          <ListItem key={idx} className="related residence" onClick={navigateTo(r, navigator)}>
+            <span className="title">{r.properties.title}</span>
+          </ListItem>
+        } />
     </Page>
   )
 

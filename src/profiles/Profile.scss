@@ -1,0 +1,49 @@
+.profile {
+
+  .description {
+    padding:20px;
+    line-height:150%;
+  }
+
+  .related {
+
+    ons-icon {
+      font-size:20px;
+      margin-right:8px;
+      vertical-align:bottom;
+      
+    }
+
+    ons-list-header {
+      font-size:17px;
+      color:#66562f;
+      padding:20px 20px 5px 22px;
+    }
+
+    ons-list-item {
+      padding:5px 20px;
+
+      div {
+        padding:10px;
+        border-radius:3px;
+        background-color:#ebe8e1;
+        border:1px solid #a08952;
+      }
+    }
+
+  }
+
+}
+
+.profile.place {
+
+  .map-container {
+    width:100%;
+    position:relative;
+
+    .leaflet-container {
+      height:200px;
+    }
+  }
+
+}
