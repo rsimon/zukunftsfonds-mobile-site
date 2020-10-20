@@ -3,7 +3,8 @@ import PlaceProfile from '../profiles/PlaceProfile';
 
 const PROFILE_COMPONENTS = {
   'crm:E18_Physical_Thing': PlaceProfile,
-  'crm:E21_Person': ActorProfile
+  'crm:E21_Person': ActorProfile,
+  'crm:E74_Group': ActorProfile
 }
 
 /** Returns the right JSX profile component for this item **/
