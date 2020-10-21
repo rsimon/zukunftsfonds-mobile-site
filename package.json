@@ -2,6 +2,7 @@
   "name": "zukunftsfonds-mobile-site",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@turf/bbox": "^6.0.1",
     "axios": "^0.20.0",
