@@ -3,7 +3,7 @@ import { Icon, List, ListHeader, ListItem, Page, Radio } from 'react-onsenui';
 import { useRecoilState } from 'recoil';
 import { languageState } from './store/State';
 import { fetchUserLocation } from './tour';
-import i18n from './i18n';
+import { useI18N } from './i18n';
 import SearchPage from './search/SearchPage';
 import SplashPage from './splash/SplashPage';
 
@@ -12,6 +12,8 @@ import './SideMenu.scss';
 const SideMenu = props => {
 
   const [ language, setLanguage ] = useRecoilState(languageState);
+
+  const i18n = useI18N();
 
   const onChangeLanguage = lang => {
     setLanguage(lang);
@@ -35,27 +37,27 @@ const SideMenu = props => {
       <List>
         <ListItem onClick={onHome}>
           <Icon icon="md-home" />
-          <label>{i18n.t('Home', language)}</label>
+          <label>{i18n('Home')}</label>
         </ListItem>
         <ListItem onClick={onSearch}>
           <Icon icon="md-search" />
-          <label>{i18n.t('Search', language)}</label>
+          <label>{i18n('Search')}</label>
         </ListItem>
       </List>
 
       <List>
         <ListHeader>
           <Icon icon="md-info-outline" />
-          <label>{i18n.t('Information', language)}</label>
+          <label>{i18n('Information')}</label>
         </ListHeader>
 
         <ListItem>
-          <label>{i18n.t('Help', language)}</label>
+          <label>{i18n('Help')}</label>
         </ListItem>  
 
         <ListItem className="projects">
           <div>
-            <label>{i18n.t('Projects', language)}</label>
+            <label>{i18n('Projects')}</label>
             <ul>
               <li>Orthodoxes Wien</li>
               <li>Oberhollabrunn</li>
@@ -64,14 +66,14 @@ const SideMenu = props => {
         </ListItem>
         
         <ListItem>
-          <label>{i18n.t('About Us', language)}</label>
+          <label>{i18n('About Us')}</label>
         </ListItem>
       </List>
       
       <List>
         <ListHeader>
           <Icon icon="md-walk" />
-          <label>{i18n.t('Walking Tours', language)}</label>
+          <label>{i18n('Walking Tours')}</label>
         </ListHeader>
         
         <ListItem onClick={onStartTour}>
@@ -82,7 +84,7 @@ const SideMenu = props => {
       <List className="set-language">
         <ListHeader>
           <Icon icon="md-translate" />
-          <label>{i18n.t('Language', language)}</label>
+          <label>{i18n('Language')}</label>
         </ListHeader>
         
         <ListItem>

@@ -3,14 +3,14 @@ import { BackButton, Icon, Page, Input, Toolbar, ToolbarButton } from 'react-ons
 import ResultList from './ResultList';
 import { getProfileComponent } from '../profiles/Utils';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
-import { languageState, searchQueryState, searchResultState } from '../store/State';
-import i18n from '../i18n';
+import { searchQueryState, searchResultState } from '../store/State';
+import { useI18N }from '../i18n';
 
 import './SearchPage.scss';
 
 const SearchPage = props => {
 
-  const language = useRecoilValue(languageState);
+  const i18n = useI18N();
 
   // We'll keep search state global, so we can persist across page navigation
   const search = useRecoilValue(searchQueryState);
@@ -55,7 +55,7 @@ const SearchPage = props => {
           <div className="center">
             <Input
               value={search}
-              placeholder={i18n.t('Search', language)}
+              placeholder={i18n('Search')}
               onChange={onSearch} />
           </div>
           

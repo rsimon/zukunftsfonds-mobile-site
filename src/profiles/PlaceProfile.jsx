@@ -2,11 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import { Icon, List, ListHeader, ListItem } from 'react-onsenui';
 import { GeoJSON, Map, TileLayer } from 'react-leaflet';
 import bbox from '@turf/bbox';
-import { useRecoilValue } from 'recoil';
-import { languageState } from '../store/State';
-import { getActors, getTranslation, navigateTo } from './Utils';
+import { getActors, navigateTo } from './Utils';
 import PageWithMenu from '../PageWithMenu';
-import i18n from '../i18n';
+import { useI18N, useBilingual } from '../i18n';
 
 import 'leaflet/dist/leaflet.css';
 import './Profile.scss';
@@ -21,7 +19,9 @@ const getBounds = geojson => {
 
 const PlaceProfile = props => {
 
-  const language = useRecoilValue(languageState);
+  const i18n = useI18N();
+
+  const getTranslation = useBilingual();
 
   const mapRef = useRef();
 
@@ -56,7 +56,7 @@ const PlaceProfile = props => {
         </Map>
       </div>
       {item.description.map((d, idx) => 
-        <div key={idx} className="description">{getTranslation(d.value, language)}</div>
+        <div key={idx} className="description">{getTranslation(d.value)}</div>
       )}
 
       <List
@@ -65,7 +65,7 @@ const PlaceProfile = props => {
         renderHeader={() =>
           <ListHeader>
             <Icon icon="md-account" />
-            <label>{i18n.t('People', language)}</label>
+            <label>{i18n('People')}</label>
           </ListHeader>
         }
         renderRow={(r, idx) => 

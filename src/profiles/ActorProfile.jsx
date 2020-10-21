@@ -1,16 +1,16 @@
 import React from 'react';
 import { Icon, List, ListHeader, ListItem } from 'react-onsenui';
-import { getResidences, getTranslation, navigateTo } from './Utils';
-import { useRecoilValue } from 'recoil';
-import { languageState } from '../store/State';
+import { getResidences, navigateTo } from './Utils';
 import PageWithMenu from '../PageWithMenu';
-import i18n from '../i18n';
+import { useI18N, useBilingual } from '../i18n';
 
 import './Profile.scss';
 
 const ActorProfile = props => {
 
-  const language = useRecoilValue(languageState);
+  const i18n = useI18N();
+
+  const getTranslation = useBilingual();
 
   const { item, store, navigator } = props;
 
@@ -24,7 +24,7 @@ const ActorProfile = props => {
       navigator={props.navigator}>
 
       {item.description.map((d, idx) => 
-        <div key={idx} className="description">{getTranslation(d.value, language)}</div>
+        <div key={idx} className="description">{getTranslation(d.value)}</div>
       )}
 
       <List
@@ -33,7 +33,7 @@ const ActorProfile = props => {
         renderHeader={() =>
           <ListHeader>
             <Icon icon="md-pin" />
-            <label>{i18n.t('Places', language)}</label>
+            <label>{i18n('Places')}</label>
           </ListHeader>
         }
         renderRow={(r, idx) => 

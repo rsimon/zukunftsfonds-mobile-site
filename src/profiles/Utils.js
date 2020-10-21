@@ -33,12 +33,3 @@ export const getActors = (place, store) => {
 
   return location?.relationTo ? store.getActorsWithResidence(location.relationTo) : [];
 }
-
-export const getTranslation = (description, language) => {
-  // Project convention: ------------ separates EN from DE
-  if (description.indexOf('------------') === -1) {
-    return description;
-  } else {
-    return language === 'de' ? description.split('------------')[0].trim() : description.split('------------')[1].trim();
-  }
-}
