@@ -2,6 +2,7 @@ import React from 'react';
 import { Icon, List, ListHeader, ListItem, Page, Radio } from 'react-onsenui';
 import { useRecoilState } from 'recoil';
 import { languageState } from './store/State';
+import { fetchUserLocation } from './tour';
 import i18n from './i18n';
 import SearchPage from './search/SearchPage';
 import SplashPage from './splash/SplashPage';
@@ -22,6 +23,12 @@ const SideMenu = props => {
 
   const onSearch = () =>
     props.navigator.pushPage({ component: SearchPage });
+
+  // Just for testing
+  const onStartTour = () =>
+    fetchUserLocation()
+      .then(pos => console.log(pos))
+      .catch(() => console.log('rejected or not available'));
 
   return (
     <Page className="side-menu">
@@ -67,7 +74,7 @@ const SideMenu = props => {
           <label>{i18n.t('Walking Tours', language)}</label>
         </ListHeader>
         
-        <ListItem>
+        <ListItem onClick={onStartTour}>
           <label>Oberhollabrunn</label>
         </ListItem>
       </List>
