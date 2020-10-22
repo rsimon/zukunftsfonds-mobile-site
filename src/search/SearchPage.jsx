@@ -18,7 +18,7 @@ const SearchPage = props => {
   
   const results = useRecoilValue(searchResultState);
   const setResults = useSetRecoilState(searchResultState);
-
+  
   const onSearch = evt => {
     const query = evt.target.value.toLowerCase();
 
@@ -34,7 +34,7 @@ const SearchPage = props => {
 
   const onSelectResult = result =>
     props.navigator.pushPage({ 
-      component: getProfileComponent(result), 
+      component: getProfileComponent(result),
       item: result 
     });
 

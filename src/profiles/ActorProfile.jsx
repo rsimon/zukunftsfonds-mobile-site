@@ -3,7 +3,7 @@ import { Icon, List, ListHeader, ListItem } from 'react-onsenui';
 import { getResidences, navigateTo } from './Utils';
 import PageWithMenu from '../PageWithMenu';
 import { useI18N, useBilingual } from '../i18n';
-import ImageSlider from './ImageSlider';
+import ImageSlider, { hasDepictions } from './ImageSlider';
 
 import './Profile.scss';
 
@@ -16,7 +16,7 @@ const ActorProfile = props => {
   const { item, store, navigator } = props;
 
   const residences = getResidences(item, store);
-
+  
   return (
     <PageWithMenu 
       backButton
@@ -24,11 +24,11 @@ const ActorProfile = props => {
       title={item.properties.title}
       navigator={props.navigator}>
 
-      {item.description.map((d, idx) => 
+      { item.description.map((d, idx) => 
         <div key={idx} className="description">{getTranslation(d.value)}</div>
       )}
 
-      {item.depictions && item.depictions.length > 0 && 
+      { hasDepictions(item) && 
         <ImageSlider depictions={item.depictions} />
       }
 

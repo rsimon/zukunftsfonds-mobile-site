@@ -5,6 +5,7 @@ import bbox from '@turf/bbox';
 import { getActors, navigateTo } from './Utils';
 import PageWithMenu from '../PageWithMenu';
 import { useI18N, useBilingual } from '../i18n';
+import ImageSlider, { hasDepictions } from './ImageSlider';
 
 import 'leaflet/dist/leaflet.css';
 import './Profile.scss';
@@ -55,9 +56,14 @@ const PlaceProfile = props => {
           <GeoJSON data={item} />
         </Map>
       </div>
-      {item.description.map((d, idx) => 
+
+      { item.description.map((d, idx) => 
         <div key={idx} className="description">{getTranslation(d.value)}</div>
       )}
+
+      { hasDepictions(item) && 
+        <ImageSlider depictions={item.depictions} />
+      }
 
       <List
         className="related actors"

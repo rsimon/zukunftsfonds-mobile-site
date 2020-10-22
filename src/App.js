@@ -10,13 +10,11 @@ import './App.scss';
 
 const App = props => {
 
-  // TODO looks like this renders multiple times!
-
   const renderPage = (route, navigator) =>
     React.createElement(route.component, { 
       ...route, 
       navigator, 
-      key: uuid(), // Needs a key per definition and we want to re-render always
+      key: props.key || uuid(), // Needs a key per definition and we want to re-render always
       store: props.store
     });
 
@@ -24,7 +22,7 @@ const App = props => {
     <RecoilRoot>
       <Navigator
         renderPage={renderPage}
-        initialRoute={{ component: SplashPage }} 
+        initialRoute={{ component: SplashPage, key: 'SplashPage' }} 
         animation="slide"
         swipeable />
     </RecoilRoot>

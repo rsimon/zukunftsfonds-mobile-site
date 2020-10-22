@@ -5,6 +5,25 @@
     line-height:150%;
   }
 
+  .image-carousel {
+    background-color: #e2e2e2;
+    padding: 7px;
+    border: 1px solid #ccc;
+
+    .image-wrapper {
+      padding:0 3px;
+      height:240px;
+      position:relative;
+      
+      img {
+        height:100%;
+        border: 1px solid #ccc;
+      }
+
+    }
+
+  }
+
   .related {
 
     ons-icon {

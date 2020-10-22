@@ -18,7 +18,7 @@ const SplashPage = props => {
   const i18n = useI18N();
 
   const getTranslation = useBilingual();
-
+  
   return (
     <PageWithMenu 
       title={i18n('Orthodox Europe')}
