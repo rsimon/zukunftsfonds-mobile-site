@@ -9,7 +9,6 @@ export default class DataStore {
 
   constructor() {
     this.actors = [];
-    this.events = [];
     this.places = [];
 
     this.search = new JsSearch.Search('@id');   
@@ -24,23 +23,21 @@ export default class DataStore {
 
   load() {
     const loadFile = entityType => 
-      axios.get(`data/api/items_${entityType}.json`).then(response =>
+      axios.get(`data/items_${entityType}.json`).then(response =>
         response.data[0].reduce((items, next) => items.concat(next.features), []));
     
     const responses = Promise.all([
       loadFile('actor'),
-      loadFile('event'),
       loadFile('place')
     ]);
 
     return responses.then(arr => {
-      const [ actors, events, places ] = arr;
+      const [ actors, places ] = arr;
       
       this.actors = actors;
-      this.events = events;
       this.places = places;
 
-      this.search.addDocuments([ ...actors, /* ...events ,*/ ...places ]);
+      this.search.addDocuments([ ...actors, ...places ]);
     });
   }
 
