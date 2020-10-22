@@ -3,6 +3,7 @@ import { Icon, List, ListHeader, ListItem } from 'react-onsenui';
 import { getResidences, navigateTo } from './Utils';
 import PageWithMenu from '../PageWithMenu';
 import { useI18N, useBilingual } from '../i18n';
+import ImageSlider from './ImageSlider';
 
 import './Profile.scss';
 
@@ -26,6 +27,10 @@ const ActorProfile = props => {
       {item.description.map((d, idx) => 
         <div key={idx} className="description">{getTranslation(d.value)}</div>
       )}
+
+      {item.depictions && item.depictions.length > 0 && 
+        <ImageSlider depictions={item.depictions} />
+      }
 
       <List
         className="related places"
