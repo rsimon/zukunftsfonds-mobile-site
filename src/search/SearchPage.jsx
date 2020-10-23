@@ -18,7 +18,7 @@ const SearchPage = props => {
   
   const results = useRecoilValue(searchResultState);
   const setResults = useSetRecoilState(searchResultState);
-  
+
   const onSearch = evt => {
     const query = evt.target.value.toLowerCase();
 

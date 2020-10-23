@@ -3,13 +3,6 @@ import AliceCarousel from 'react-alice-carousel';
 
 import 'react-alice-carousel/lib/alice-carousel.css';
 
-const responsive = {
-  0:    { items: 1 },
-  360:  { items: 2 },
-  640:  { items: 3 },
-  1024: { items: 4 }
-};
-
 const getValidDepictions = depictions => depictions ? 
   depictions.filter(d => d.url.indexOf('http') === 0) : [];
 
@@ -22,7 +15,9 @@ const ImageSlider = props => {
 
   const images = depictions.map(d =>
     <div className="image-wrapper">
-      <img src={d.url} alt={d.title} />
+      <div className="inner">
+        <img src={d.url} alt={d.title} />
+      </div>
     </div>
   )
 
@@ -30,11 +25,9 @@ const ImageSlider = props => {
     <div className="image-carousel">
       <AliceCarousel 
         mouseTracking
-        responsive={responsive}
         disableDotsControls
         disableButtonsControls
-        paddingLeft={3}
-        paddingRight={3}
+        autoWidth
         items={images} />
     </div>
   )

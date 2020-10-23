@@ -9,15 +9,20 @@
     background-color: #e2e2e2;
     padding: 7px;
     border: 1px solid #ccc;
+    box-shadow:inset 0 3px 3px -3px rgba(0,0,0,0.2), inset  0 -3px 3px -3px rgba(0,0,0,0.2);
 
     .image-wrapper {
       padding:0 3px;
-      height:240px;
       position:relative;
-      
-      img {
-        height:100%;
-        border: 1px solid #ccc;
+      display:inline-block;
+
+      .inner { 
+        height:240px;
+        border: 1px solid #bfbfbf;
+
+        img {
+          height:100%;
+        }
       }
 
     }
