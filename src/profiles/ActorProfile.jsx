@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon, List, ListHeader, ListItem } from 'react-onsenui';
-import { getResidences, navigateTo } from './Utils';
+import { getResidences, getRelatedPlaces, navigateTo } from './Utils';
 import PageWithMenu from '../PageWithMenu';
 import { useI18N, useBilingual } from '../i18n';
 import ImageSlider, { hasDepictions } from './ImageSlider';
@@ -15,8 +15,9 @@ const ActorProfile = props => {
 
   const { item, store, navigator } = props;
 
-  const residences = getResidences(item, store);
-  
+  // const residences = getResidences(item, store);
+  const relatedPlaces = getRelatedPlaces(item, store);
+
   return (
     <PageWithMenu 
       backButton
@@ -34,7 +35,7 @@ const ActorProfile = props => {
 
       <List
         className="related places"
-        dataSource={residences}
+        dataSource={relatedPlaces}
         renderHeader={() =>
           <ListHeader>
             <Icon icon="md-pin" />

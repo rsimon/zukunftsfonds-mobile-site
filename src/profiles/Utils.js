@@ -25,6 +25,23 @@ export const getResidences = (actor, store) => {
     store.getPlaceWithLocation(rel.relationTo));
 }
 
+export const getRelatedPlaces = (actor, store) => {
+  const relevantTypes = [
+    'crm:P74_has_current_or_former_residence',
+    'crm:OA8_begins_in',
+    'crm:OA9_ends_in'
+  ];
+
+  const locations =  actor.relations.filter(rel => 
+    relevantTypes.includes(rel.relationType));
+
+  const uniqueURIs = new Set(locations.map(rel => rel.relationTo));
+
+  // Relation points to location -> get place
+  return Array.from(uniqueURIs).map(uri => 
+    store.getPlaceWithLocation(uri));
+}
+
 /** Returns the actors linke to a place **/
 export const getActors = (place, store) => {
   // CRM 'hasFormerOrCurrentLocation' relations on place (if any)
