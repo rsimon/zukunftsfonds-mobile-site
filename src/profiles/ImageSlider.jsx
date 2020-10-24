@@ -5,6 +5,13 @@ import Lightbox from 'react-image-lightbox';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import 'react-image-lightbox/style.css';
 
+const preload = url => new Promise((resolve, reject) => {
+  const img = new Image();
+  img.src = url;
+  img.onload = () => resolve();
+  img.onerror = () => reject();
+})
+
 const getValidDepictions = depictions => depictions ? 
   depictions.filter(d => d.url.indexOf('http') === 0) : [];
 
@@ -14,8 +21,12 @@ export const hasDepictions = item =>
 const ImageSlider = props => {
 
   const [ selected, setSelected ] = useState(null);
+  const [ isLoading, setIsLoading ] = useState(true);
 
   const depictions = getValidDepictions(props.depictions);
+
+  Promise.all(depictions.map(d => preload(d.url))).then(() => 
+    setIsLoading(false));
 
   const getPrev = idx => {
     if (selected !== null && depictions.length > 0) {
@@ -42,12 +53,12 @@ const ImageSlider = props => {
   return (
     <>
       <div className="image-carousel">
-        <AliceCarousel 
+        { !isLoading && <AliceCarousel 
           mouseTracking
           disableDotsControls
           disableButtonsControls
           autoWidth
-          items={images} />
+          items={images} /> }
       </div>
 
       { selected !== null && 
