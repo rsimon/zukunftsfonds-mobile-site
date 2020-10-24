@@ -17,6 +17,20 @@ const ImageSlider = props => {
 
   const depictions = getValidDepictions(props.depictions);
 
+  const getPrev = idx => {
+    if (selected !== null && depictions.length > 0) {
+      const prevIdx = (depictions.length + selected - 1) % depictions.length;
+      return depictions[prevIdx].url
+    }
+  }
+
+  const getNext = idx => {
+    if (selected !== null && depictions.length > 0) {
+      const nextIdx = (selected + 1) % depictions.length;
+      return depictions[nextIdx].url;
+    }
+  }
+
   const images = depictions.map((d, idx) =>
     <div className="image-wrapper">
       <div className="inner">
@@ -36,9 +50,14 @@ const ImageSlider = props => {
           items={images} />
       </div>
 
-      { selected && 
+      { selected !== null && 
         <Lightbox 
-          mainSrc={depictions[selected].url} />
+          mainSrc={depictions[selected].url} 
+          prevSrc={getPrev()}
+          nextSrc={getNext()}
+          onMovePrevRequest={() => setSelected((depictions.length + selected - 1) % depictions.length)}
+          onMoveNextRequest={() => setSelected((selected + 1) % depictions.length)}
+          onCloseRequest={() => setSelected(null) } />
       }
     </>
   )
