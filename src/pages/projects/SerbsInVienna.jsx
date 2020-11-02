@@ -111,6 +111,9 @@ const Page = props => {
           {DESCRIPTION[lang]}
         </div>
       </div>
+      <footer>
+        <img src="images/wienkultur_logo_RGB.png" alt="Logo Wien Kultur"></img>
+      </footer>
     </PageWithMenu>
   )
 }
