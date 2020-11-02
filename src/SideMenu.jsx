@@ -4,8 +4,11 @@ import { useRecoilState } from 'recoil';
 import { languageState } from './store/State';
 import { fetchUserLocation } from './tour';
 import { useI18N } from './i18n';
+
 import SearchPage from './search/SearchPage';
 import SplashPage from './splash/SplashPage';
+
+import SerbsInVienna from './pages/projects/SerbsInVienna';
 
 import './SideMenu.scss';
 
@@ -20,11 +23,8 @@ const SideMenu = props => {
     window.localStorage.setItem('zukunftsfonds.language', lang);
   }
 
-  const onHome = () => 
-    props.navigator.pushPage({ component: SplashPage });
-
-  const onSearch = () =>
-    props.navigator.pushPage({ component: SearchPage });
+  const goTo = component => () =>
+    props.navigator.pushPage({ component });
 
   // Just for testing
   const onStartTour = () =>
@@ -35,11 +35,11 @@ const SideMenu = props => {
   return (
     <Page className="side-menu">
       <List>
-        <ListItem onClick={onHome}>
+        <ListItem onClick={goTo(SplashPage)}>
           <Icon icon="md-home" />
           <label>{i18n('Home')}</label>
         </ListItem>
-        <ListItem onClick={onSearch}>
+        <ListItem onClick={goTo(SearchPage)}>
           <Icon icon="md-search" />
           <label>{i18n('Search')}</label>
         </ListItem>
@@ -59,7 +59,7 @@ const SideMenu = props => {
           <div>
             <label>{i18n('Projects')}</label>
             <ul>
-              <li>Orthodoxes Wien</li>
+              <li onClick={goTo(SerbsInVienna)}>{i18n('Serbs in Vienna 1741-1918')}</li>
               <li>Oberhollabrunn</li>
             </ul>
           </div>

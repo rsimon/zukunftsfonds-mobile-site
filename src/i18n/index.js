@@ -30,6 +30,10 @@ export const useI18N = () => {
 
 }
 
+// Just a tiny shorthand to use current language setting more easily
+export const useLang = ()  =>
+  useRecoilValue(languageState)
+
 // Helper to handle the ad-hoc 'bilingual' description format of the project
 export const useBilingual = () => {
   
