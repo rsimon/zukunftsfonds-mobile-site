@@ -64,10 +64,6 @@ const SideMenu = props => {
             </ul>
           </div>
         </ListItem>
-        
-        <ListItem>
-          <label>{i18n('About Us')}</label>
-        </ListItem>
       </List>
       
       <List>
