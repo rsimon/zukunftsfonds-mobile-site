@@ -104,7 +104,8 @@ const Page = props => {
   return(
     <PageWithMenu
       title={PAGE_TITLE[lang]}
-      navigator={props.navigator}>
+      navigator={props.navigator}
+      backButton>
       <div className="page-container">
         <h1>{TEXT_TITLE[lang]}</h1>
         <div>
