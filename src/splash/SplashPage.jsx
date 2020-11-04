@@ -2,6 +2,8 @@ import React from 'react';
 import { Button, Icon } from 'react-onsenui';
 import PageWithMenu from '../PageWithMenu';
 import { useI18N, useBilingual } from '../i18n';
+import SearchPage from '../search/SearchPage';
+import SerbsInVienna from '../pages/projects/SerbsInVienna';
 
 import './SplashPage.scss';
 
@@ -19,6 +21,9 @@ const SplashPage = props => {
   const i18n = useI18N();
 
   const getTranslation = useBilingual();
+
+  const goTo = component => () =>
+    props.navigator.pushPage({ component });
   
   return (
     <PageWithMenu 
@@ -31,7 +36,7 @@ const SplashPage = props => {
         </div>
 
         <div className="buttons">
-          <Button modifier="large">
+          <Button modifier="large" onClick={goTo(SearchPage)}>
             <Icon icon="md-search" />
             <label>{i18n('Search')}</label>
           </Button>
@@ -45,6 +50,21 @@ const SplashPage = props => {
             {getTranslation(SPLASH_MESSAGE)}
           </p>
         </div>
+
+        <div className="projects">
+          <h2>{i18n('Projects')}</h2>
+          <ol>
+            <li>
+              <Button modifier="large--quiet" onClick={goTo(SerbsInVienna)}>
+                {i18n('Serbs in Vienna 1741-1918')}
+              </Button>
+            </li>
+          </ol>
+        </div>
+
+        <footer>
+
+        </footer>
       </div>
     </PageWithMenu>
   )

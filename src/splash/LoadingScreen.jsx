@@ -1,5 +1,5 @@
 import React from 'react';
-import { Page, ProgressCircular } from 'react-onsenui';
+import { ProgressCircular } from 'react-onsenui';
 
 import './LoadingScreen.scss';
 
