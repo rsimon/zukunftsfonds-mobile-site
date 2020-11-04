@@ -14,15 +14,7 @@ export const getProfileComponent = item => PROFILE_COMPONENTS[item.crmClass];
 export const navigateTo = (item, navigator) => _ =>
   navigator.pushPage({ component: getProfileComponent(item), item });
 
-/** Returns the actors linked to a place **/
-export const getActors = (place, store) => {
-  // CRM 'hasFormerOrCurrentLocation' relations on place (if any)
-  const location = place.relations.find(rel =>
-    rel.relationType === 'crm:P53_has_former_or_current_location');
-
-  return location?.relationTo ? store.getActorsWithResidence(location.relationTo) : [];
-}
-
+/** Helper to determine whether the item has any non-empty geometries **/
 export const hasGeometry = item => {
   if (!item)
     return false; 

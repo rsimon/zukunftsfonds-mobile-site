@@ -2,7 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { Icon, List, ListHeader, ListItem } from 'react-onsenui';
 import { GeoJSON, Map, TileLayer } from 'react-leaflet';
 import bbox from '@turf/bbox';
-import { getActors, navigateTo, hasGeometry } from './Utils';
+import { getRelatedItems } from './RelatedItems';
+import { navigateTo, hasGeometry } from './Utils';
 import PageWithMenu from '../PageWithMenu';
 import { useI18N, useBilingual } from '../i18n';
 import ImageSlider, { hasDepictions } from './ImageSlider';
@@ -37,7 +38,7 @@ const PlaceProfile = props => {
     }
   }, [ item, hasGeom ]);
 
-  const actors = getActors(item, store);
+  const actors = getRelatedItems(item, store).actors;
 
   return (
     <PageWithMenu 

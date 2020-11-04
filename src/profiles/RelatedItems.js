@@ -8,11 +8,15 @@ const distinct = items => {
 class RelatedItems {
 
   constructor(item, store) {
-    this.relations = item.relations;
+    this.item = item;
     this.store = store;
   }
 
   /**
+   * If this item is an actor, it will have places connected to it.
+   * This method performs a "forward lookup", based on the links
+   * included in this item.
+   * 
    * Returns an object with the following properties:
    * 
    * places.begins_in
@@ -31,7 +35,7 @@ class RelatedItems {
     ];
 
     // Relations with these types
-    const relations =  this.relations.filter(rel =>
+    const relations = this.item.relations.filter(rel =>
       relevantTypes.includes(rel.relationType));
 
     // Resolve referred locations to places
@@ -54,8 +58,18 @@ class RelatedItems {
     }
   }
 
+  /**
+   * If this item is a place, other items in the store will have
+   * connections to it. This method performs a "reverse lookup",
+   * fetching every actor from the store that references this
+   * place.
+   */
   get actors() {
+    const location = this.item.relations.find(rel => 
+      rel.relationType === 'crm:P53_has_former_or_current_location');
 
+    return location ?
+      this.store.getActorsWithLocation(location.relationTo) : [];
   }
 
 }

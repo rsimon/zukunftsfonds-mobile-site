@@ -54,9 +54,15 @@ export default class DataStore {
       rel.relationTo === id && rel.relationType === 'crm:P53_has_former_or_current_location'));
   }
 
-  getActorsWithResidence(id) {
+  getActorsWithLocation(id) {
+    const relevantTypes = [
+      'crm:OA8_begins_in',
+      'crm:OA9_ends_in',
+      'crm:P74_has_current_or_former_residence'
+    ];
+
     return this.actors.filter(actor => actor.relations.find(rel => 
-      rel.relationTo === id && rel.relationType === 'crm:P74_has_current_or_former_residence'));
+      rel.relationTo === id && relevantTypes.includes(rel.relationType)));
   }
   
 }
