@@ -5,7 +5,5 @@ Mobile site UI Design for the Zukunftsfonds project.
 ## TODOs
 
 - Prototype Leaflet curve connection lines
-- Prototype profile page with images
+- Proper splash page (with links to Search and Map, project descriptions)
 - Loading page
-- Places without coordinates currently break - implement a "no location" design for this case
-- Search filters: case studies? entity types?
