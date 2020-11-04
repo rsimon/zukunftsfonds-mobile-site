@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button, Icon } from 'react-onsenui';
 import PageWithMenu from '../PageWithMenu';
 import { useI18N, useBilingual } from '../i18n';
 
@@ -27,6 +28,13 @@ const SplashPage = props => {
       <div className="splash-page-container">
         <div className="splash-image-container">
           <img className="splash-image" src="images/OrthodoxyInEurope.png" alt="Orthodoxy in Europe - Map" />
+        </div>
+
+        <div className="buttons">
+          <Button modifier="large">
+            <Icon icon="md-search" />
+            <label>{i18n('Search')}</label>
+          </Button>
         </div>
 
         <div className="splash-message">
