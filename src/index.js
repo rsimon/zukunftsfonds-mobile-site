@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import LoadingScreen from './splash/LoadingScreen';
 import * as serviceWorker from './serviceWorker';
 import DataStore from './store/DataStore';
 import L from 'leaflet';
@@ -22,9 +23,9 @@ const Launcher = () => {
 
   const store = new DataStore();
   store.load().then(() => setIsLoading(false));
-
+  
   return (
-    <>{ isLoading ? <div>Loading</div> : <App store={store} /> }</>
+    <>{ isLoading ? <LoadingScreen /> : <App store={store} /> }</>
   )
 
 }

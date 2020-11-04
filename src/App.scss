@@ -1,44 +1,49 @@
-#root ons-page {
-  font-family:'Montserrat', sans-serif;
-
-  .page__background {
-    background-color:#fff;
-  }
-
-  .page-container {
-    padding:20px;
-    line-height:160%;
-
-    h1 {
-      font-size:19px;
-      line-height:165%;
-      padding-bottom:20px;
-    }
-  }
-
-  footer {
-    border-top:1px solid #d3d3d3;
-    background-color:#dfdfdf;
-    padding:20px;
-    position:relative;
-    text-align:center;
-
-    img {
-      max-width:240px;
-    }
-  }
-
-  ons-toolbar {
-    background-color:#a08952;
-
-    div, ons-toolbar-button {
-      color:#fff;
-    }
-
-    ons-back-button svg {
-      fill:#fff;
-    }
+#root { 
+  height:100%;
   
+  ons-page {
+    font-family:'Montserrat', sans-serif;
+
+    .page__background {
+      background-color:#fff;
+    }
+
+    .page-container {
+      padding:20px;
+      line-height:160%;
+
+      h1 {
+        font-size:19px;
+        line-height:165%;
+        padding-bottom:20px;
+      }
+    }
+
+    footer {
+      border-top:1px solid #d3d3d3;
+      background-color:#dfdfdf;
+      padding:20px;
+      position:relative;
+      text-align:center;
+
+      img {
+        max-width:240px;
+      }
+    }
+
+    ons-toolbar {
+      background-color:#a08952;
+
+      div, ons-toolbar-button {
+        color:#fff;
+      }
+
+      ons-back-button svg {
+        fill:#fff;
+      }
+    
+    }
+
   }
 
 }
