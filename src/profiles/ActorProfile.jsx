@@ -1,6 +1,7 @@
 import React from 'react';
 import { Icon, List, ListHeader, ListItem } from 'react-onsenui';
-import { getResidences, getRelatedPlaces, navigateTo } from './Utils';
+import { navigateTo } from './Utils';
+import { getRelatedItems } from './RelatedItems';
 import PageWithMenu from '../PageWithMenu';
 import { useI18N, useBilingual } from '../i18n';
 import ImageSlider, { hasDepictions } from './ImageSlider';
@@ -15,8 +16,7 @@ const ActorProfile = props => {
 
   const { item, store, navigator } = props;
 
-  // const residences = getResidences(item, store);
-  const relatedPlaces = getRelatedPlaces(item, store);
+  const relatedPlaces = getRelatedItems(item, store).places.all;
 
   return (
     <PageWithMenu 

@@ -1,3 +1,9 @@
+// De-duplicates the list of items, using their URI for equality
+const distinct = items => {
+  const uris = items.map(item => item['@id']);
+  return items.filter((item, pos) => uris.indexOf(item['@id']) === pos);
+}
+
 /** Helper class to deal with related places/actors more easily **/
 class RelatedItems {
 
@@ -43,7 +49,8 @@ class RelatedItems {
     return {
       begins_in: filter('crm:OA8_begins_in'),
       ends_in: filter('crm:OA9_ends_in'),
-      has_residence: filter('crm:P74_has_current_or_former_residence')
+      has_residence: filter('crm:P74_has_current_or_former_residence'),
+      all: distinct(places.map(p => p.resolved)) // TODO de-duplicate
     }
   }
 
@@ -53,7 +60,5 @@ class RelatedItems {
 
 }
 
-const getRelatedItems = (item, store) =>
+export const getRelatedItems = (item, store) =>
   new RelatedItems(item, store);
-
-export default getRelatedItems;

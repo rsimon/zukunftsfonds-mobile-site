@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Icon, List, ListHeader, ListItem } from 'react-onsenui';
 import { GeoJSON, Map, TileLayer } from 'react-leaflet';
 import bbox from '@turf/bbox';
-import { getActors, navigateTo } from './Utils';
+import { getActors, navigateTo, hasGeometry } from './Utils';
 import PageWithMenu from '../PageWithMenu';
 import { useI18N, useBilingual } from '../i18n';
 import ImageSlider, { hasDepictions } from './ImageSlider';
@@ -28,12 +28,14 @@ const PlaceProfile = props => {
 
   const { item, navigator, store } = props;
 
+  const hasGeom = hasGeometry(item);
+
   useEffect(() => {
-    if (mapRef.current) {
+    if (mapRef.current && hasGeom) {
       const map = mapRef.current.leafletElement;
       map.fitBounds(getBounds(item));
     }
-  }, [ item ]);
+  }, [ item, hasGeom ]);
 
   const actors = getActors(item, store);
 
@@ -53,11 +55,11 @@ const PlaceProfile = props => {
             attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <GeoJSON data={item} />
+          { hasGeom && <GeoJSON data={item} /> }
         </Map>
       </div>
 
-      { item.description.map((d, idx) => 
+      { item.description && item.description.map((d, idx) => 
         <div key={idx} className="description">{getTranslation(d.value)}</div>
       )}
 

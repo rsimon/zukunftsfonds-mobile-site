@@ -14,38 +14,6 @@ export const getProfileComponent = item => PROFILE_COMPONENTS[item.crmClass];
 export const navigateTo = (item, navigator) => _ =>
   navigator.pushPage({ component: getProfileComponent(item), item });
 
-/** Returns the residences linked to an actor **
-export const getResidences = (actor, store) => {
-  // CRM 'hasCurrentOrFormerResidence' relations on actor (if any)
-  const residences = actor.relations.filter(rel =>
-    rel.relationType === 'crm:P74_has_current_or_former_residence');
-
-  // Relation points to location -> get place
-  return residences.map(rel =>
-    store.getPlaceWithLocation(rel.relationTo));
-}
-*/
-
-export const getRelatedPlaces = (actor, store) => {
-  // Pick up the following CRM types
-  const relevantTypes = [
-    'crm:P74_has_current_or_former_residence',
-    'crm:OA8_begins_in',
-    'crm:OA9_ends_in'
-  ];
-
-  // Location items referred to via these locations
-  const locations =  actor.relations.filter(rel =>
-    relevantTypes.includes(rel.relationType));
-
-  // Locations might be referenced multiple times, through different relations
-  const uniqueURIs = new Set(locations.map(rel => rel.relationTo));
-
-  // Relation points to location -> get place
-  return Array.from(uniqueURIs).map(uri => 
-    store.getPlaceWithLocation(uri));
-}
-
 /** Returns the actors linked to a place **/
 export const getActors = (place, store) => {
   // CRM 'hasFormerOrCurrentLocation' relations on place (if any)
@@ -53,4 +21,17 @@ export const getActors = (place, store) => {
     rel.relationType === 'crm:P53_has_former_or_current_location');
 
   return location?.relationTo ? store.getActorsWithResidence(location.relationTo) : [];
+}
+
+export const hasGeometry = item => {
+  if (!item)
+    return false; 
+
+  if (!item.geometry)
+    return false; 
+
+  if (item.geometry.type === 'GeometryCollection')
+    return item.geometry.geometries?.length > 0 && item.geometry.geometries[0].coordinates;
+
+  return item.geometry?.coordinates?.length > 0;
 }
