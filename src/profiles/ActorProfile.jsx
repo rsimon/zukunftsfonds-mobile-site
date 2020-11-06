@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Icon, List, ListHeader, ListItem } from 'react-onsenui';
-import { navigateTo } from './Utils';
+import { GeoJSON, Map, TileLayer } from 'react-leaflet';
+import bbox from '@turf/bbox';
+import { hasGeometry, navigateTo } from './Utils';
 import { getRelatedItems } from './RelatedItems';
 import PageWithMenu from '../PageWithMenu';
 import { useI18N, useBilingual } from '../i18n';
@@ -8,9 +10,27 @@ import ImageSlider, { hasDepictions } from './ImageSlider';
 
 import './Profile.scss';
 
+const getUnionBounds = geometries => {
+  const bboxes = geometries.map(geom => bbox(geom));
+
+  const corners = [
+    Math.min.apply(null, bboxes.map(t => t[0])),
+    Math.min.apply(null, bboxes.map(t => t[1])),
+    Math.max.apply(null, bboxes.map(t => t[2])),
+    Math.max.apply(null, bboxes.map(t => t[3]))
+  ];
+
+  return [ // Leaflet order
+    [ corners[1], corners[0] ],
+    [ corners[3], corners[2] ]
+  ];
+}
+
 const ActorProfile = props => {
 
   const i18n = useI18N();
+
+  const mapRef = useRef();
 
   const getTranslation = useBilingual();
 
@@ -18,12 +38,36 @@ const ActorProfile = props => {
 
   const relatedPlaces = getRelatedItems(item, store).places.all;
 
+  const geometries = relatedPlaces.filter(p => hasGeometry(p));
+
+  useEffect(() => {
+    if (mapRef.current && geometries.length > 0) {
+      const map = mapRef.current.leafletElement;
+      map.fitBounds(getUnionBounds(geometries));
+    }
+  }, [ geometries]);
+
   return (
     <PageWithMenu 
       backButton
       className="profile actor"
       title={item.properties.title}
       navigator={props.navigator}>
+
+      <div className="map-container">
+        <Map 
+          ref={mapRef}
+          zoomControl={false}
+          style={{height:'200px'}}>
+          <TileLayer
+            attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          {geometries.map(geom => 
+            <GeoJSON key={geom['@id']} data={geom} />
+          )}
+        </Map>
+      </div>
 
       { item.description.map((d, idx) => 
         <div key={idx} className="description">{getTranslation(d.value)}</div>
