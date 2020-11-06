@@ -15605,8 +15605,8 @@
           "geometry": {
             "geometries": [
               {
-                "geometries": [],
-                "type": "GeometryCollection"
+                "coordinates": [25.98387, 47.80277],
+                "type": "Point"
               }
             ],
             "type": "GeometryCollection"
