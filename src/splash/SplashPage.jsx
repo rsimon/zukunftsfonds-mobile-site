@@ -4,6 +4,7 @@ import PageWithMenu from '../PageWithMenu';
 import { useI18N, useBilingual } from '../i18n';
 import SearchPage from '../search/SearchPage';
 import SerbsInVienna from '../pages/projects/SerbsInVienna';
+import CampOberhollabrunn from '../pages/projects/CampOberhollabrunn';
 
 import './SplashPage.scss';
 
@@ -57,6 +58,12 @@ const SplashPage = props => {
             <li>
               <Button modifier="large--quiet" onClick={goTo(SerbsInVienna)}>
                 {i18n('Serbs in Vienna 1741-1918')}
+              </Button>
+            </li>
+            
+            <li>
+              <Button modifier="large--quiet" onClick={goTo(CampOberhollabrunn)}>
+                {i18n('On the Run in the Monarchy')}
               </Button>
             </li>
           </ol>

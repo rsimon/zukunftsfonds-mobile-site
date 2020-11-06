@@ -9,6 +9,7 @@ import SearchPage from './search/SearchPage';
 import SplashPage from './splash/SplashPage';
 
 import SerbsInVienna from './pages/projects/SerbsInVienna';
+import CampOberhollabrunn from './pages/projects/CampOberhollabrunn';
 
 import './SideMenu.scss';
 
@@ -60,7 +61,7 @@ const SideMenu = props => {
             <label>{i18n('Projects')}</label>
             <ul>
               <li onClick={goTo(SerbsInVienna)}>{i18n('Serbs in Vienna 1741-1918')}</li>
-              <li>Oberhollabrunn</li>
+              <li onClick={goTo(CampOberhollabrunn)}>{i18n('On the Run in the Monarchy')}</li>
             </ul>
           </div>
         </ListItem>
