@@ -62,7 +62,7 @@ const DESCRIPTION_ENGLISH =
       <tbody>
         <tr>
           <td>Duration of the Project:</td>
-          <td>1 January 2018-30. June 2019</td>
+          <td>1 January 2018-30 June 2019</td>
         </tr>
 
         <tr>

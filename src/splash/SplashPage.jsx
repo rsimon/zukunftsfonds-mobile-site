@@ -28,6 +28,7 @@ const SplashPage = props => {
   
   return (
     <PageWithMenu 
+      className="splashpage"
       title={i18n('Orthodox Europe')}
       navigator={props.navigator}>
 
