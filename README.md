@@ -2,9 +2,10 @@
 
 Mobile site UI Design for the Zukunftsfonds project.
 
+__Note:__ places outside Austria (i.e. birth places) do not have coordinates yet. I added coordinates 
+manually for one place, to have a test example: __Badeutz__, birth place of __Wasilie Dimitrescul__.
+
 ## TODOs
 
-- Prototype Leaflet curve connection lines
 - Large images not loading (hard limitation on physical devices?)
 - Filter by projects?
-- Check if images from "SerbInnen in Wien" project are picked up correctly! (Doesn't look like it at the moment.)
