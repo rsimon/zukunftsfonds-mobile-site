@@ -38,13 +38,19 @@ export const useLang = ()  =>
 export const useBilingual = () => {
   
   const lang = useRecoilValue(languageState);
+
+  // Helper to remove trailing + leading whitespace and dashes
+  const trim = str =>
+    str.replace(/^[-,\s]+ | [-,\s]+$/g, '');
  
   return description => {
-    // Project convention: ------------ separates EN from DE
-    if (description.indexOf('------------') === -1) {
+    // Project convention is to use 12 dash characters as separators. Anyways,
+    // people aren't doing this consistently, sometimes using more or fewer dashes.
+    // We'll split on everything thats more than 9 consecutive dashes.
+    if (description.indexOf('---------') === -1) {
       return description;
     } else {
-      return lang === 'de' ? description.split('------------')[0].trim() : description.split('------------')[1].trim();
+      return lang === 'de' ? trim(description.split('---------')[0]) : trim(description.split('---------')[1]);
     }
   }
 
