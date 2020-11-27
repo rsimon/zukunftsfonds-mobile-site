@@ -9,3 +9,4 @@ manually for one place, to have a test example: __Badeutz__, birth place of __Wa
 
 - Large images not loading (hard limitation on physical devices?)
 - Filter by projects?
+- Global map (with movement arrows?) as alternative entry point
