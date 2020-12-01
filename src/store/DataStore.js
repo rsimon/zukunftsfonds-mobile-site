@@ -1,6 +1,12 @@
 import axios from 'axios';
 import * as JsSearch from 'js-search';
 
+import { getRelatedItems } from '../profiles/RelatedItems';
+import { hasGeometry } from '../profiles/Utils';
+
+/**
+ * Helper to compute the bounding box of all places in the dataset.
+ */
 const computeGeoBounds = places => {
   const coords = places.reduce((allCoords, p) => {
     const g = p.geometry.geometries[0];
@@ -36,6 +42,30 @@ const computeGeoBounds = places => {
 }
 
 /**
+ * Helper to compute the spatial 'life paths' of all actors, i.e. the 
+ * pairs of coordinates for actor 'begins_in' and 'ends_in' properties.
+ * 
+ * Note that the computation will filter out places that don't have
+ * coordinates.
+ */
+const computeLifePaths = (store, actors) => actors.reduce((paths, actor) => {
+  let { begins_in, ends_in } = getRelatedItems(actor, store).places; // .filter(p => hasGeometry(p));
+  
+  begins_in = begins_in.filter(p => hasGeometry(p));
+  ends_in = ends_in.filter(p => hasGeometry(p));
+
+  if (begins_in.length > 0 && ends_in.length > 0) {
+    return [ ...paths, {
+      actor, 
+      begins: begins_in[0],
+      ends: ends_in[0]
+    }];
+  } else {
+    return paths;
+  }
+}, []);
+
+/**
  * Because (fortunately) our data is static, the data store
  * is just a convenience wrapper over the JSON data files. 
  */
@@ -45,7 +75,12 @@ export default class DataStore {
     this.actors = [];
     this.places = [];
 
+    // Geo-bounds of all places in the dataset
     this.geoBounds = null;
+
+    // The 'life paths', pairs of coordinates for actors'
+    // begins_in/ends_in properties
+    this.lifePaths = [];
 
     this.search = new JsSearch.Search('@id');   
     this.search.tokenizer = {
@@ -74,6 +109,7 @@ export default class DataStore {
       this.places = places;
 
       this.geoBounds = computeGeoBounds(places);
+      this.lifePaths = computeLifePaths(this, actors);
 
       this.search.addDocuments([ ...actors, ...places ]);
     });

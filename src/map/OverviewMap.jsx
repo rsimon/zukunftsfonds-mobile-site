@@ -11,6 +11,8 @@ const OverviewMap = props => {
 
   const mapRef = useRef();
 
+  console.log(props.store.lifePaths);
+
   useEffect(() => {
     if (mapRef.current) {
       const map = mapRef.current.leafletElement;
