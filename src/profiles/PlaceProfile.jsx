@@ -9,6 +9,7 @@ import { useI18N, useBilingual } from '../i18n';
 import ImageSlider, { hasDepictions } from './ImageSlider';
 
 import 'leaflet/dist/leaflet.css';
+
 import './Profile.scss';
 
 const getBounds = geojson => {

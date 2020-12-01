@@ -1,6 +1,40 @@
 import axios from 'axios';
 import * as JsSearch from 'js-search';
 
+const computeGeoBounds = places => {
+  const coords = places.reduce((allCoords, p) => {
+    const g = p.geometry.geometries[0];
+
+    // Support all the ways in which the data encodes point/poly coords
+    if (g.coordinates) {
+      if (Array.isArray(g.coordinates[0])) {
+        if (Array.isArray(g.coordinates[0][0]))
+          return allCoords.concat(...g.coordinates);
+        else 
+          return allCoords.concat(g.coordinates);
+      } else {
+        // Single coordinate tuple
+        return allCoords.concat([ g.coordinates ]);
+      }
+    } else {
+      return allCoords;
+    }
+  }, []);
+
+  const lons = coords.map(t => t[0]);
+  const lats = coords.map(t => t[1]); 
+
+  const minLon = Math.min(...lons);
+  const maxLon = Math.max(...lons);
+  const minLat = Math.min(...lats);
+  const maxLat = Math.max(...lats);
+
+  return [
+    [ minLat, minLon ],
+    [ maxLat, maxLon ]
+  ];
+}
+
 /**
  * Because (fortunately) our data is static, the data store
  * is just a convenience wrapper over the JSON data files. 
@@ -10,6 +44,8 @@ export default class DataStore {
   constructor() {
     this.actors = [];
     this.places = [];
+
+    this.geoBounds = null;
 
     this.search = new JsSearch.Search('@id');   
     this.search.tokenizer = {
@@ -36,6 +72,8 @@ export default class DataStore {
       
       this.actors = actors;
       this.places = places;
+
+      this.geoBounds = computeGeoBounds(places);
 
       this.search.addDocuments([ ...actors, ...places ]);
     });

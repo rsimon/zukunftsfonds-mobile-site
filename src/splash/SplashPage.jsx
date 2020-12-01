@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Icon } from 'react-onsenui';
 import PageWithMenu from '../PageWithMenu';
 import { useI18N, useBilingual } from '../i18n';
+import OverviewMap from '../map/OverviewMap';
 import SearchPage from '../search/SearchPage';
 import SerbsInVienna from '../pages/projects/SerbsInVienna';
 import CampOberhollabrunn from '../pages/projects/CampOberhollabrunn';
@@ -38,7 +39,11 @@ const SplashPage = props => {
         </div>
 
         <div className="buttons">
-          <Button modifier="large" onClick={goTo(SearchPage)}>
+          <Button onClick={goTo(OverviewMap)}>
+            <Icon icon="md-globe" />
+            <label>{i18n('Map')}</label>
+          </Button>
+          <Button onClick={goTo(SearchPage)}>
             <Icon icon="md-search" />
             <label>{i18n('Search')}</label>
           </Button>

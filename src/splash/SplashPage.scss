@@ -11,12 +11,24 @@ ons-page.splashpage ons-toolbar div.center {
   }
 
   .buttons {
+    display:flex;
+    flex-direction:row;
+    align-items:stretch;
     padding:10px;
     border-width:1px 0 0 0;
     border-style:solid;
     border-color:#e7e7e7;
-    
+
+    ons-button:first-child {
+      margin-right:5px;
+    }
+
+    ons-button:last-child {
+      margin-left:5px;
+    }
+
     ons-button {
+      flex:1;
       background-color:#a08952;
 
       ons-icon {

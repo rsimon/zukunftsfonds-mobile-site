@@ -48,17 +48,17 @@ const ActorProfile = props => {
     // GeoJSON - extract just coords, and flip to Leaflet order
     centroid(geom).geometry.coordinates.reverse());
 
-  const drawArrow = map => {
-    const [ start, end ] = centroids;
-
-    L.swoopyArrow(start, end, {
-      color:'#4e89ff',
-      weight:2,
-      factor:-0.5
-    }).addTo(map);
-  }
-
   useEffect(() => {
+    const drawArrow = map => {
+      const [ start, end ] = centroids;
+  
+      L.swoopyArrow(start, end, {
+        color:'#4e89ff',
+        weight:2,
+        factor:-0.5
+      }).addTo(map);
+    }
+
     if (mapRef.current && geometries.length > 0) {
       const map = mapRef.current.leafletElement;
       map.fitBounds(getUnionBounds(geometries));
@@ -66,7 +66,7 @@ const ActorProfile = props => {
       if (centroids.length === 2)
         drawArrow(map);
     }
-  }, [ geometries]);
+  }, [ geometries, centroids ]);
 
   return (
     <PageWithMenu 
