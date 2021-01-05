@@ -19,6 +19,7 @@ __Note:__ there's currently an issue with the images hosted at the ÖAW server. 
 - Add Help page
 - Pages are rendering twice + there is a glitch after transition animation has finished
 - We need an icon!
+- Enable hardware back button!
 
 ## Changelog
 
