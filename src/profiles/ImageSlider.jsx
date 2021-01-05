@@ -7,15 +7,15 @@ import 'react-image-lightbox/style.css';
 
 const preload = url => new Promise((resolve, reject) => {
   const img = new Image();
-  img.src = url;
   img.onload = () => resolve();
-  img.onerror = () => reject();
+  img.onerror = error => reject({ error, url });
+  img.src = url;
 })
 
 const getValidDepictions = depictions => depictions ? 
-  depictions.filter(d => d.url.indexOf('http') === 0) : [];
+  depictions.filter(d => d.url.indexOf('http') === 0 || d.url.indexOf('/images') === 0) : [];
 
-export const hasDepictions = item => 
+export const hasDepictions = item =>
   getValidDepictions(item.depictions).length > 0;
 
 const ImageSlider = props => {
@@ -25,8 +25,11 @@ const ImageSlider = props => {
 
   const depictions = getValidDepictions(props.depictions);
 
-  Promise.all(depictions.map(d => preload(d.url))).then(() => 
-    setIsLoading(false));
+  Promise.all(depictions.map(d => preload(d.url))).then(result => { 
+    setIsLoading(false)
+  }).catch(error => {
+    // TODO display error message in UI
+  });
 
   const getPrev = idx => {
     if (selected !== null && depictions.length > 0) {
