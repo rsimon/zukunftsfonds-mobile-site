@@ -13,7 +13,7 @@ const preload = url => new Promise((resolve, reject) => {
 })
 
 const getValidDepictions = depictions => depictions ? 
-  depictions.filter(d => d.url.indexOf('http') === 0 || d.url.indexOf('/images') === 0) : [];
+  depictions.filter(d => d.url.indexOf('http') === 0) : [];
 
 export const hasDepictions = item =>
   getValidDepictions(item.depictions).length > 0;
@@ -61,7 +61,7 @@ const ImageSlider = props => {
 
   return (
     <>
-      { isLoading && 
+      { !isLoading && !loadingError && 
         <div className="image-carousel">
           <AliceCarousel 
             mouseTracking
