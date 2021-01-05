@@ -15,3 +15,7 @@ manually for one place, to have a test example: __Badeutz__, birth place of __Wa
 - Theme color?
 - Add Help page
 - Pages are rendering twice + there is a glitch after transition animation has finished
+
+## Changelog
+
+- Behavior tweak: same page doesn't "open" twice (e.g. navigating from Home to Home just closes the sidebar)
