@@ -38,14 +38,14 @@ const ImageSlider = props => {
   }, []);
 
   const getPrev = idx => {
-    if (selected !== null && depictions.length > 0) {
+    if (selected !== null && depictions.length > 1) {
       const prevIdx = (depictions.length + selected - 1) % depictions.length;
       return depictions[prevIdx].url
     }
   }
 
   const getNext = idx => {
-    if (selected !== null && depictions.length > 0) {
+    if (selected !== null && depictions.length > 1) {
       const nextIdx = (selected + 1) % depictions.length;
       return depictions[nextIdx].url;
     }
