@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import Lightbox from 'react-image-lightbox';
 
@@ -22,14 +22,20 @@ const ImageSlider = props => {
 
   const [ selected, setSelected ] = useState(null);
   const [ isLoading, setIsLoading ] = useState(true);
+  const [ loadingError, setLoadingError ] = useState(null);
 
   const depictions = getValidDepictions(props.depictions);
 
-  Promise.all(depictions.map(d => preload(d.url))).then(result => { 
-    setIsLoading(false)
-  }).catch(error => {
-    // TODO display error message in UI
-  });
+  useEffect(() => {
+    Promise.all(depictions.map(d => preload(d.url))).then(result =>
+      setIsLoading(false)
+    ).catch(error => {
+      console.error('Error loading image(s)');
+      console.error(error);
+      setIsLoading(false);
+      setLoadingError(error)
+    });  
+  }, []);
 
   const getPrev = idx => {
     if (selected !== null && depictions.length > 0) {
@@ -55,14 +61,22 @@ const ImageSlider = props => {
 
   return (
     <>
-      <div className="image-carousel">
-        { !isLoading && <AliceCarousel 
-          mouseTracking
-          disableDotsControls
-          disableButtonsControls
-          autoWidth
-          items={images} /> }
-      </div>
+      { isLoading && 
+        <div className="image-carousel">
+          <AliceCarousel 
+            mouseTracking
+            disableDotsControls
+            disableButtonsControls
+            autoWidth
+            items={images} />
+        </div>
+      }
+
+      { loadingError && 
+        <div className="image-loading-failed">
+          Error loading images {loadingError.url}
+        </div>
+      }
 
       { selected !== null && 
         <Lightbox 

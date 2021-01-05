@@ -29,6 +29,17 @@
 
   }
 
+  .image-loading-failed {
+    text-align: center;
+    font-weight: bold;
+    color: #f35050;
+    border: 1px solid #f35050;
+    margin: 0 20px;
+    padding: 10px;
+    background-color: #ffeded;
+    border-radius: 2px;
+  }
+
   .related {
     padding-bottom:30px;
 

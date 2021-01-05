@@ -18,6 +18,7 @@ __Note:__ there's currently an issue with the images hosted at the ÖAW server. 
 - Theme color?
 - Add Help page
 - Pages are rendering twice + there is a glitch after transition animation has finished
+- We need an icon!
 
 ## Changelog
 
