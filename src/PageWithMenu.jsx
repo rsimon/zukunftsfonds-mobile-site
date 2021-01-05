@@ -49,7 +49,9 @@ const PageWithMenu = props => {
           isOpen={isMenuOpen}
           onClose={() => setMenuOpen(false)}>
 
-          <SideMenu navigator={props.navigator} />
+          <SideMenu 
+            navigator={props.navigator} 
+            onClose={() => setMenuOpen(false)} />
 
         </SplitterSide>
       </Splitter>

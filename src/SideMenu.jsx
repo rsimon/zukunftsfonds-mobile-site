@@ -24,8 +24,14 @@ const SideMenu = props => {
     window.localStorage.setItem('zukunftsfonds.language', lang);
   }
 
-  const goTo = component => () =>
-    props.navigator.pushPage({ component });
+  const goTo = component => () => {
+    const { pages } = props.navigator;
+    const currentPage = pages.length > 0 ? pages[pages.length - 1].props.component : null;
+    if (component !== currentPage)
+      props.navigator.pushPage({ component });
+    else 
+      props.onClose();
+  }
 
   // Just for testing
   const onStartTour = () =>
