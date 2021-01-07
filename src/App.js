@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { RecoilRoot } from 'recoil';
 import { Navigator } from 'react-onsenui';
 import SplashPage from './splash/SplashPage';
@@ -10,6 +10,8 @@ import './App.scss';
 
 const App = props => {
 
+  const nav = useRef();
+
   const renderPage = (route, navigator) =>
     React.createElement(route.component, { 
       ...route, 
@@ -18,20 +20,23 @@ const App = props => {
       store: props.store
     });
 
+  // Pushes a state to the window history, so the back button doesn't
+  // close the app. It's actually just a dummy push (the state is never
+  // read). We'll rewire window.onpopstate instead to pop the navigator.
   const onPostPush = evt => {
-    window.history.pushState({}, '');
-    alert('pushed');
+    const { name } = evt.routes.pushedRoute.component;
+    window.history.pushState({ name }, '');
   }
 
   useEffect(() => {
-    window.onpopstate = evt => {
-      alert('popped');
-    }
-  });
+    window.onpopstate = () =>
+      nav.current && nav.current.popPage();
+  }, []);
 
   return (
     <RecoilRoot>
       <Navigator
+        ref={nav}
         renderPage={renderPage}
         initialRoute={{ component: SplashPage, key: 'SplashPage' }} 
         onPostPush={onPostPush}
