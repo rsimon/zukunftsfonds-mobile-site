@@ -16,6 +16,7 @@ const PageWithMenu = props => {
   const [ isMenuOpen, setMenuOpen ] = useState(false);
 
   const onBackButton = evt => {
+    alert('on back');
     props.navigator.popPage();
   }
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { RecoilRoot } from 'recoil';
 import { Navigator } from 'react-onsenui';
 import SplashPage from './splash/SplashPage';
@@ -20,8 +20,14 @@ const App = props => {
 
   const onPostPush = evt => {
     window.history.pushState({}, '');
-    console.log(evt);
+    alert('pushed');
   }
+
+  useEffect(() => {
+    window.onpopstate = evt => {
+      alert('popped');
+    }
+  });
 
   return (
     <RecoilRoot>
