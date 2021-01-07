@@ -10,6 +10,7 @@ import SplashPage from './splash/SplashPage';
 
 import SerbsInVienna from './pages/projects/SerbsInVienna';
 import CampOberhollabrunn from './pages/projects/CampOberhollabrunn';
+import Help from './pages/Help';
 
 import './SideMenu.scss';
 
@@ -58,7 +59,7 @@ const SideMenu = props => {
           <label>{i18n('Information')}</label>
         </ListHeader>
 
-        <ListItem>
+        <ListItem onClick={goTo(Help)}>
           <label>{i18n('Help')}</label>
         </ListItem>  
 

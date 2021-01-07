@@ -10,16 +10,14 @@ __Note:__ there's currently an issue with the images hosted at the ÖAW server. 
 
 ## TODOs
 
-- Large images not loading (hard limitation on physical devices?)
+- Add Help page
 - Filter by projects?
 - Global map (with movement arrows?) as alternative entry point (make arrows clickable!)
 - Make profile maps "static"?
 - Metadata to enable the 'add to home screen' popup?
 - Theme color?
-- Add Help page
 - Pages are rendering twice + there is a glitch after transition animation has finished
 - We need an icon!
-- Enable hardware back button!
 
 ## Changelog
 

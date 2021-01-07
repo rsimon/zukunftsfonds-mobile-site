@@ -113,7 +113,7 @@ const DESCRIPTION = {
   'en': DESCRIPTION_ENGLISH
 }
 
-const Page = props => {
+const CampOberhollabrunn = props => {
 
   const lang = useLang();
 
@@ -135,4 +135,4 @@ const Page = props => {
   )
 }
 
-export default Page;
+export default CampOberhollabrunn;

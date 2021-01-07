@@ -97,7 +97,7 @@ const DESCRIPTION = {
   'en': DESCRIPTION_ENGLISH
 }
 
-const Page = props => {
+const SerbsInVienna = props => {
 
   const lang = useLang();
 
@@ -119,4 +119,4 @@ const Page = props => {
   )
 }
 
-export default Page;
+export default SerbsInVienna;
