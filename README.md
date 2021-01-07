@@ -10,6 +10,7 @@ __Note:__ there's currently an issue with the images hosted at the ÖAW server. 
 
 ## TODOs
 
+- "Loading" placeholder for image carousel
 - Global map (with movement arrows?) as alternative entry point (make arrows clickable!)
 - Metadata to enable the 'add to home screen' popup (+ we need an icon!)
 - Filter by projects?
