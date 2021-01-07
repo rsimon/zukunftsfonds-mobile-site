@@ -15,11 +15,16 @@ const PageWithMenu = props => {
 
   const [ isMenuOpen, setMenuOpen ] = useState(false);
 
+  const onBackButton = evt => {
+    props.navigator.popPage();
+  }
+
   return (
     <Page className={props.className}>
       <Splitter>
         <SplitterContent>
           <Page 
+            onDeviceBackButton={onBackButton}
             renderToolbar={() => 
               <Toolbar>
                 { props.backButton &&
