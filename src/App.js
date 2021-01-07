@@ -18,11 +18,17 @@ const App = props => {
       store: props.store
     });
 
+  const onPostPush = evt => {
+    window.history.pushState({}, '');
+    console.log(evt);
+  }
+
   return (
     <RecoilRoot>
       <Navigator
         renderPage={renderPage}
         initialRoute={{ component: SplashPage, key: 'SplashPage' }} 
+        onPostPush={onPostPush}
         animation="slide"
         swipeable />
     </RecoilRoot>
