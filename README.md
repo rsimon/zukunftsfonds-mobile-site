@@ -10,7 +10,7 @@ __Note:__ there's currently an issue with the images hosted at the ÖAW server. 
 
 ## TODOs
 
-- Filter by projects?
 - Global map (with movement arrows?) as alternative entry point (make arrows clickable!)
-- Make profile maps "static"?
 - Metadata to enable the 'add to home screen' popup (+ we need an icon!)
+- Filter by projects?
+- Make profile maps "static"?
