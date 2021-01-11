@@ -8,18 +8,38 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "orth_aut_cross_114.png",
+      "type": "image/png",
+      "sizes": "114x114"
+    },
+    {
+      "src": "orth_aut_cross_144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "orth_aut_cross_152.png",
+      "type": "image/png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "orth_aut_cross_180.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "orth_aut_cross_192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "orth_aut_cross_512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#a08952",
   "background_color": "#ffffff"
 }
