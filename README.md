@@ -11,6 +11,7 @@ __Note:__ there's currently an issue with the images hosted at the ÖAW server. 
 ## TODOs
 
 - "Loading" placeholder for image carousel
+- Rounded corners on App logo?
 - Global map (with movement arrows?) as alternative entry point (make arrows clickable!)
 - Filter by projects?
 - Make profile maps "static"?
