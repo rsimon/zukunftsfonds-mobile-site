@@ -3,6 +3,15 @@ ons-page.splashpage ons-toolbar div.center {
   font-size: 26px;
 }
 
+@media screen and (orientation:landscape) {
+
+  .splash-image {
+    max-height:400px;
+    object-fit:cover;
+  }
+
+}
+
 .splash-page-container {
 
   .splash-image {

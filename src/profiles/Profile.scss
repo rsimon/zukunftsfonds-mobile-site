@@ -1,5 +1,14 @@
 .profile {
 
+  @media screen and (orientation:landscape) {
+
+    .description {
+      padding:40px;
+      line-height:170%;
+    }
+
+  }
+
   .description {
     padding:20px;
     line-height:150%;
@@ -86,9 +95,19 @@
     width:100%;
     position:relative;
 
+    @media screen and (orientation:landscape) {
+
+      .leaflet-container {
+        min-height:200px;
+        height:40vw !important;
+      }
+
+    }
+
     .leaflet-container {
       height:200px;
     }
+
   }
 
 }
