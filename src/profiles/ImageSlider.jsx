@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import Lightbox from 'react-image-lightbox';
+import { ProgressCircular } from 'react-onsenui';
 
 import 'react-alice-carousel/lib/alice-carousel.css';
 import 'react-image-lightbox/style.css';
@@ -61,6 +62,11 @@ const ImageSlider = props => {
 
   return (
     <>
+      { isLoading && 
+        <div className="image-carousel loading">
+          <ProgressCircular indeterminate />
+        </div>
+      }
       { !isLoading && !loadingError && 
         <div className="image-carousel">
           <AliceCarousel 

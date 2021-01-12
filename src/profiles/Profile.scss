@@ -10,6 +10,7 @@
     padding: 7px;
     border: 1px solid #ccc;
     box-shadow:inset 0 3px 3px -3px rgba(0,0,0,0.2), inset  0 -3px 3px -3px rgba(0,0,0,0.2);
+    min-height:240px;
 
     .image-wrapper {
       padding:0 3px;
@@ -27,6 +28,12 @@
 
     }
 
+  }
+
+  .image-carousel.loading {
+    display:flex;
+    align-items:center;
+    justify-content:center;  
   }
 
   .image-loading-failed {
