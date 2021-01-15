@@ -69,7 +69,7 @@ const SplashPage = props => {
             
             <li>
               <Button modifier="large--quiet" onClick={goTo(CampOberhollabrunn)}>
-                {i18n('On the Run in the Monarchy')}
+                {i18n('Orthodox Refugees in Hollabrunn 1914-1918')}
               </Button>
             </li>
           </ol>

@@ -68,7 +68,7 @@ const SideMenu = props => {
             <label>{i18n('Projects')}</label>
             <ul>
               <li onClick={goTo(SerbsInVienna)}>{i18n('Serbs in Vienna 1741-1918')}</li>
-              <li onClick={goTo(CampOberhollabrunn)}>{i18n('On the Run in the Monarchy')}</li>
+              <li onClick={goTo(CampOberhollabrunn)}>{i18n('Orthodox Refugees in Hollabrunn 1914-1918')}</li>
             </ul>
           </div>
         </ListItem>
