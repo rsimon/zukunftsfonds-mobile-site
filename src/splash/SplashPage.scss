@@ -12,7 +12,7 @@ ons-page.splashpage ons-toolbar div.center {
 
 }
 
-.splash-page-container {
+#root ons-page .splash-page-container {
 
   .splash-image {
     width:100%;
@@ -83,6 +83,18 @@ ons-page.splashpage ons-toolbar div.center {
       }
     }
 
+  }
+
+  footer {
+    text-align:left;
+    font-size:14px;
+    background-color:#504b44;
+    color:#fff;
+    border-top:none;
+
+    a {
+      color:#cbcbcb;
+    }
   }
 
 }

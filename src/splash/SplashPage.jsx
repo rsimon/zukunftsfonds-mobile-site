@@ -76,7 +76,14 @@ const SplashPage = props => {
         </div>
 
         <footer>
-
+          <strong>{i18n('Imprint')}</strong><br/>
+          Digitales Geoportal der Geschichte der Orthodoxen in Österreich<br/>
+          Vertreten durch:<br/>
+          Priv.-Doz. Mag. Dr. Mihailo Popović, Projektleiter<br/>
+          Kiningergasse 12/2/7<br/>
+          1120 Wien<br/>
+          Österreich<br/>
+          <a href="mailto:mihailop@hotmail.com">mihailop@hotmail.com</a>
         </footer>
       </div>
     </PageWithMenu>
