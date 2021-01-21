@@ -10,5 +10,7 @@ __Note:__ there's currently an issue with the images hosted at the ÖAW server. 
 
 ## TODOs
 
+- Tour Mode - ideas?
 - Filter by projects?
 - Make profile maps "static"?
+
