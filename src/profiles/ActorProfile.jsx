@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { Icon, List, ListHeader, ListItem } from 'react-onsenui';
-import L from 'leaflet';
 import { GeoJSON, Map, TileLayer } from 'react-leaflet';
 import bbox from '@turf/bbox';
 import centroid from '@turf/centroid';
@@ -9,8 +8,7 @@ import { getRelatedItems } from './RelatedItems';
 import PageWithMenu from '../PageWithMenu';
 import { useI18N, useBilingual } from '../i18n';
 import ImageSlider, { hasDepictions } from './ImageSlider';
-
-import 'leaflet-swoopy';
+import Curve from '../map/Curve';
 
 import './Profile.scss';
 
@@ -50,18 +48,13 @@ const ActorProfile = props => {
 
   useEffect(() => {
     const drawArrow = map => {
-      const [ start, end ] = centroids;
-  
-      L.swoopyArrow(start, end, {
-        color:'#4e89ff',
-        weight:2,
-        factor:-0.5
-      }).addTo(map);
+      const [ start, end ] = centroids;      
+      new Curve(start, end).addTo(map);
     }
 
     if (mapRef.current && geometries.length > 0) {
       const map = mapRef.current.leafletElement;
-      map.fitBounds(getUnionBounds(geometries));
+      map.fitBounds(getUnionBounds(geometries), { padding: [ 15, 15 ]});
 
       if (centroids.length === 2)
         drawArrow(map);

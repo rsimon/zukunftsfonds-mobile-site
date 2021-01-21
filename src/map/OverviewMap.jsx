@@ -1,12 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import { Map, TileLayer } from 'react-leaflet';
-import L from 'leaflet';
 import centroid from '@turf/centroid';
 import PageWithMenu from '../PageWithMenu';
 import { useI18N } from '../i18n';
 import { navigateTo } from '../profiles/Utils';
-
-import 'leaflet-swoopy';
+import Curve from './Curve';
 
 import './OverviewMap.scss';
 
@@ -14,16 +12,8 @@ const drawArrow = (path, map, onClick) => {
   const start = centroid(path.begins).geometry.coordinates.reverse();
   const end = centroid(path.ends).geometry.coordinates.reverse();
 
-  const arrow = L.swoopyArrow(start, end, {
-    color:'#4e89ff',
-    weight:2,
-    factor:-0.5,
-    hideArrowHead:true
-  }).addTo(map);
-
-  // Attaching click handler to the SVG path element directly,
-  // since there seems to be no other way in Swoopy
-  arrow._currentPath.addEventListener('click', onClick);
+  const arrow = new Curve(start, end).addTo(map);
+  arrow.onClick(onClick);
 }
 
 const OverviewMap = props => {
