@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import PageWithMenu from '../../PageWithMenu';
 import bbox from '@turf/bbox';
-import { Icon } from 'react-onsenui';
+import { Button, Icon } from 'react-onsenui';
 import { GeoJSON, Map, TileLayer } from 'react-leaflet';
 import { useI18N } from '../../i18n';
 import { loadTour } from '../Tour';
@@ -80,6 +80,16 @@ const TourStartPage = props => {
               
               <GeoJSON data={tour.track} />
             </Map>
+          </div>
+
+          <div className="start-buttons">
+            <Button>
+              <Icon icon="md-gps-dot" /> <label>{i18n('Start the tour')}</label>
+            </Button>
+
+            <Button modifier="outline" className="outline">
+              <Icon icon="md-gps-off" /> <label>{i18n('View tour without GPS')}</label>
+            </Button>
           </div>
         </>
       }

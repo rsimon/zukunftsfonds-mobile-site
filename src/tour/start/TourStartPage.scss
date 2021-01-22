@@ -41,4 +41,26 @@
     line-height:150%;
   }
 
+  .start-buttons {
+    padding:20px;
+    text-align:center;
+
+    ons-icon {
+      padding-right:5px;
+    }
+
+    ons-button {
+      display:block;
+      margin:15px 0;
+      background-color:#a08952;
+    }
+
+    ons-button.outline {
+      background-color:transparent;
+      color:#a08952;
+      border:1px solid #a08952;
+    }
+
+  }
+
 }
