@@ -1,0 +1,44 @@
+.tour-startpage {
+
+  .tour-start-header-image {
+    position:relative;
+
+    img {
+      width:100%;
+    }
+
+    .caption {
+      padding:15px 10px;
+      position:absolute;
+      bottom:0;
+      line-height:170%;
+
+      h1, h2, h3 {
+        color:#fff;
+        padding:0;
+        margin:0;
+        text-shadow: 0 0 8px rgba(0, 0, 0, .8);
+      }
+
+      h1 {
+        font-size:21px;
+      }
+
+      ons-icon {
+        padding-right:3px;
+      }
+
+      h3 {
+        font-size:16px;
+      }
+
+    }
+
+  }
+
+  .tour-description {
+    padding:20px;
+    line-height:150%;
+  }
+
+}

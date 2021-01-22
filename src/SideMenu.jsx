@@ -2,7 +2,6 @@ import React from 'react';
 import { Icon, List, ListHeader, ListItem, Page, Radio } from 'react-onsenui';
 import { useRecoilState } from 'recoil';
 import { languageState } from './store/State';
-import { fetchUserLocation } from './tour';
 import { useI18N } from './i18n';
 
 import SearchPage from './search/SearchPage';
@@ -11,6 +10,8 @@ import SplashPage from './splash/SplashPage';
 import SerbsInVienna from './pages/projects/SerbsInVienna';
 import CampOberhollabrunn from './pages/projects/CampOberhollabrunn';
 import Help from './pages/Help';
+
+import TourStartPage from './tour/start/TourStartPage';
 
 import './SideMenu.scss';
 
@@ -33,12 +34,6 @@ const SideMenu = props => {
     else 
       props.onClose();
   }
-
-  // Just for testing
-  const onStartTour = () =>
-    fetchUserLocation()
-      .then(pos => console.log(pos))
-      .catch(() => console.log('rejected or not available'));
 
   return (
     <Page className="side-menu">
@@ -80,7 +75,7 @@ const SideMenu = props => {
           <label>{i18n('Walking Tours')}</label>
         </ListHeader>
         
-        <ListItem onClick={onStartTour}>
+        <ListItem onClick={goTo(TourStartPage)}>
           <label>Oberhollabrunn</label>
         </ListItem>
       </List>
