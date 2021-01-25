@@ -11,7 +11,6 @@ __Note:__ there's currently an issue with the images hosted at the ÖAW server. 
 ## TODOs
 
 - Search tokenization: remove quotes
-- Leaflet: remove attribution box and attribute in info pages instead
 - Filter by projects?
 - Make profile maps "static"?
 - Instructions when search results are empty
