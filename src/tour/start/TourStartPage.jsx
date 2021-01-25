@@ -1,21 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import PageWithMenu from '../../PageWithMenu';
-import bbox from '@turf/bbox';
 import { Button, Icon } from 'react-onsenui';
 import { GeoJSON, Map, TileLayer } from 'react-leaflet';
 import { useI18N } from '../../i18n';
 import { loadTour } from '../Tour';
+import GPSModePage from '../gps/GPSModePage';
 
 import './TourStartPage.scss';
-
-// TODO redundancy with PlaceProfile -> refactor
-const getBounds = geojson => {
-  const corners = bbox(geojson);
-  return [ // Leaflet order
-    [ corners[1], corners[0] ],
-    [ corners[3], corners[2] ]
-  ];
-}
 
 const TourStartPage = props => {
 
@@ -32,18 +23,15 @@ const TourStartPage = props => {
   useEffect(() => {
     if (mapRef.current && tour) {
       const map = mapRef.current.leafletElement;
-      map.fitBounds(getBounds(tour.track), { padding: [ 15, 15 ]});
+      map.fitBounds(tour.bounds, { padding: [ 15, 15 ]});
     }
   }, [ tour ]);
 
-  /*
-    // Just for testing
-  const onStartTour = () =>
-    fetchUserLocation()
-      .then(pos => console.log(pos))
-      .catch(() => console.log('rejected or not available'));
-
-  */
+  const onStartGPSTour = tour => () =>
+    props.navigator.pushPage({ 
+      component: GPSModePage,
+      tour
+    });
 
   return (
     <PageWithMenu 
@@ -74,11 +62,7 @@ const TourStartPage = props => {
               zoomControl={false}
               attributionControl={false}
               style={{height:'200px'}}>
-              <TileLayer
-                attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              />
-              
+              <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
               <GeoJSON data={tour.track} />
             </Map>
             
@@ -86,7 +70,7 @@ const TourStartPage = props => {
           </div>
 
           <div className="start-buttons">
-            <Button>
+            <Button onClick={onStartGPSTour(tour)}>
               <Icon icon="md-gps-dot" /> <label>{i18n('Start the tour')}</label>
             </Button>
 

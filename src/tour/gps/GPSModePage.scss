@@ -1,0 +1,13 @@
+#root ons-page.tour-gps {
+  height:100%;
+  position:relative;
+
+  .leaflet-container {
+    position:absolute !important;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+  }
+
+}

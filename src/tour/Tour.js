@@ -1,4 +1,13 @@
 import axios from 'axios';
+import bbox from '@turf/bbox';
+
+const getBounds = geojson => {
+  const corners = bbox(geojson);
+  return [
+    [ corners[1], corners[0] ],
+    [ corners[3], corners[2] ]
+  ];
+}
 
 class Tour {
 
@@ -9,6 +18,7 @@ class Tour {
     ]).then(results => {
       this.track = results[0].data;
       this.waypoints = results[1].data;
+      this.bounds = getBounds(this.track);
     });
   }
 
