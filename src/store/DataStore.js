@@ -85,7 +85,9 @@ export default class DataStore {
     this.search = new JsSearch.Search('@id');   
     this.search.tokenizer = {
       tokenize(text) {
-        return text.split(/[\s,-]+/)
+        return text
+          .replace(/[.,'"#!$%^&*;:{}=\-_`~()]/g, '')
+          .split(/[\s,-]+/)
       }
     };
 
