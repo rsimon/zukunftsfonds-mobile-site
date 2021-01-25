@@ -44,6 +44,7 @@ const OverviewMap = props => {
         <Map 
           ref={mapRef}
           zoom={10}
+          attributionControl={false}
           style={{height:'100%'}}>
           <TileLayer
             attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

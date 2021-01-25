@@ -49,13 +49,13 @@ const TourStartPage = props => {
     <PageWithMenu 
       backButton
       className="tour-startpage"
-      title="Tour Oberhollabrunn"
+      title={i18n('GPS Walking Tours')}
       navigator={props.navigator}>
 
       { tour &&
         <>
           <div className="tour-start-header-image">
-            <img src="tours/images/waypoint-4.jpg" />
+            <img src="tours/images/waypoint-4.jpg" alt="GPS walk header decoration" />
             <div className="caption">
               <h1>{tour.title}</h1>
               <h3 className="duration">
@@ -72,6 +72,7 @@ const TourStartPage = props => {
             <Map 
               ref={mapRef}
               zoomControl={false}
+              attributionControl={false}
               style={{height:'200px'}}>
               <TileLayer
                 attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

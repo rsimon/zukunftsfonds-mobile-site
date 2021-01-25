@@ -2,6 +2,8 @@ import React from 'react';
 import PageWithMenu from '../PageWithMenu';
 import { useLang } from '../i18n';
 
+import './Help.scss';
+
 const de = 
   <>
     <p>
@@ -20,6 +22,15 @@ const de =
       um die Spracheinstellung zwischen Englisch und Deutsch 
       umzuschalten.
     </p>
+
+    <h1>App-Information</h1>
+    <p>
+      Diese Anwendung nutzt u.A. die folgenden Open Source Softwarebibliotheken und Datenquellen: 
+    </p>
+    <ul>
+      <li><a href="https://leafletjs.com/" target="_blank" rel="noreferrer">Leaflet</a></li>
+      <li><a href="https://www.openstreetmap.org/" target="_blank" rel="noreferrer">OpenStreetMap</a></li>
+    </ul>
   </>
 
 const en = 
@@ -39,6 +50,16 @@ const en =
       or the project information pages, or to toggle the language 
       setting between English and German.
     </p>
+
+    <h1>App Information</h1>
+    <p>
+      This application makes use of the following open source software libraries and 
+      data sources:
+    </p>
+    <ul>
+      <li><a href="https://leafletjs.com/" target="_blank" rel="noreferrer">Leaflet</a></li>
+      <li><a href="https://www.openstreetmap.org/" target="_blank" rel="noreferrer">OpenStreetMap</a></li>
+    </ul>
   </>
 
 const TITLE = {
@@ -54,6 +75,7 @@ const Help = props => {
 
   return(
     <PageWithMenu
+      className="app-help"
       title={TITLE[lang]}
       navigator={props.navigator}
       backButton>

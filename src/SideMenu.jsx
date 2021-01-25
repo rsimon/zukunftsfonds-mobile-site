@@ -55,7 +55,7 @@ const SideMenu = props => {
         </ListHeader>
 
         <ListItem onClick={goTo(Help)}>
-          <label>{i18n('Help')}</label>
+          <label>{i18n('User Help & App Info')}</label>
         </ListItem>  
 
         <ListItem className="projects">
