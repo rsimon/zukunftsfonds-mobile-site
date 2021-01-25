@@ -81,6 +81,8 @@ const TourStartPage = props => {
               
               <GeoJSON data={tour.track} />
             </Map>
+            
+            <div className="clicktrap" />
           </div>
 
           <div className="start-buttons">
