@@ -1,5 +1,6 @@
 import axios from 'axios';
 import bbox from '@turf/bbox';
+import distance from '@turf/distance';
 
 const getBounds = geojson => {
   const corners = bbox(geojson);
@@ -40,6 +41,24 @@ class Tour {
 
   get title() {
     return this.getProp('title');
+  }
+
+  getNearestWaypoint = pos => {
+    if (pos) {
+      const currentPos = {
+        type: 'Feature',
+        properties: {},
+        geometry: {
+          type: 'Point',
+          coordinates: [ pos.coords.longitude, pos.coords.latitude ]
+        }
+      };
+
+      const distances = this.waypoints.features.map(f => distance(currentPos, f));
+      const minDistance = Math.min.apply(null, distances);
+
+      return this.waypoints.features[distances.indexOf(minDistance)];
+    }
   }
 
 }

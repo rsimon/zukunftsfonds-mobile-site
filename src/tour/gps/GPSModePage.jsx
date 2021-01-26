@@ -13,7 +13,7 @@ const PATH_STYLE = {
 
 const GPSModePage = props => {
 
-  const [ waypoint, setWaypoint ] = useState(0);
+  const [ waypoint, setWaypoint ] = useState(props.tour.waypoints.features[0]);
 
   const [ pos, setPos ] = useState();
 
@@ -28,7 +28,10 @@ const GPSModePage = props => {
       });
     }
 
-    const watchId = navigator.geolocation?.watchPosition(setPos);
+    const watchId = navigator.geolocation?.watchPosition(pos => {
+      setPos(pos);
+      setWaypoint(props.tour.getNearestWaypoint(pos))
+    });
 
     return function cleanup() {
       navigator.geolocation?.clearWatch(watchId);
