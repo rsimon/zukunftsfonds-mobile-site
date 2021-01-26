@@ -16,9 +16,9 @@ const INNER_STYLE = {
   fillColor: '#004aff'
 }
 
-const MyPosition = pos => {
+const MyPosition = props => {
 
-  const { latitude, longitude } = pos.data.coords;
+  const { latitude, longitude } = props.pos.coords;
 
   const center = [ latitude, longitude ];
 

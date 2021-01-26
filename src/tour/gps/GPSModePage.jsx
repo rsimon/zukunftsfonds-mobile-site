@@ -13,6 +13,8 @@ const PATH_STYLE = {
 
 const GPSModePage = props => {
 
+  const [ waypoint, setWaypoint ] = useState(0);
+
   const [ pos, setPos ] = useState();
 
   const mapRef = useRef();
@@ -46,10 +48,15 @@ const GPSModePage = props => {
         attributionControl={false}>
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         <GeoJSON { ...{...PATH_STYLE, data: props.tour.track }} />
-        { pos && <MyPosition data={pos} /> }
+        { pos && <MyPosition pos={pos} /> }
       </Map>
 
-      <InfoPanel />
+      <InfoPanel 
+        tour={props.tour} 
+        waypoint={waypoint} 
+        pos={pos} 
+        onNextWaypoint={() => setWaypoint(Math.min(waypoint + 1, props.tour.waypoints.length - 1))}
+        onPrevWaypoint={() => setWaypoint(Math.max(0, waypoint - 1))}/>
     </PageWithMenu>
   )
 
