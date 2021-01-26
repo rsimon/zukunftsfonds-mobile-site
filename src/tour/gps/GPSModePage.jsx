@@ -1,16 +1,16 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import PageWithMenu from '../../PageWithMenu';
+import MyPosition from './MyPosition';
 import { GeoJSON, Map, TileLayer } from 'react-leaflet';
 
 import './GPSModePage.scss';
 
+
 const GPSModePage = props => {
 
-  const mapRef = useRef();
+  const [ pos, setPos ] = useState();
 
-  const onPositionUpate = pos => {
-    console.log(pos);
-  }
+  const mapRef = useRef();
 
   useEffect(() => {
     if (mapRef.current) {
@@ -18,7 +18,7 @@ const GPSModePage = props => {
       map.fitBounds(props.tour.bounds, { padding: [ 15, 15 ]});
     }
 
-    const watchId = navigator.geolocation?.watchPosition(onPositionUpate);
+    const watchId = navigator.geolocation?.watchPosition(setPos);
 
     return function cleanup() {
       navigator.geolocation?.clearWatch(watchId);
@@ -37,8 +37,8 @@ const GPSModePage = props => {
         zoomControl={false}
         attributionControl={false}>
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-        
         <GeoJSON data={props.tour.track} />
+        { pos && <MyPosition data={pos} /> }
       </Map>
     </PageWithMenu>
   )
