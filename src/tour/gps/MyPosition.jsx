@@ -3,13 +3,17 @@ import { CircleMarker, LayerGroup } from 'react-leaflet';
 
 const OUTER_STYLE = {
   radius: 32,
-  weight: 1
+  weight: 1,
+  color: '#739cff',
+  fillColor: '#004aff',
+  fillOpacity: 0.3
 }
 
 const INNER_STYLE = {
-  radius: 7,
+  radius: 5,
   stroke: false,
-  fillOpacity: 1
+  fillOpacity: 1,
+  fillColor: '#004aff'
 }
 
 const MyPosition = pos => {

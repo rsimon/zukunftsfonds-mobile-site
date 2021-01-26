@@ -8,6 +8,11 @@ import GPSModePage from '../gps/GPSModePage';
 
 import './TourStartPage.scss';
 
+const PATH_STYLE = {
+  color: '#000',
+  dashArray: '6 6'
+}
+
 const TourStartPage = props => {
 
   const i18n = useI18N();
@@ -63,7 +68,7 @@ const TourStartPage = props => {
               attributionControl={false}
               style={{height:'200px'}}>
               <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-              <GeoJSON data={tour.track} />
+              <GeoJSON data={tour.track} {...PATH_STYLE} />
             </Map>
             
             <div className="clicktrap" />
