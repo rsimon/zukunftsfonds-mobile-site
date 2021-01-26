@@ -31,6 +31,8 @@ const GPSModePage = props => {
     const watchId = navigator.geolocation?.watchPosition(pos => {
       setPos(pos);
       setWaypoint(props.tour.getNearestWaypoint(pos))
+    }, null, {
+      enableHighAccuracy: true
     });
 
     return function cleanup() {
