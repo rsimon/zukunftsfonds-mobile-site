@@ -9,7 +9,7 @@ import { hasGeometry } from '../profiles/Utils';
  */
 const computeGeoBounds = places => {
   const coords = places.reduce((allCoords, p) => {
-    const g = p.geometry.geometries[0];
+    const g = p.geometry;
 
     // Support all the ways in which the data encodes point/poly coords
     if (g.coordinates) {
@@ -97,7 +97,7 @@ export default class DataStore {
   load() {
     const loadFile = entityType => 
       axios.get(`data/items_${entityType}.json`).then(response =>
-        response.data[0].reduce((items, next) => items.concat(next.features), []));
+        response.data.result.reduce((items, next) => items.concat(next.features), []));
     
     const responses = Promise.all([
       loadFile('actor'),
@@ -106,7 +106,7 @@ export default class DataStore {
 
     return responses.then(arr => {
       const [ actors, places ] = arr;
-      
+
       this.actors = actors;
       this.places = places;
 
