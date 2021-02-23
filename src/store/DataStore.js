@@ -1,5 +1,6 @@
 import axios from 'axios';
 import * as JsSearch from 'js-search';
+import centroid from '@turf/centroid';
 
 import { getRelatedItems } from '../profiles/RelatedItems';
 import { hasGeometry } from '../profiles/Utils';
@@ -48,22 +49,44 @@ const computeGeoBounds = places => {
  * Note that the computation will filter out places that don't have
  * coordinates.
  */
-const computeLifePaths = (store, actors) => actors.reduce((paths, actor) => {
-  let { begins_in, ends_in } = getRelatedItems(actor, store).places; // .filter(p => hasGeometry(p));
-  
-  begins_in = begins_in.filter(p => hasGeometry(p));
-  ends_in = ends_in.filter(p => hasGeometry(p));
+const computeLifePaths = (store, actors) => {
+  const paths = actors.reduce((paths, actor) => {
+    let { begins_in, ends_in } = getRelatedItems(actor, store).places; // .filter(p => hasGeometry(p));
+    
+    begins_in = begins_in.filter(p => hasGeometry(p));
+    ends_in = ends_in.filter(p => hasGeometry(p));
 
-  if (begins_in.length > 0 && ends_in.length > 0) {
-    return [ ...paths, {
-      actor, 
-      begins: begins_in[0],
-      ends: ends_in[0]
-    }];
-  } else {
-    return paths;
-  }
-}, []);
+    if (begins_in.length > 0 && ends_in.length > 0) {
+      return [ ...paths, {
+        actor, 
+        begins: begins_in[0],
+        ends: ends_in[0]
+      }];
+    } else {
+      return paths;
+    }
+  }, []);
+
+  // Sort paths by distance
+  paths.sort((a, b) => {
+    const [ aBegins, aEnds ] = [
+      centroid(a.begins).geometry.coordinates,
+      centroid(a.ends).geometry.coordinates
+    ];
+
+    const [ bBegins, bEnds ] = [
+      centroid(b.begins).geometry.coordinates,
+      centroid(b.ends).geometry.coordinates
+    ]; 
+
+    const distA = Math.sqrt(Math.pow(aEnds[0] - aBegins[0], 2) + Math.pow(aEnds[1] - aBegins[1], 2));
+    const distB = Math.sqrt(Math.pow(bEnds[0] - bBegins[0], 2) + Math.pow(bEnds[1] - bBegins[1], 2));
+
+    return distA - distB;
+  });
+
+  return paths;
+}
 
 /**
  * Because (fortunately) our data is static, the data store

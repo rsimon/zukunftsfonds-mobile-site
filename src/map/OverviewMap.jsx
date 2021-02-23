@@ -5,14 +5,20 @@ import PageWithMenu from '../PageWithMenu';
 import { useI18N } from '../i18n';
 import { navigateTo } from '../profiles/Utils';
 import Curve from './Curve';
+import L from 'leaflet';
 
 import './OverviewMap.scss';
 
-const drawArrow = (path, map, onClick) => {
+const drawArrow = (path, curveLayer, markerLayer, onClick) => {
   const start = centroid(path.begins).geometry.coordinates.reverse();
   const end = centroid(path.ends).geometry.coordinates.reverse();
 
-  const arrow = new Curve(start, end).addTo(map);
+  const arrow = new Curve(
+    start, 
+    end, 
+    curveLayer, 
+    markerLayer);
+
   arrow.onClick(onClick);
 }
 
@@ -44,8 +50,11 @@ const OverviewMap = props => {
       const map = mapRef.current.leafletElement;
       map.fitBounds(props.store.geoBounds);
 
+      const curveLayer = L.layerGroup().addTo(map);
+      const markerLayer = L.layerGroup().addTo(map);
+
       getDistinctPaths(props.store.lifePaths)
-        .forEach(l => drawArrow(l, map, onClick(l)));
+        .forEach(l => drawArrow(l, curveLayer, markerLayer, onClick(l)));
     }
   });
 

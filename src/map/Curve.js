@@ -8,7 +8,7 @@ import '@elfalem/leaflet-curve';
 
 export default class Curve {
 
-  constructor(fromLatLon, toLatLon, opts) {
+  constructor(fromLatLon, toLatLon, curveLayer, markerLayer, opts) {
     const pathOptions = opts || {
       color: '#a98f54',
       weight: 3
@@ -36,38 +36,25 @@ export default class Curve {
       toLatLon
     ];
 
-    this.curve = L.curve(data, { ...pathOptions, className: 'curve-inner' });
-
-    // Looks like this is no longer needed in cavas rendering mode
-    // A wider, transparent copy of the path to catch tap events
-    // this.clickBuffer = L.curve(data, {
-    //   color: 'transparent',
-    //   weight: 20
-    // });
+    this.curve = L.curve(data, { ...pathOptions })
+      .addTo(curveLayer).bringToBack();
 
     const handleStyle = {
       stroke: false,
       fillColor: pathOptions.handleColor || '#8a6100',
       fillOpacity: 1,
-      radius: 5
+      radius: 6
     }
 
     this.handles = [
-      L.circleMarker(fromLatLon, handleStyle),
-      L.circleMarker(toLatLon, handleStyle)
+      L.circleMarker(fromLatLon, handleStyle).addTo(markerLayer),
+      L.circleMarker(toLatLon, handleStyle).addTo(markerLayer)
     ];
   }
 
-  addTo = map => {
-    this.curve.addTo(map);
-    this.handles.map(h => h.addTo(map));
-    // this.clickBuffer.addTo(map);
-    return this;
-  }
-
   onClick = handler => {
-    // this.clickBuffer.addEventListener('click', handler);
-    this.curve.addEventListener('click', handler);
+    this.curve.on('click', handler);
+    this.handles.map(h => h.on('click', handler));
   }
   
 }

@@ -49,7 +49,7 @@ const ActorProfile = props => {
   useEffect(() => {
     const drawArrow = map => {
       const [ start, end ] = centroids;      
-      new Curve(start, end).addTo(map);
+      new Curve(start, end, map, map);
     }
 
     if (mapRef.current && geometries.length > 0) {
