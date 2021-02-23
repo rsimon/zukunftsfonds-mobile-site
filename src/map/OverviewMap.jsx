@@ -60,6 +60,7 @@ const OverviewMap = props => {
         <Map 
           ref={mapRef}
           zoom={10}
+          preferCanvas={true}
           attributionControl={false}
           style={{height:'100%'}}>
           <TileLayer

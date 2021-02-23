@@ -2,8 +2,6 @@ import L from 'leaflet';
 
 import '@elfalem/leaflet-curve';
 
-const canvasRenderer = L.canvas();
-
 /**
  * Modified from https://gist.github.com/ryancatalani/6091e50bf756088bf9bf5de2017b32e6
  */
@@ -38,13 +36,14 @@ export default class Curve {
       toLatLon
     ];
 
-    this.curve = L.curve(data, { ...pathOptions, className: 'curve-inner', renderer: canvasRenderer });
+    this.curve = L.curve(data, { ...pathOptions, className: 'curve-inner' });
 
-    /* A wider, transparent copy of the path to catch tap events
-    this.clickBuffer = L.curve(data, {
-      color: 'transparent',
-      weight: 20
-    });
+    // Looks like this is no longer needed in cavas rendering mode
+    // A wider, transparent copy of the path to catch tap events
+    // this.clickBuffer = L.curve(data, {
+    //   color: 'transparent',
+    //   weight: 20
+    // });
 
     const handleStyle = {
       stroke: false,
@@ -57,12 +56,11 @@ export default class Curve {
       L.circleMarker(fromLatLon, handleStyle),
       L.circleMarker(toLatLon, handleStyle)
     ];
-    */
   }
 
   addTo = map => {
     this.curve.addTo(map);
-    // this.handles.map(h => h.addTo(map));
+    this.handles.map(h => h.addTo(map));
     // this.clickBuffer.addTo(map);
     return this;
   }
