@@ -16,6 +16,20 @@ const drawArrow = (path, map, onClick) => {
   arrow.onClick(onClick);
 }
 
+const getDistinctPaths = paths => {
+  const distinct =  {};
+
+  paths.forEach(p => {
+    // Path is defined by the URIs of its start & end
+    const key = `${p.begins['@id']}-${p.ends['@id']}`;
+    
+    // Keep only the last, so that we render only one arc
+    distinct[key] = p;
+  });
+
+  return Object.values(distinct);
+}
+
 const OverviewMap = props => {
 
   const i18n = useI18N();
@@ -29,7 +43,9 @@ const OverviewMap = props => {
     if (mapRef.current) {
       const map = mapRef.current.leafletElement;
       map.fitBounds(props.store.geoBounds);
-      props.store.lifePaths.forEach(l => drawArrow(l, map, onClick(l)));
+
+      getDistinctPaths(props.store.lifePaths)
+        .forEach(l => drawArrow(l, map, onClick(l)));
     }
   });
 

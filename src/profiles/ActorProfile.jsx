@@ -72,6 +72,7 @@ const ActorProfile = props => {
         <Map 
           ref={mapRef}
           zoomControl={false}
+          attributionControl={false}
           style={{height:'200px'}}>
           <TileLayer
             attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
