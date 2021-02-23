@@ -1,6 +1,8 @@
 import L from 'leaflet';
 
-import 'leaflet-curve'
+import '@elfalem/leaflet-curve';
+
+const canvasRenderer = L.canvas();
 
 /**
  * Modified from https://gist.github.com/ryancatalani/6091e50bf756088bf9bf5de2017b32e6
@@ -36,7 +38,7 @@ export default class Curve {
       toLatLon
     ];
 
-    this.curve = L.curve(data, { ...pathOptions, className: 'curve-inner' });
+    this.curve = L.curve(data, { ...pathOptions, className: 'curve-inner', renderer: canvasRenderer });
 
     /* A wider, transparent copy of the path to catch tap events
     this.clickBuffer = L.curve(data, {
