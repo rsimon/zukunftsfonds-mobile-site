@@ -75,7 +75,7 @@ const ActorProfile = props => {
           attributionControl={false}
           style={{height:'200px'}}>
           <TileLayer
-            url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}"
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           {geometries.map(geom => 
             <GeoJSON key={geom['@id']} data={geom} />
