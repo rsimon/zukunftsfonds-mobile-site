@@ -38,7 +38,7 @@ export default class Curve {
 
     this.curve = L.curve(data, { ...pathOptions, className: 'curve-inner' });
 
-    // A wider, transparent copy of the path to catch tap events
+    /* A wider, transparent copy of the path to catch tap events
     this.clickBuffer = L.curve(data, {
       color: 'transparent',
       weight: 20
@@ -55,17 +55,19 @@ export default class Curve {
       L.circleMarker(fromLatLon, handleStyle),
       L.circleMarker(toLatLon, handleStyle)
     ];
+    */
   }
 
   addTo = map => {
     this.curve.addTo(map);
-    this.handles.map(h => h.addTo(map));
-    this.clickBuffer.addTo(map);
+    // this.handles.map(h => h.addTo(map));
+    // this.clickBuffer.addTo(map);
     return this;
   }
 
   onClick = handler => {
-    this.clickBuffer.addEventListener('click', handler);
+    // this.clickBuffer.addEventListener('click', handler);
+    this.curve.addEventListener('click', handler);
   }
   
 }
