@@ -29,7 +29,10 @@ const de =
     </p>
     <ul>
       <li><a href="https://leafletjs.com/" target="_blank" rel="noreferrer">Leaflet</a></li>
-      <li><a href="https://www.openstreetmap.org/" target="_blank" rel="noreferrer">OpenStreetMap</a></li>
+      <li>
+        Kartendaten von <a href="https://developers.arcgis.com/" target="_blank" rel="noreferrer">ESRI ArcGIS online</a>. 
+        Source: Esri, Maxar, GeoEye, Earthstar Geographics, CNES/Airbus DS, USDA, USGS, AeroGRID, IGN, and the GIS User Community.
+      </li>
     </ul>
   </>
 
