@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { CircleMarker, GeoJSON, Map, TileLayer } from 'react-leaflet';
+import { GeoJSON, Map, TileLayer } from 'react-leaflet';
 import PageWithMenu from '../../PageWithMenu';
 import MyPosition from './MyPosition';
 import NextStop from './NextStop';
@@ -22,17 +22,28 @@ const GPSModePage = props => {
 
   const currentIdx = props.tour.waypoints.features.indexOf(waypoint);
 
-  useEffect(() => {
+  const fitBounds = () => {
     if (mapRef.current) {
       const map = mapRef.current.leafletElement;
 
-      map.fitBounds(props.tour.bounds, { 
+      const lons = [ pos.coords.longitude, waypoint.geometry.coordinates[0] ];
+      const lats = [ pos.coords.latitude, waypoint.geometry.coordinates[1] ];
+
+      const bounds = [
+        [ Math.min(...lats), Math.min(...lons) ],
+        [ Math.max(...lats), Math.max(...lons) ]
+      ];
+
+      map.fitBounds(bounds, { 
         paddingTopLeft: [ 15, 15 ],
-        paddingBottomRight: [ 15, window.innerHeight  / 2 ]
+        paddingBottomRight: [ 10, window.innerHeight  / 2 ]
       });
     }
+  }
 
-    // Set up GPS watcher
+  useEffect(() => {
+    fitBounds();
+
     if (props.useGPS) {
       const watchId = navigator.geolocation?.watchPosition(pos => {
         setPos(pos);
@@ -43,6 +54,10 @@ const GPSModePage = props => {
       }
     }
   }, []);
+
+  useEffect(() => {
+    fitBounds();
+  }, [ waypoint ]);
 
   const onNextWaypoint = () => {
     const nextIdx = Math.min(currentIdx + 1, props.tour.waypoints.features.length - 1);
