@@ -24,13 +24,12 @@ const GPSModePage = props => {
       const map = mapRef.current.leafletElement;
       map.fitBounds(props.tour.bounds, { 
         paddingTopLeft: [ 15, 15 ],
-        paddingBottomRight: [ 15, 200 ]
+        paddingBottomRight: [ 15, window.innerHeight  / 2 ]
       });
     }
 
     const watchId = navigator.geolocation?.watchPosition(pos => {
       setPos(pos);
-      setWaypoint(props.tour.getNearestWaypoint(pos))
     }, null, {
       enableHighAccuracy: true
     });
@@ -42,14 +41,7 @@ const GPSModePage = props => {
 
   const onNextWaypoint = () => {
     const currentIdx = props.tour.waypoints.features.indexOf(waypoint);
-
-    console.log('current waypoint idx', currentIdx);
-
     const nextIdx = Math.min(currentIdx + 1, props.tour.waypoints.features.length - 1);
-
-    console.log('next idx', nextIdx);
-    
-    console.log(props.tour.waypoints.features[nextIdx]);
     setWaypoint(props.tour.waypoints.features[nextIdx]);
   }
 
