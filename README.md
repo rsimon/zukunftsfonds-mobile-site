@@ -13,7 +13,6 @@ __Note:__ there's currently an issue with the images hosted at the ÖAW server. 
 - Filter by projects?
 - Make profile maps "static"?
 - Instructions when search results are empty
-- Style for next waypoint
 - Data update
 
 
