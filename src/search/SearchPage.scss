@@ -1,6 +1,12 @@
 #root {
   
   .search {
+
+    .instructions {
+      padding:30px 20px;
+      line-height:160%;
+      text-align:center;
+    }
   
     .search-results {
       width:100%;

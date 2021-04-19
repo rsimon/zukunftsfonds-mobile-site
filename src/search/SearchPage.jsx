@@ -1,6 +1,7 @@
 import React from 'react';
 import { BackButton, Icon, Page, Input, Toolbar, ToolbarButton } from 'react-onsenui';
 import ResultList from './ResultList';
+import SearchInstructions from './SearchInstructions';
 import { getProfileComponent } from '../profiles/Utils';
 import { useRecoilState } from 'recoil';
 import { searchQueryState, searchResultState } from '../store/State';
@@ -64,9 +65,10 @@ const SearchPage = props => {
         </Toolbar>
       }>
 
-      <ResultList
-        results={results} 
-        onSelect={onSelectResult} />
+      {results.length > 0 ?
+        <ResultList
+          results={results} 
+          onSelect={onSelectResult} /> : <SearchInstructions /> }
     </Page>
   )
 
