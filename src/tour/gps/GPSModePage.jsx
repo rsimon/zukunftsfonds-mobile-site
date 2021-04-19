@@ -28,7 +28,7 @@ const GPSModePage = props => {
 
       let bounds = null;
 
-      if (props.useGPS) {
+      if (props.useGPS && pos) {
         // When using GPS, fit map to waypoint + current location
         const lons = [ pos.coords.longitude, waypoint.geometry.coordinates[0] ];
         const lats = [ pos.coords.latitude, waypoint.geometry.coordinates[1] ];
