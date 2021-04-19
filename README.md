@@ -18,8 +18,5 @@ Download all places and actors to seperate files...
 ...and replace the data files in the `/public/data` folder.
  
 
-## TODOs
-
-- Data update
 
 

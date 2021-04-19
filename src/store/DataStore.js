@@ -150,14 +150,14 @@ export default class DataStore {
 
   getPlaceWithLocation(id) {
     return this.places.find(place => place.relations.find(rel => 
-      rel.relationTo === id && rel.relationType === 'crm:P53_has_former_or_current_location'));
+      rel.relationTo === id && rel.relationType === 'crm:P53 has former or current location'));
   }
 
   getActorsWithLocation(id) {
     const relevantTypes = [
-      'crm:OA8_begins_in',
-      'crm:OA9_ends_in',
-      'crm:P74_has_current_or_former_residence'
+      'crm:OA8 begins in',
+      'crm:OA9 ends in',
+      'crm:P74 has current or former residence'
     ];
 
     return this.actors.filter(actor => actor.relations.find(rel => 

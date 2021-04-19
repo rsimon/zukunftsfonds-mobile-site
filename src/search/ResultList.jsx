@@ -6,9 +6,9 @@ import AutoSizer from 'react-virtualized-auto-sizer';
 import './ResultList.scss';
 
 const ICONS = {
-  'crm:E18_Physical_Thing': 'md-pin',
-  'crm:E21_Person': 'md-account',
-  'crm:E74_Group': 'md-accounts'
+  'crm:E18 Physical Thing': 'md-pin',
+  'crm:E21 Person': 'md-account',
+  'crm:E74 Group': 'md-accounts'
 }
 
 const ResultList = props => {

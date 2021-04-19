@@ -2,9 +2,9 @@ import ActorProfile from '../profiles/ActorProfile';
 import PlaceProfile from '../profiles/PlaceProfile';
 
 const PROFILE_COMPONENTS = {
-  'crm:E18_Physical_Thing': PlaceProfile,
-  'crm:E21_Person': ActorProfile,
-  'crm:E74_Group': ActorProfile
+  'crm:E18 Physical Thing': PlaceProfile,
+  'crm:E21 Person': ActorProfile,
+  'crm:E74 Group': ActorProfile
 }
 
 /** Returns the right JSX profile component for this item **/

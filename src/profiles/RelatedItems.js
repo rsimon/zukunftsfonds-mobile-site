@@ -29,9 +29,9 @@ class RelatedItems {
   get places() {
     // Pick up the following CRM types
     const relevantTypes = [
-      'crm:P74_has_current_or_former_residence',
-      'crm:OA8_begins_in',
-      'crm:OA9_ends_in'
+      'crm:P74 has current or former residence',
+      'crm:OA8 begins in',
+      'crm:OA9 ends in'
     ];
 
     // Relations with these types
@@ -51,9 +51,9 @@ class RelatedItems {
 
     // TODO add all unique places
     return {
-      begins_in: filter('crm:OA8_begins_in'),
-      ends_in: filter('crm:OA9_ends_in'),
-      has_residence: filter('crm:P74_has_current_or_former_residence'),
+      begins_in: filter('crm:OA8 begins in'),
+      ends_in: filter('crm:OA9 ends in'),
+      has_residence: filter('crm:P74 has current or former residence'),
       all: distinct(places.map(p => p.resolved)) // TODO de-duplicate
     }
   }
@@ -66,7 +66,7 @@ class RelatedItems {
    */
   get actors() {
     const location = this.item.relations.find(rel => 
-      rel.relationType === 'crm:P53_has_former_or_current_location');
+      rel.relationType === 'crm:P53 has former or current location');
 
     return location ?
       this.store.getActorsWithLocation(location.relationTo) : [];
