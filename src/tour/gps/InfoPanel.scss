@@ -139,6 +139,36 @@
       background:linear-gradient(0deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 100%);
       border-radius:4px;
     }
+
+    .buttons {
+      padding:30px 20px;
+      text-align:center;
+
+      ons-button {
+        text-align:center;
+        display:block;
+        margin:15px 0;
+        background-color:#a08952;
+      }
+
+      ons-icon {
+        font-size:20px;
+        padding-right:5px;
+        vertical-align:top;
+      }
+
+
+      .prev-waypoint {
+        background:none;
+        outline:none;
+        border:none;
+        text-decoration:underline;
+        font-size:15px; 
+        color:#a08952;
+      }
+
+    }
+
   }
 
   /*

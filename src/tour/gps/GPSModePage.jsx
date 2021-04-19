@@ -19,6 +19,8 @@ const GPSModePage = props => {
 
   const mapRef = useRef();
 
+  const currentIdx = props.tour.waypoints.features.indexOf(waypoint);
+
   useEffect(() => {
     if (mapRef.current) {
       const map = mapRef.current.leafletElement;
@@ -40,9 +42,13 @@ const GPSModePage = props => {
   }, []);
 
   const onNextWaypoint = () => {
-    const currentIdx = props.tour.waypoints.features.indexOf(waypoint);
     const nextIdx = Math.min(currentIdx + 1, props.tour.waypoints.features.length - 1);
     setWaypoint(props.tour.waypoints.features[nextIdx]);
+  }
+
+  const onPrevWaypoint = () => {
+    const prevIdx = Math.max(0, currentIdx - 1);
+    setWaypoint(props.tour.waypoints.features[prevIdx]);
   }
 
   return (
@@ -67,7 +73,7 @@ const GPSModePage = props => {
         waypoint={waypoint} 
         pos={pos} 
         onNextWaypoint={onNextWaypoint}
-        onPrevWaypoint={() => setWaypoint(Math.max(0, waypoint - 1))}/>
+        onPreviousWaypoint={onPrevWaypoint}/>
     </PageWithMenu>
   )
 

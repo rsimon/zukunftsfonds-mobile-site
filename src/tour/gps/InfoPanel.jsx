@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Icon } from 'react-onsenui';
+import React, { useState, useEffect } from 'react';
+import { Button, Icon } from 'react-onsenui';
 import distance from '@turf/distance';
 import { CSSTransition } from 'react-transition-group';
 import { useI18N } from '../../i18n';
@@ -25,6 +25,14 @@ const InfoPanel = props => {
   const dist = currentPos ? Math.round(distance(currentPos, props.waypoint) * 1000) : null;
   
   const proximity = dist < 25 ? 'ARRIVED' : 'FAR';
+
+  useEffect(() => {
+    // If proximity changes to 'ARRIVED', buzz & expand panel
+    if (proximity === 'ARRIVED') {
+      window.navigator.vibrate(200);
+      setExpanded(true);
+    }
+  }, [ proximity ])
 
   const onNextWaypoint = () => {
     setExpanded(false);
@@ -69,13 +77,18 @@ const InfoPanel = props => {
             {props.waypoint.properties.description}
           </p>
 
-          <button 
-            className="next-waypoint" 
-            onClick={onNextWaypoint}>{i18n('Continue Tour')}</button>
+          <div className="buttons">
+            <Button 
+              className="next-waypoint" 
+              onClick={onNextWaypoint}>
 
-          <button 
-            className="prev-waypoint"
-            onClick={onPreviousWaypoint}>{i18n('Continue Tour')}</button>
+              <Icon icon="md-long-arrow-tab" /> {i18n('Continue Tour')}
+            </Button>
+
+            <button 
+              className="prev-waypoint"
+              onClick={onPreviousWaypoint}>{i18n('Back to previous stop')}</button>
+          </div>
 
           <div className="shade-gradient" />
         </div>
