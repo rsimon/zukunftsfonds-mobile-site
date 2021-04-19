@@ -24,7 +24,7 @@ const InfoPanel = props => {
 
   const dist = currentPos ? Math.round(distance(currentPos, props.waypoint) * 1000) : null;
   
-  const proximity = dist < 25 ? 'ARRIVED' : 'FAR';
+  const proximity = props.useGPS ? (dist !== null && dist < 25 ? 'ARRIVED' : 'FAR') : 'NO-GPS';
 
   useEffect(() => {
     // If proximity changes to 'ARRIVED', buzz & expand panel
@@ -35,27 +35,51 @@ const InfoPanel = props => {
   }, [ proximity ])
 
   const onNextWaypoint = () => {
-    setExpanded(false);
-    props.onNextWaypoint();
+    if (props.useGPS)
+      setExpanded(false);
+    
+      props.onNextWaypoint();
   }
 
   const onPreviousWaypoint = () => {
-    setExpanded(false);
-    props.onPreviousWaypoint();
+    if (props.useGPS)
+      setExpanded(false);
+    
+      props.onPreviousWaypoint();
   }
 
   return (
     <CSSTransition in={expanded} timeout={200}>
       <div className="tour-map-infopanel">
         <div className={`next-stop ${proximity}`}>
-          {proximity !== 'ARRIVED' &&
-            <h1>{i18n('Next Stop')}</h1> }
+          {proximity === 'FAR' &&
+            <h1>
+              { 
+                props.isStart ? i18n('First Stop') : (
+                  props.isEnd ? i18n('Last Stop') : i18n('Next Stop')
+                )
+              }
+            </h1>
+          }
+
+          {proximity === 'ARRIVED' &&
+            <h1>{i18n('You have arrived!')}</h1> }
+
+          {proximity === 'NO-GPS' &&
+            <h1>
+              { 
+                props.isStart ? i18n('First Stop') : (
+                  props.isEnd ? i18n('Last Stop') : `${i18n('Stop')} ${props.waypointIdx + 1}`
+                )
+              }
+            </h1>
+          }
 
           <h2>
             {proximity === 'FAR' &&
               <span className="distance"><Icon icon="md-walk" /> {dist || '-'}m </span> }
 
-            {proximity === 'ARRIVED' &&
+            {proximity !== 'FAR' &&
               <Icon icon="md-gps-dot" /> }
 
             {props.waypoint.properties.title}

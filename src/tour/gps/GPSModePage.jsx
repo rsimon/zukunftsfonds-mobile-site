@@ -30,14 +30,15 @@ const GPSModePage = props => {
       });
     }
 
-    const watchId = navigator.geolocation?.watchPosition(pos => {
-      setPos(pos);
-    }, null, {
-      enableHighAccuracy: true
-    });
+    // Set up GPS watcher
+    if (props.useGPS) {
+      const watchId = navigator.geolocation?.watchPosition(pos => {
+        setPos(pos);
+      }, null, { enableHighAccuracy: true });
 
-    return function cleanup() {
-      navigator.geolocation?.clearWatch(watchId);
+      return function cleanup() {
+        navigator.geolocation?.clearWatch(watchId);
+      }
     }
   }, []);
 
@@ -70,8 +71,12 @@ const GPSModePage = props => {
 
       <InfoPanel 
         tour={props.tour} 
+        useGPS={props.useGPS}
         waypoint={waypoint} 
+        waypointIdx={currentIdx}
         pos={pos} 
+        isStart={currentIdx === 0}
+        isEnd={currentIdx === props.tour.waypoints.features.length - 1}
         onNextWaypoint={onNextWaypoint}
         onPreviousWaypoint={onPrevWaypoint}/>
     </PageWithMenu>

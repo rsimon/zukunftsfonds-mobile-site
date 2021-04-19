@@ -71,7 +71,8 @@
 
   }
 
-  .next-stop.ARRIVED {
+  .next-stop.ARRIVED,
+  .next-stop.NO-GPS {
     background-color:#a08952;
     color:#fff;
 
@@ -170,27 +171,6 @@
     }
 
   }
-
-  /*
-  footer.tour-map-footer {
-    padding:5px 10px;
-    border-top:none;
-    text-align:left;
-    background-color:#eaeaea;
-    color:#6d6d6d;
-    font-size:14px;
-
-    ons-icon {
-      vertical-align:text-bottom;
-      padding-right:5px;
-    }
-
-    .distance-to-waypoint {
-      vertical-align:middle;
-    }
-
-  }
-  */
 
 }
 

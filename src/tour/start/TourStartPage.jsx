@@ -32,10 +32,11 @@ const TourStartPage = props => {
     }
   }, [ tour ]);
 
-  const onStartGPSTour = tour => () =>
+  const onStartTour = (tour, useGPS) => () =>
     props.navigator.pushPage({ 
       component: GPSModePage,
-      tour
+      tour,
+      useGPS
     });
 
   return (
@@ -75,11 +76,11 @@ const TourStartPage = props => {
           </div>
 
           <div className="start-buttons">
-            <Button onClick={onStartGPSTour(tour)}>
+            <Button onClick={onStartTour(tour, true)}>
               <Icon icon="md-gps-dot" /> <label>{i18n('Start the tour')}</label>
             </Button>
 
-            <Button modifier="outline" className="outline">
+            <Button onClick={onStartTour(tour, false)} modifier="outline" className="outline">
               <Icon icon="md-gps-off" /> <label>{i18n('View tour without GPS')}</label>
             </Button>
           </div>
