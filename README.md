@@ -20,9 +20,6 @@ Download all places and actors to seperate files...
 
 ## TODOs
 
-- Filter by projects?
-- Make profile maps "static"?
-- Instructions when search results are empty
 - Data update
 
 
