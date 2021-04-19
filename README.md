@@ -14,6 +14,5 @@ __Note:__ there's currently an issue with the images hosted at the ÖAW server. 
 - Make profile maps "static"?
 - Instructions when search results are empty
 - Data update
-- Fit map to: next waypoint + current location (when starting the tour + when switching to next waypoint)
 
 

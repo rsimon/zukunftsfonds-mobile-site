@@ -26,13 +26,21 @@ const GPSModePage = props => {
     if (mapRef.current) {
       const map = mapRef.current.leafletElement;
 
-      const lons = [ pos.coords.longitude, waypoint.geometry.coordinates[0] ];
-      const lats = [ pos.coords.latitude, waypoint.geometry.coordinates[1] ];
+      let bounds = null;
 
-      const bounds = [
-        [ Math.min(...lats), Math.min(...lons) ],
-        [ Math.max(...lats), Math.max(...lons) ]
-      ];
+      if (props.useGPS) {
+        // When using GPS, fit map to waypoint + current location
+        const lons = [ pos.coords.longitude, waypoint.geometry.coordinates[0] ];
+        const lats = [ pos.coords.latitude, waypoint.geometry.coordinates[1] ];
+
+        bounds = [
+          [ Math.min(...lats), Math.min(...lons) ],
+          [ Math.max(...lats), Math.max(...lons) ]
+        ];
+      } else {
+        // When not using GPS, just fit to tour path
+        bounds = props.tour.bounds;
+      }
 
       map.fitBounds(bounds, { 
         paddingTopLeft: [ 15, 15 ],
@@ -43,7 +51,7 @@ const GPSModePage = props => {
 
   useEffect(() => {
     fitBounds();
-
+    
     if (props.useGPS) {
       const watchId = navigator.geolocation?.watchPosition(pos => {
         setPos(pos);
