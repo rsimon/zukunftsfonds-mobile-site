@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { GeoJSON, Map, TileLayer } from 'react-leaflet';
+import { CircleMarker, GeoJSON, Map, TileLayer } from 'react-leaflet';
 import PageWithMenu from '../../PageWithMenu';
 import MyPosition from './MyPosition';
 import InfoPanel from './InfoPanel';
@@ -40,6 +40,19 @@ const GPSModePage = props => {
     }
   }, []);
 
+  const onNextWaypoint = () => {
+    const currentIdx = props.tour.waypoints.features.indexOf(waypoint);
+
+    console.log('current waypoint idx', currentIdx);
+
+    const nextIdx = Math.min(currentIdx + 1, props.tour.waypoints.features.length - 1);
+
+    console.log('next idx', nextIdx);
+    
+    console.log(props.tour.waypoints.features[nextIdx]);
+    setWaypoint(props.tour.waypoints.features[nextIdx]);
+  }
+
   return (
     <PageWithMenu 
       backButton
@@ -54,13 +67,14 @@ const GPSModePage = props => {
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         <GeoJSON { ...{...PATH_STYLE, data: props.tour.track }} />
         { pos && <MyPosition pos={pos} /> }
+        <CircleMarker center={waypoint.geometry.coordinates.slice().reverse()} />
       </Map>
 
       <InfoPanel 
         tour={props.tour} 
         waypoint={waypoint} 
         pos={pos} 
-        onNextWaypoint={() => setWaypoint(Math.min(waypoint + 1, props.tour.waypoints.length - 1))}
+        onNextWaypoint={onNextWaypoint}
         onPrevWaypoint={() => setWaypoint(Math.max(0, waypoint - 1))}/>
     </PageWithMenu>
   )

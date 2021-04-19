@@ -19,6 +19,7 @@
     "react-leaflet": "^2.7.0",
     "react-onsenui": "^1.11.3",
     "react-scripts": "^4.0.1",
+    "react-transition-group": "^4.4.1",
     "react-virtualized-auto-sizer": "^1.0.2",
     "react-window": "^1.8.5",
     "recoil": "0.0.13",
