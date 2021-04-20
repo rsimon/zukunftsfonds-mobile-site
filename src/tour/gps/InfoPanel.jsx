@@ -3,6 +3,7 @@ import { Button, GestureDetector, Icon } from 'react-onsenui';
 import distance from '@turf/distance';
 import { CSSTransition } from 'react-transition-group';
 import { useI18N, useBilingual } from '../../i18n';
+import ImageSlider from '../../profiles/ImageSlider';
 
 import './InfoPanel.scss';
 
@@ -50,9 +51,9 @@ const InfoPanel = props => {
       props.onPreviousWaypoint();
   }
 
-  const headerImage = props.waypoint.properties.images[0].startsWith('http') ? 
-    props.waypoint.properties.images[0] :
-    `tours/images/${props.waypoint.properties.images[0]}`;
+  const headerImage = props.waypoint.properties.images[0].url.startsWith('http') ? 
+    props.waypoint.properties.images[0].url :
+    `tours/images/${props.waypoint.properties.images[0].url}`;
 
   return (
     <GestureDetector 
@@ -107,6 +108,8 @@ const InfoPanel = props => {
             <p>
               {getTranslation(props.waypoint.properties.description)}
             </p>
+
+            <ImageSlider depictions={props.waypoint.properties.images} />
 
             <div className="buttons">
               <Button 

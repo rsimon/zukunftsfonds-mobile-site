@@ -5,6 +5,7 @@ import { ProgressCircular } from 'react-onsenui';
 
 import 'react-alice-carousel/lib/alice-carousel.css';
 import 'react-image-lightbox/style.css';
+import './ImageSlider.scss';
 
 const preload = url => new Promise((resolve, reject) => {
   const img = new Image();
@@ -24,19 +25,28 @@ const ImageSlider = props => {
   const [ selected, setSelected ] = useState(null);
   const [ isLoading, setIsLoading ] = useState(true);
   const [ loadingError, setLoadingError ] = useState(null);
-
+  
   const depictions = getValidDepictions(props.depictions);
 
+  const images = depictions.map((d, idx) =>
+    <div className="image-wrapper">
+      <div className="inner">
+        <img src={d.url} alt={d.title} onClick={() => setSelected(idx)} />
+      </div>
+    </div>
+  )
+
   useEffect(() => {
-    Promise.all(depictions.map(d => preload(d.url))).then(result =>
-      setIsLoading(false)
-    ).catch(error => {
-      console.error('Error loading image(s)');
-      console.error(error);
+    setIsLoading(true);
+    setLoadingError(null);
+
+    Promise.all(depictions.map(d => preload(d.url))).then(result => {
       setIsLoading(false);
-      setLoadingError(error)
-    });  
-  }, []);
+    }).catch(error => {
+      setIsLoading(false);
+      setLoadingError(error);
+    }); 
+  }, [ props.depictions ]);
 
   const getPrev = idx => {
     if (selected !== null && depictions.length > 1) {
@@ -52,14 +62,6 @@ const ImageSlider = props => {
     }
   }
 
-  const images = depictions.map((d, idx) =>
-    <div className="image-wrapper">
-      <div className="inner">
-        <img src={d.url} alt={d.title} onClick={() => setSelected(idx)} />
-      </div>
-    </div>
-  )
-
   return (
     <>
       { isLoading && 
@@ -67,6 +69,7 @@ const ImageSlider = props => {
           <ProgressCircular indeterminate />
         </div>
       }
+      
       { !isLoading && !loadingError && 
         <div className="image-carousel">
           <AliceCarousel 

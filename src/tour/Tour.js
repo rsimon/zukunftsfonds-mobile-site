@@ -19,7 +19,7 @@ const buildWaypointFeatures = (waypoints, store) => ({
       type: 'Feature',
       properties: {
         title: record.properties.title.replace('Oberhollabrunn, Flüchtlingslager,', '').trim(),
-        images: record.depictions.map(d => d.url),
+        images: record.depictions,
         description: record.description.map(d => d.value).join('\n\n')
       },
       geometry: centroid(record.geometry).geometry
