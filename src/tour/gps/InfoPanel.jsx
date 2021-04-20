@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Icon } from 'react-onsenui';
+import { Button, GestureDetector, Icon } from 'react-onsenui';
 import distance from '@turf/distance';
 import { CSSTransition } from 'react-transition-group';
 import { useI18N, useBilingual } from '../../i18n';
@@ -55,72 +55,77 @@ const InfoPanel = props => {
     `tours/images/${props.waypoint.properties.images[0]}`;
 
   return (
-    <CSSTransition in={expanded} timeout={200}>
-      <div className="tour-map-infopanel">
-        <div className={`next-stop ${proximity}`}>
-          {proximity === 'FAR' &&
-            <h1>
-              { 
-                props.isStart ? i18n('First Stop') : (
-                  props.isEnd ? i18n('Last Stop') : i18n('Next Stop')
-                )
-              }
-            </h1>
-          }
+    <GestureDetector 
+      onSwipeUp={() => setExpanded(true)} 
+      onSwipeDown={() => setExpanded(false)}>
 
-          {proximity === 'ARRIVED' &&
-            <h1>{i18n('You have arrived!')}</h1> }
-
-          {proximity === 'NO-GPS' &&
-            <h1>
-              { 
-                props.isStart ? i18n('First Stop') : (
-                  props.isEnd ? i18n('Last Stop') : `${i18n('Stop')} ${props.waypointIdx + 1}`
-                )
-              }
-            </h1>
-          }
-
-          <h2>
+      <CSSTransition in={expanded} timeout={200}>
+        <div className="tour-map-infopanel">
+          <div className={`next-stop ${proximity}`}>
             {proximity === 'FAR' &&
-              <span className="distance"><Icon icon="md-walk" /> {dist || '-'}m </span> }
+              <h1>
+                { 
+                  props.isStart ? i18n('First Stop') : (
+                    props.isEnd ? i18n('Last Stop') : i18n('Next Stop')
+                  )
+                }
+              </h1>
+            }
 
-            {props.waypoint.properties.title}
-          </h2>
+            {proximity === 'ARRIVED' &&
+              <h1>{i18n('You have arrived!')}</h1> }
 
-          <button 
-            className="expand"
-            onClick={() => setExpanded(!expanded)}>
-            <Icon icon="md-chevron-right" /> 
-          </button>
-        </div>
-        <div 
-          className="waypoint-image"
-          style={{ backgroundImage: `url('${headerImage}')` }}>
-          {/* <h2>{props.waypoint.properties.title}</h2> */}
-        </div>
-        <div className="waypoint-description">
-          <p>
-            {getTranslation(props.waypoint.properties.description)}
-          </p>
+            {proximity === 'NO-GPS' &&
+              <h1>
+                { 
+                  props.isStart ? i18n('First Stop') : (
+                    props.isEnd ? i18n('Last Stop') : `${i18n('Stop')} ${props.waypointIdx + 1}`
+                  )
+                }
+              </h1>
+            }
 
-          <div className="buttons">
-            <Button 
-              className="next-waypoint" 
-              onClick={onNextWaypoint}>
+            <h2>
+              {proximity === 'FAR' &&
+                <span className="distance"><Icon icon="md-walk" /> {dist || '-'}m </span> }
 
-              <Icon icon="md-walk" /> {i18n('Continue to Next Stop')}
-            </Button>
+              {props.waypoint.properties.title}
+            </h2>
 
             <button 
-              className="prev-waypoint"
-              onClick={onPreviousWaypoint}>{i18n('Back to previous stop')}</button>
+              className="expand"
+              onClick={() => setExpanded(!expanded)}>
+              <Icon icon="md-chevron-right" /> 
+            </button>
           </div>
+          <div 
+            className="waypoint-image"
+            style={{ backgroundImage: `url('${headerImage}')` }}>
+            {/* <h2>{props.waypoint.properties.title}</h2> */}
+          </div>
+          <div className="waypoint-description">
+            <p>
+              {getTranslation(props.waypoint.properties.description)}
+            </p>
 
-          <div className="shade-gradient" />
+            <div className="buttons">
+              <Button 
+                className="next-waypoint" 
+                onClick={onNextWaypoint}>
+
+                <Icon icon="md-walk" /> {i18n('Continue to Next Stop')}
+              </Button>
+
+              <button 
+                className="prev-waypoint"
+                onClick={onPreviousWaypoint}>{i18n('Back to previous stop')}</button>
+            </div>
+
+            <div className="shade-gradient" />
+          </div>
         </div>
-      </div>
-    </CSSTransition>
+      </CSSTransition>
+    </GestureDetector>
   ) 
 
 }

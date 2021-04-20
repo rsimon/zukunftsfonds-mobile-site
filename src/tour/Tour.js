@@ -15,9 +15,6 @@ const buildWaypointFeatures = (waypoints, store) => ({
   type: 'FeatureCollection',
   features: waypoints.map(waypoint => {
     const record = store.findById(waypoint.id);
-
-    console.log(record);
-
     return {
       type: 'Feature',
       properties: {
