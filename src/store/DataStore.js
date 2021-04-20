@@ -134,6 +134,8 @@ export default class DataStore {
       this.actors = actors;
       this.places = places;
 
+      this.items = this.actors.concat(this.places);
+
       this.geoBounds = computeGeoBounds(places);
       this.lifePaths = computeLifePaths(this, actors);
 

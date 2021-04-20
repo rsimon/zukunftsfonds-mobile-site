@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button, Icon } from 'react-onsenui';
 import distance from '@turf/distance';
 import { CSSTransition } from 'react-transition-group';
-import { useI18N } from '../../i18n';
+import { useI18N, useBilingual } from '../../i18n';
 
 import './InfoPanel.scss';
 
@@ -11,6 +11,8 @@ const InfoPanel = props => {
   const [ expanded, setExpanded ] = useState(false);
 
   const i18n = useI18N();
+
+  const getTranslation = useBilingual();
   
   // turf.js needs GeoJSON feature
   const currentPos = props.pos ? {
@@ -48,6 +50,10 @@ const InfoPanel = props => {
       props.onPreviousWaypoint();
   }
 
+  const headerImage = props.waypoint.properties.images[0].startsWith('http') ? 
+    props.waypoint.properties.images[0] :
+    `tours/images/${props.waypoint.properties.images[0]}`;
+
   return (
     <CSSTransition in={expanded} timeout={200}>
       <div className="tour-map-infopanel">
@@ -79,9 +85,6 @@ const InfoPanel = props => {
             {proximity === 'FAR' &&
               <span className="distance"><Icon icon="md-walk" /> {dist || '-'}m </span> }
 
-            {proximity !== 'FAR' &&
-              <Icon icon="md-gps-dot" /> }
-
             {props.waypoint.properties.title}
           </h2>
 
@@ -93,12 +96,12 @@ const InfoPanel = props => {
         </div>
         <div 
           className="waypoint-image"
-          style={{ backgroundImage: `url('tours/images/${props.waypoint.properties.images[0]}')` }}>
-          <h2>{props.waypoint.properties.title}</h2>
+          style={{ backgroundImage: `url('${headerImage}')` }}>
+          {/* <h2>{props.waypoint.properties.title}</h2> */}
         </div>
         <div className="waypoint-description">
           <p>
-            {props.waypoint.properties.description}
+            {getTranslation(props.waypoint.properties.description)}
           </p>
 
           <div className="buttons">

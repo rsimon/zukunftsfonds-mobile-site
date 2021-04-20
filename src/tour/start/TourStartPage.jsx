@@ -22,7 +22,7 @@ const TourStartPage = props => {
   const [ tour, setTour ] = useState();
 
   useEffect(() => {
-    loadTour('simulated').then(setTour);
+    loadTour('oberhollabrunn', props.store).then(setTour);
   }, []);
 
   useEffect(() => {
@@ -49,7 +49,7 @@ const TourStartPage = props => {
       { tour &&
         <>
           <div className="tour-start-header-image">
-            <img src="tours/images/waypoint-4.jpg" alt="GPS walk header decoration" />
+            <img src={tour.image} alt="GPS walk header decoration" />
             <div className="caption">
               <h1>{tour.title}</h1>
               <h3 className="duration">
@@ -58,9 +58,9 @@ const TourStartPage = props => {
             </div>
           </div>
 
-          <div className="tour-description">
-            {tour.description}
-          </div>
+          <div className="tour-description" dangerouslySetInnerHTML={{
+            __html: tour.description
+          }} />
 
           <div className="tour-overview-map">
             <Map 

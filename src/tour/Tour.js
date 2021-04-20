@@ -1,6 +1,7 @@
 import axios from 'axios';
 import bbox from '@turf/bbox';
 import distance from '@turf/distance';
+import centroid from '@turf/centroid';
 
 const getBounds = geojson => {
   const corners = bbox(geojson);
@@ -10,15 +11,38 @@ const getBounds = geojson => {
   ];
 }
 
+const buildWaypointFeatures = (waypoints, store) => ({
+  type: 'FeatureCollection',
+  features: waypoints.map(waypoint => {
+    const record = store.findById(waypoint.id);
+
+    console.log(record);
+
+    return {
+      type: 'Feature',
+      properties: {
+        title: record.properties.title.replace('Oberhollabrunn, Flüchtlingslager,', '').trim(),
+        images: record.depictions.map(d => d.url),
+        description: record.description.map(d => d.value).join('\n\n')
+      },
+      geometry: centroid(record.geometry).geometry
+    }
+  })
+})
+
 class Tour {
 
-  load(tour) {
+  load(tour, store) {
     return Promise.all([
       axios.get(`tours/${tour}-track.json`),
       axios.get(`tours/${tour}-waypoints.json`)
     ]).then(results => {
       this.track = results[0].data;
-      this.waypoints = results[1].data;
+      
+      // Allow GeoJSON feature collection or DB ID list
+      this.waypoints = results[1].data.type === 'FeatureCollection' ?
+        results[1].data : buildWaypointFeatures(results[1].data, store);
+
       this.bounds = getBounds(this.track);
     });
   }
@@ -64,7 +88,7 @@ class Tour {
 }
 
 /** Instantiate a tour object, return the promise, and map result to the tour itself **/
-export const loadTour = name => {
+export const loadTour = (name, store) => {
   const tour = new Tour();
-  return tour.load(name).then(() => tour);
+  return tour.load(name, store).then(() => tour);
 }
