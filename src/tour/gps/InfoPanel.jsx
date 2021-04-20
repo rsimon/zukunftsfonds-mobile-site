@@ -106,7 +106,7 @@ const InfoPanel = props => {
               className="next-waypoint" 
               onClick={onNextWaypoint}>
 
-              <Icon icon="md-long-arrow-tab" /> {i18n('Continue Tour')}
+              <Icon icon="md-walk" /> {i18n('Continue to Next Stop')}
             </Button>
 
             <button 
