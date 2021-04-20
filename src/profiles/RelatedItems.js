@@ -1,3 +1,5 @@
+import CRM from '../CRM';
+
 // De-duplicates the list of items, using their URI for equality
 const distinct = items => {
   const uris = items.map(item => item['@id']);
@@ -29,9 +31,9 @@ class RelatedItems {
   get places() {
     // Pick up the following CRM types
     const relevantTypes = [
-      'crm:P74 has current or former residence',
-      'crm:OA8 begins in',
-      'crm:OA9 ends in'
+      CRM.P74_has_current_or_former_residence,
+      CRM.OA8_begins_in,
+      CRM.OA9_ends_in
     ];
 
     // Relations with these types
@@ -51,9 +53,9 @@ class RelatedItems {
 
     // TODO add all unique places
     return {
-      begins_in: filter('crm:OA8 begins in'),
-      ends_in: filter('crm:OA9 ends in'),
-      has_residence: filter('crm:P74 has current or former residence'),
+      begins_in: filter(CRM.OA8_begins_in),
+      ends_in: filter(CRM.OA9_ends_in),
+      has_residence: filter(CRM.P74_has_current_or_former_residence),
       all: distinct(places.map(p => p.resolved)) // TODO de-duplicate
     }
   }
@@ -66,7 +68,7 @@ class RelatedItems {
    */
   get actors() {
     const location = this.item.relations.find(rel => 
-      rel.relationType === 'crm:P53 has former or current location');
+      rel.relationType === CRM.P53_has_former_or_current_location);
 
     return location ?
       this.store.getActorsWithLocation(location.relationTo) : [];

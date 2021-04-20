@@ -2,13 +2,14 @@ import React from 'react';
 import { FixedSizeList as List } from 'react-window';
 import { Icon, Ripple } from 'react-onsenui';
 import AutoSizer from 'react-virtualized-auto-sizer';
+import CRM from '../CRM';
 
 import './ResultList.scss';
 
 const ICONS = {
-  'crm:E18 Physical Thing': 'md-pin',
-  'crm:E21 Person': 'md-account',
-  'crm:E74 Group': 'md-accounts'
+  [CRM.E18_Physical_Thing]: 'md-pin',
+  [CRM.E21_Person]: 'md-account',
+  [CRM.E74_Group]: 'md-accounts'
 }
 
 const ResultList = props => {

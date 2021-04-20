@@ -1,10 +1,11 @@
-import ActorProfile from '../profiles/ActorProfile';
-import PlaceProfile from '../profiles/PlaceProfile';
+import ActorProfile from './ActorProfile';
+import PlaceProfile from './PlaceProfile';
+import CRM from '../CRM';
 
 const PROFILE_COMPONENTS = {
-  'crm:E18 Physical Thing': PlaceProfile,
-  'crm:E21 Person': ActorProfile,
-  'crm:E74 Group': ActorProfile
+  [CRM.E18_Physical_Thing]: PlaceProfile,
+  [CRM.E21_Person]: ActorProfile,
+  [CRM.E74_Group]: ActorProfile
 }
 
 /** Returns the right JSX profile component for this item **/

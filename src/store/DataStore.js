@@ -4,6 +4,7 @@ import centroid from '@turf/centroid';
 
 import { getRelatedItems } from '../profiles/RelatedItems';
 import { hasGeometry } from '../profiles/Utils';
+import CRM from '../CRM';
 
 /**
  * Helper to compute the bounding box of all places in the dataset.
@@ -150,14 +151,14 @@ export default class DataStore {
 
   getPlaceWithLocation(id) {
     return this.places.find(place => place.relations.find(rel => 
-      rel.relationTo === id && rel.relationType === 'crm:P53 has former or current location'));
+      rel.relationTo === id && rel.relationType === CRM.P53_has_former_or_current_location));
   }
 
   getActorsWithLocation(id) {
     const relevantTypes = [
-      'crm:OA8 begins in',
-      'crm:OA9 ends in',
-      'crm:P74 has current or former residence'
+      CRM.OA8_begins_in,
+      CRM.OA9_ends_in,
+      CRM.P74_has_current_or_former_residence
     ];
 
     return this.actors.filter(actor => actor.relations.find(rel => 
