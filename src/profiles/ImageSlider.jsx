@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import Lightbox from 'react-image-lightbox';
 import { ProgressCircular } from 'react-onsenui';
@@ -21,7 +21,6 @@ export const hasDepictions = item =>
   getValidDepictions(item.depictions).length > 0;
 
 const ImageSlider = props => {
-
   const [ selected, setSelected ] = useState(null);
   const [ isLoading, setIsLoading ] = useState(true);
   const [ loadingError, setLoadingError ] = useState(null);
@@ -45,7 +44,7 @@ const ImageSlider = props => {
     }).catch(error => {
       setIsLoading(false);
       setLoadingError(error);
-    }); 
+    });
   }, [ props.depictions ]);
 
   const getPrev = idx => {
