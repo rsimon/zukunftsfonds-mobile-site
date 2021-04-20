@@ -99,33 +99,36 @@ const InfoPanel = props => {
               <Icon icon="md-chevron-right" /> 
             </button>
           </div>
-          <div 
-            className="waypoint-image"
-            style={{ backgroundImage: `url('${headerImage}')` }}>
-            {/* <h2>{props.waypoint.properties.title}</h2> */}
-          </div>
-          <div className="waypoint-description">
-            <p>
-              {getTranslation(props.waypoint.properties.description)}
-            </p>
-
-            <ImageSlider depictions={props.waypoint.properties.images} />
-
-            <div className="buttons">
-              <Button 
-                className="next-waypoint" 
-                onClick={onNextWaypoint}>
-
-                <Icon icon="md-walk" /> {i18n('Continue to Next Stop')}
-              </Button>
-
-              <button 
-                className="prev-waypoint"
-                onClick={onPreviousWaypoint}>{i18n('Back to previous stop')}</button>
+          
+          <main>
+            <div 
+              className="waypoint-image"
+              style={{ backgroundImage: `url('${headerImage}')` }}>
+              {/* <h2>{props.waypoint.properties.title}</h2> */}
             </div>
+            <div className="waypoint-description">
+              <p>
+                {getTranslation(props.waypoint.properties.description)}
+              </p>
 
-            <div className="shade-gradient" />
-          </div>
+              <ImageSlider depictions={props.waypoint.properties.images} />
+
+              <div className="buttons">
+                <Button 
+                  className="next-waypoint" 
+                  onClick={onNextWaypoint}>
+
+                  <Icon icon="md-walk" /> {i18n('Continue to Next Stop')}
+                </Button>
+
+                <button 
+                  className="prev-waypoint"
+                  onClick={onPreviousWaypoint}>{i18n('Back to previous stop')}</button>
+              </div>
+
+              <div className="shade-gradient" />
+            </div>
+          </main>
         </div>
       </CSSTransition>
     </GestureDetector>
