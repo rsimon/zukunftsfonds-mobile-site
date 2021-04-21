@@ -1,4 +1,4 @@
-export default {
+const CRM = {
 
   'E18_Physical_Thing': 'crm:E18 Physical Thing',
   'E21_Person': 'crm:E21 Person',
@@ -11,3 +11,5 @@ export default {
   'P74_has_current_or_former_residence': 'crm:P74_has_current_or_former_residence'
 
 }
+
+export default CRM;

@@ -11,7 +11,7 @@
   transition:top 200ms;
   display:flex;
   flex-direction:column;
-  align-content:start;
+  align-content:flex-start;
 
   .next-stop {
     position:relative;
@@ -200,7 +200,7 @@
   }
 
   .waypoint-image {
-    height:200px;
+    height:0;
   }
 
   .waypoint-description {

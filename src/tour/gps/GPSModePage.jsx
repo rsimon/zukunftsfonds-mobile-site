@@ -77,6 +77,9 @@ const GPSModePage = props => {
     setWaypoint(props.tour.waypoints.features[prevIdx]);
   }
 
+  const onReturn = () =>
+    props.navigator.popPage();
+
   return (
     <PageWithMenu 
       backButton
@@ -105,7 +108,8 @@ const GPSModePage = props => {
         isStart={currentIdx === 0}
         isEnd={currentIdx === props.tour.waypoints.features.length - 1}
         onNextWaypoint={onNextWaypoint}
-        onPreviousWaypoint={onPrevWaypoint}/>
+        onPreviousWaypoint={onPrevWaypoint}
+        onReturn={onReturn} />
     </PageWithMenu>
   )
 
