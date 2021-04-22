@@ -45,7 +45,7 @@ const ImageSlider = props => {
       setIsLoading(false);
       setLoadingError(error);
     });
-  }, [ depictions ]);
+  }, [ props.depictions ]);
 
   const getPrev = idx => {
     if (selected !== null && depictions.length > 1) {

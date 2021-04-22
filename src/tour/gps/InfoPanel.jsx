@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Button, Icon } from 'react-onsenui';
 import distance from '@turf/distance';
 import { CSSTransition } from 'react-transition-group';
@@ -8,6 +8,8 @@ import ImageSlider from '../../profiles/ImageSlider';
 import './InfoPanel.scss';
 
 const InfoPanel = props => {
+
+  const main = useRef();
 
   const [ expanded, setExpanded ] = useState(false);
 
@@ -28,6 +30,11 @@ const InfoPanel = props => {
   const dist = currentPos ? Math.round(distance(currentPos, props.waypoint) * 1000) : null;
   
   const proximity = props.useGPS ? (dist !== null && dist < 25 ? 'ARRIVED' : 'FAR') : 'NO-GPS';
+
+  useEffect(() => {
+    if (main.current)
+      main.current.scrollTop = 0;
+  }, [ props.waypoint ])
 
   useEffect(() => {
     // If proximity changes to 'ARRIVED', buzz & expand panel
@@ -96,7 +103,7 @@ const InfoPanel = props => {
           </button>
         </div>
         
-        <main>
+        <main ref={main}>
           <div 
             className="waypoint-image"
             style={{ backgroundImage: `url('${headerImage}')` }}>
