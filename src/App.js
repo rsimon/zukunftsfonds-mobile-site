@@ -45,7 +45,7 @@ const App = props => {
         renderPage={renderPage}
         initialRoute={{ component: splashPage, key: 'SplashPage' }} 
         onPostPush={onPostPush}
-        animation="slide"
+        animation={props.isDesktop ? 'fade' : 'slide'}
         swipeable />
     </RecoilRoot>
   );
