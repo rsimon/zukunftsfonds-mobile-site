@@ -5,7 +5,10 @@ import { languageState } from './store/State';
 import { useI18N } from './i18n';
 
 import SearchPage from './search/SearchPage';
+import DesktopSearchPage from './search/DesktopSearchPage';
+
 import SplashPage from './splash/SplashPage';
+import DesktopSplashPage from './splash/DesktopSplashPage';
 
 import SerbsInVienna from './pages/projects/SerbsInVienna';
 import CampOberhollabrunn from './pages/projects/CampOberhollabrunn';
@@ -26,23 +29,27 @@ const SideMenu = props => {
     window.localStorage.setItem('zukunftsfonds.language', lang);
   }
 
-  const goTo = component => () => {
+  const goTo = (mobileComponent, optDesktopComponent) => () => {
+
+    const component = props.isDesktop && optDesktopComponent ? 
+      optDesktopComponent : mobileComponent;
+
     const { pages } = props.navigator;
     const currentPage = pages.length > 0 ? pages[pages.length - 1].props.component : null;
     if (component !== currentPage)
       props.navigator.pushPage({ component });
     else 
-      props.onClose();
+      props.onClose && props.onClose();
   }
 
   return (
     <Page className="side-menu">
       <List>
-        <ListItem onClick={goTo(SplashPage)}>
+        <ListItem onClick={goTo(SplashPage, DesktopSplashPage)}>
           <Icon icon="md-home" />
           <label>{i18n('Home')}</label>
         </ListItem>
-        <ListItem onClick={goTo(SearchPage)}>
+        <ListItem onClick={goTo(SearchPage, DesktopSearchPage)}>
           <Icon icon="md-search" />
           <label>{i18n('Search')}</label>
         </ListItem>
