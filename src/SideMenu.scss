@@ -1,4 +1,12 @@
+#root .desktop ons-page.side-menu label {
+  padding:4px 0;
+}
+
 #root ons-page.side-menu {
+
+  .selected {
+    border-bottom: 2px solid #333;
+  }
 
   ons-list-header {
     background-color:#ebe8e1;

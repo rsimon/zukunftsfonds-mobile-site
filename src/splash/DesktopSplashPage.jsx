@@ -18,6 +18,7 @@ const DesktopSplashPage = props => {
   return (
     <DesktopPageWithMenu 
       className="splashpage"
+      current="SplashPage"
       navigator={props.navigator}>
       
       <div className="splash-page-container">

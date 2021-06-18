@@ -45,6 +45,7 @@ const DesktopSearchPage = props => {
   return (
     <DesktopPageWithMenu 
       className="search"
+      current="Search"
       navigator={props.navigator}>
 
       <div className="center">

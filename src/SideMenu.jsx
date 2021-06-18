@@ -42,16 +42,21 @@ const SideMenu = props => {
       props.onClose && props.onClose();
   }
 
+  const setSelected = pageName =>
+    props.current === pageName ? 'selected' : null;
+
   return (
     <Page className="side-menu">
       <List>
-        <ListItem onClick={goTo(SplashPage, DesktopSplashPage)}>
-          <Icon icon="md-home" />
-          <label>{i18n('Home')}</label>
+        <ListItem 
+          onClick={goTo(SplashPage, DesktopSplashPage)}>
+            <Icon icon="md-home" />
+            <label className={setSelected('SplashPage')}>{i18n('Home')}</label>
         </ListItem>
+
         <ListItem onClick={goTo(SearchPage, DesktopSearchPage)}>
           <Icon icon="md-search" />
-          <label>{i18n('Search')}</label>
+          <label className={setSelected('Search')}>{i18n('Search')}</label>
         </ListItem>
       </List>
 
@@ -62,15 +67,26 @@ const SideMenu = props => {
         </ListHeader>
 
         <ListItem onClick={goTo(Help)}>
-          <label>{i18n('User Help & App Info')}</label>
+          <label className={setSelected('Help')}>{i18n('User Help & App Info')}</label>
         </ListItem>  
 
         <ListItem className="projects">
           <div>
             <label>{i18n('Projects')}</label>
             <ul>
-              <li onClick={goTo(SerbsInVienna)}>{i18n('Serbs in Vienna 1741-1918')}</li>
-              <li onClick={goTo(CampOberhollabrunn)}>{i18n('Orthodox Refugees in Hollabrunn 1914-1918')}</li>
+              <li 
+                onClick={goTo(SerbsInVienna)}
+                className={setSelected('SerbsInVienna')}>
+                  
+                {i18n('Serbs in Vienna 1741-1918')}
+              </li>
+
+              <li 
+                onClick={goTo(CampOberhollabrunn)}
+                className={setSelected('CampOberhollabrunn')}>
+                  
+                {i18n('Orthodox Refugees in Hollabrunn 1914-1918')}
+              </li>
             </ul>
           </div>
         </ListItem>
@@ -83,7 +99,7 @@ const SideMenu = props => {
         </ListHeader>
         
         <ListItem onClick={goTo(TourStartPage)}>
-          <label>Oberhollabrunn</label>
+          <label className={setSelected('TourStartPage')}>Oberhollabrunn</label>
         </ListItem>
       </List>
 

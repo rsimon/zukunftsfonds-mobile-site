@@ -12,6 +12,7 @@ const DestkopPageWithMenu = props => {
       <div className="page-wrapper">
         <aside>
           <SideMenu 
+            current={props.current}
             isDesktop={true}
             navigator={props.navigator} />
         </aside>

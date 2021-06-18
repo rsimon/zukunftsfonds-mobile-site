@@ -133,6 +133,7 @@ const CampOberhollabrunn = props => {
 
   return props.isDesktop ?
     <DesktopPageWithMenu
+      current="CampOberhollabrunn"
       navigator={props.navigator}>
       {content}
     </DesktopPageWithMenu> :

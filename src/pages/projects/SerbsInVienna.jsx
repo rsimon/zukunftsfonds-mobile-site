@@ -117,6 +117,7 @@ const SerbsInVienna = props => {
 
   return props.isDesktop ?
     <DesktopPageWithMenu
+      current="SerbsInVienna"
       navigator={props.navigator}>
       {content}
     </DesktopPageWithMenu> :
