@@ -1,5 +1,6 @@
 import React from 'react';
 import PageWithMenu from '../../PageWithMenu';
+import DesktopPageWithMenu from '../../DesktopPageWithMenu';
 import { useLang } from '../../i18n';
 
 const DESCRIPTION_GERMAN = 
@@ -117,12 +118,9 @@ const CampOberhollabrunn = props => {
 
   const lang = useLang();
 
-  return(
-    <PageWithMenu
-      title={PAGE_TITLE[lang]}
-      navigator={props.navigator}
-      backButton>
-      <div className="page-container">
+  const content = 
+    <div className="fill-height">
+      <div className="page-container fill-height">
         <h1>{TEXT_TITLE[lang]}</h1>
         <div>
           {DESCRIPTION[lang]}
@@ -131,8 +129,20 @@ const CampOberhollabrunn = props => {
       <footer>
         <img src="images/zf_logo.png" alt="Logo Zukunftsfonds der Republik Österreich"></img>
       </footer>
+    </div>
+
+  return props.isDesktop ?
+    <DesktopPageWithMenu
+      navigator={props.navigator}>
+      {content}
+    </DesktopPageWithMenu> :
+
+    <PageWithMenu
+      title={PAGE_TITLE[lang]}
+      navigator={props.navigator}
+      backButton>
+      {content}
     </PageWithMenu>
-  )
 }
 
 export default CampOberhollabrunn;

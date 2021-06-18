@@ -1,5 +1,6 @@
 import React from 'react';
 import PageWithMenu from '../../PageWithMenu';
+import DesktopPageWithMenu from '../../DesktopPageWithMenu';
 import { useLang } from '../../i18n';
 
 const DESCRIPTION_GERMAN = 
@@ -101,12 +102,9 @@ const SerbsInVienna = props => {
 
   const lang = useLang();
 
-  return(
-    <PageWithMenu
-      title={PAGE_TITLE[lang]}
-      navigator={props.navigator}
-      backButton>
-      <div className="page-container">
+  const content = 
+    <div className="fill-height">
+      <div className="page-container fill-height">
         <h1>{TEXT_TITLE[lang]}</h1>
         <div>
           {DESCRIPTION[lang]}
@@ -115,8 +113,20 @@ const SerbsInVienna = props => {
       <footer>
         <img src="images/wienkultur_logo_RGB.png" alt="Logo Wien Kultur"></img>
       </footer>
+    </div>
+
+  return props.isDesktop ?
+    <DesktopPageWithMenu
+      navigator={props.navigator}>
+      {content}
+    </DesktopPageWithMenu> :
+
+    <PageWithMenu
+      title={PAGE_TITLE[lang]}
+      navigator={props.navigator}
+      backButton>
     </PageWithMenu>
-  )
+
 }
 
 export default SerbsInVienna;

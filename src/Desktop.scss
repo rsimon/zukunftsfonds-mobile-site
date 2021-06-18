@@ -1,5 +1,16 @@
 #root ons-page.page.desktop {
 
+  .fill-height {
+    min-height:100%;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+  }
+
+  .page-container {
+    padding:30px 50px;
+  }
+
   .page__content {
     display:flex;
     flex-direction:column;
