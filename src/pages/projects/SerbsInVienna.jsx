@@ -125,6 +125,7 @@ const SerbsInVienna = props => {
       title={PAGE_TITLE[lang]}
       navigator={props.navigator}
       backButton>
+      {content}
     </PageWithMenu>
 
 }
