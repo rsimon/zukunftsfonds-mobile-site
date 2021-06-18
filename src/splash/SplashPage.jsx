@@ -9,7 +9,7 @@ import CampOberhollabrunn from '../pages/projects/CampOberhollabrunn';
 
 import './SplashPage.scss';
 
-const SPLASH_MESSAGE = 
+export const SPLASH_MESSAGE = 
   `Das "Digitale Geoportal der Geschichte der Orthodoxen in Österreich" hat das Ziel, die Geschichte,
    den Glauben und die Kultur der orthodoxen Kirchen und von deren Gläubigen in Europa, mit einem Schwerpunkt 
    auf Österreich, mit Hilfe von wissenschaftlichen Projekten zu erforschen und einer breiten Öffentlichkeit 

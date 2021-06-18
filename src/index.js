@@ -19,13 +19,15 @@ L.Icon.Default.mergeOptions({
 // A simple start helper that loads the data and then switches to the app
 const Launcher = () => {
 
+  const isDesktop = window.screen.availWidth > 800;
+
   const [ isLoading, setIsLoading ] = useState(true);
 
   const store = new DataStore();
   store.load().then(() => setIsLoading(false));
   
   return (
-    <>{ isLoading ? <LoadingScreen /> : <App store={store} /> }</>
+    <>{ isLoading ? <LoadingScreen /> : <App store={store} isDesktop={isDesktop} /> }</>
   )
 
 }

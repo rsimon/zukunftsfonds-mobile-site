@@ -98,3 +98,27 @@ ons-page.splashpage ons-toolbar div.center {
   }
 
 }
+
+#root ons-page.desktop main {
+
+  .splash-image {
+    max-height:480px;
+    object-fit:cover;
+  }
+
+  ons-button {
+    cursor:pointer;
+  }
+
+  ons-button:hover {
+    text-decoration:underline;
+  }
+
+  .content {
+    padding:20px;
+    position:relative;
+    top:-170px;
+    background-color:rgba(255, 255, 255, 0.65);
+  }
+
+}

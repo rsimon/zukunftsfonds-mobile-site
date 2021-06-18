@@ -2,11 +2,13 @@ import React, { useEffect, useRef } from 'react';
 import { RecoilRoot } from 'recoil';
 import { Navigator } from 'react-onsenui';
 import SplashPage from './splash/SplashPage';
+import DesktopSplashPage from './splash/DesktopSplashPage';
 import 'onsenui/css/onsenui.css';
 import 'onsenui/css/onsen-css-components.css';
 import { v4 as uuid } from 'uuid';
 
 import './App.scss';
+import './Desktop.scss';
 
 const App = props => {
 
@@ -17,7 +19,8 @@ const App = props => {
       ...route, 
       navigator, 
       key: props.key || uuid(), // Needs a key per definition and we want to re-render always
-      store: props.store
+      store: props.store,
+      isDesktop: props.isDesktop
     });
 
   // Pushes a state to the window history, so the back button doesn't
@@ -33,12 +36,14 @@ const App = props => {
       nav.current && nav.current.popPage();
   }, []);
 
+  const splashPage = props.isDesktop ? DesktopSplashPage : SplashPage;
+
   return (
     <RecoilRoot>
       <Navigator
         ref={nav}
         renderPage={renderPage}
-        initialRoute={{ component: SplashPage, key: 'SplashPage' }} 
+        initialRoute={{ component: splashPage, key: 'SplashPage' }} 
         onPostPush={onPostPush}
         animation="slide"
         swipeable />
