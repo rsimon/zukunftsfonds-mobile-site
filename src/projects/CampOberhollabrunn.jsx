@@ -1,7 +1,6 @@
 import React from 'react';
-import PageWithMenu from '../../PageWithMenu';
-import DesktopPageWithMenu from '../../DesktopPageWithMenu';
-import { useLang } from '../../i18n';
+import PageWithMenu from '../PageWithMenu';
+import { useLang } from '../i18n';
 
 const DESCRIPTION_GERMAN = 
   <>
@@ -131,19 +130,16 @@ const CampOberhollabrunn = props => {
       </footer>
     </div>
 
-  return props.isDesktop ?
-    <DesktopPageWithMenu
-      current="CampOberhollabrunn"
-      navigator={props.navigator}>
-      {content}
-    </DesktopPageWithMenu> :
-
+  return (
     <PageWithMenu
+      backButton
+      current="CampOberhollabrunn"
       title={PAGE_TITLE[lang]}
-      navigator={props.navigator}
-      backButton>
+      {...props}>
       {content}
     </PageWithMenu>
+  )
+
 }
 
 export default CampOberhollabrunn;

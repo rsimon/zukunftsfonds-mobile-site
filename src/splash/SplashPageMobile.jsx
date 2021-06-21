@@ -3,9 +3,9 @@ import { Button, Icon } from 'react-onsenui';
 import PageWithMenu from '../PageWithMenu';
 import { useI18N, useBilingual } from '../i18n';
 import OverviewMap from '../map/OverviewMap';
-import SearchPage from '../search/SearchPage';
-import SerbsInVienna from '../pages/projects/SerbsInVienna';
-import CampOberhollabrunn from '../pages/projects/CampOberhollabrunn';
+import SearchPageMobile from '../search/SearchPageMobile';
+import SerbsInVienna from '../projects/SerbsInVienna';
+import CampOberhollabrunn from '../projects/CampOberhollabrunn';
 
 import './SplashPage.scss';
 
@@ -43,7 +43,7 @@ const SplashPage = props => {
             <Icon icon="md-globe" />
             <label>{i18n('Map')}</label>
           </Button>
-          <Button onClick={goTo(SearchPage)}>
+          <Button onClick={goTo(SearchPageMobile)}>
             <Icon icon="md-search" />
             <label>{i18n('Search')}</label>
           </Button>

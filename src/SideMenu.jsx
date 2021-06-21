@@ -4,15 +4,16 @@ import { useRecoilState } from 'recoil';
 import { languageState } from './store/State';
 import { useI18N } from './i18n';
 
-import SearchPage from './search/SearchPage';
-import DesktopSearchPage from './search/DesktopSearchPage';
+import SearchPageMobile from './search/SearchPageMobile';
+import SearchPageDesktop from './search/SearchPageDesktop';
 
-import SplashPage from './splash/SplashPage';
-import DesktopSplashPage from './splash/DesktopSplashPage';
+import SplashPageMobile from './splash/SplashPageMobile';
+import SplashPageDesktop from './splash/SplashPageDesktop';
 
-import SerbsInVienna from './pages/projects/SerbsInVienna';
-import CampOberhollabrunn from './pages/projects/CampOberhollabrunn';
-import Help from './pages/Help';
+import SerbsInVienna from './projects/SerbsInVienna';
+import CampOberhollabrunn from './projects/CampOberhollabrunn';
+
+import Help from './help/Help';
 
 import TourStartPage from './tour/start/TourStartPage';
 
@@ -49,12 +50,12 @@ const SideMenu = props => {
     <Page className="side-menu">
       <List>
         <ListItem 
-          onClick={goTo(SplashPage, DesktopSplashPage)}>
+          onClick={goTo(SplashPageMobile, SplashPageDesktop)}>
             <Icon icon="md-home" />
             <label className={setSelected('SplashPage')}>{i18n('Home')}</label>
         </ListItem>
 
-        <ListItem onClick={goTo(SearchPage, DesktopSearchPage)}>
+        <ListItem onClick={goTo(SearchPageMobile, SearchPageDesktop)}>
           <Icon icon="md-search" />
           <label className={setSelected('Search')}>{i18n('Search')}</label>
         </ListItem>

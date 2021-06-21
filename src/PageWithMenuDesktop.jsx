@@ -2,7 +2,7 @@ import React from 'react';
 import { Page } from 'react-onsenui';
 import SideMenu from './SideMenu';
 
-const DestkopPageWithMenu = props => {
+const PageWithMenuDesktop = props => {
 
   return (
     <Page className={`${props.className} desktop`}>
@@ -25,4 +25,4 @@ const DestkopPageWithMenu = props => {
 
 }
 
-export default DestkopPageWithMenu;
+export default PageWithMenuDesktop;

@@ -22,7 +22,7 @@ class I18N {
 
 const i18n = new I18N();
 
-// Wrapping I18N in a cool helper hook
+// Wrapping I18N into a cool helper hook
 export const useI18N = () => {
 
   const lang = useRecoilValue(languageState);
@@ -30,7 +30,7 @@ export const useI18N = () => {
 
 }
 
-// Just a tiny shorthand to use current language setting more easily
+// Just a shorthand to use current language setting more easily
 export const useLang = ()  =>
   useRecoilValue(languageState)
 

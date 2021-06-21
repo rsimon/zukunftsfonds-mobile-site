@@ -1,14 +1,15 @@
 import React, { useEffect, useRef } from 'react';
+import { v4 as uuid } from 'uuid';
 import { RecoilRoot } from 'recoil';
 import { Navigator } from 'react-onsenui';
-import SplashPage from './splash/SplashPage';
-import DesktopSplashPage from './splash/DesktopSplashPage';
+
+import SplashPageMobile from './splash/SplashPageMobile';
+import SplashPageDesktop from './splash/SplashPageDesktop';
+
 import 'onsenui/css/onsenui.css';
 import 'onsenui/css/onsen-css-components.css';
-import { v4 as uuid } from 'uuid';
 
 import './App.scss';
-import './Desktop.scss';
 
 const App = props => {
 
@@ -36,7 +37,7 @@ const App = props => {
       nav.current && nav.current.popPage();
   }, []);
 
-  const splashPage = props.isDesktop ? DesktopSplashPage : SplashPage;
+  const splashPage = props.isDesktop ? SplashPageDesktop : SplashPageMobile;
 
   return (
     <RecoilRoot>

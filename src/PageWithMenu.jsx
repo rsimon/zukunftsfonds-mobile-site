@@ -1,68 +1,34 @@
-import React, { useState } from 'react';
-import { 
-  BackButton,
-  Icon, 
-  Page, 
-  Splitter, 
-  SplitterContent, 
-  SplitterSide, 
-  Toolbar, 
-  ToolbarButton 
-} from 'react-onsenui';
-import SideMenu from './SideMenu';
+import React from 'react';
+import PageWithMenuDesktop from './PageWithMenuDesktop';
+import PageWithMenuMobile from './PageWithMenuMobile';
 
-const PageWithMenu = props => {
+/**
+ * A hybrid page that applies desktop or mobile layout automatically
+ * on the same content
+ */
+const PageWithenu = props => {
 
-  const [ isMenuOpen, setMenuOpen ] = useState(false);
+  return props.isDesktop ?
+    <PageWithMenuDesktop
+      className={props.className}
+      current={props.title}
+      title={props.title}
+      navigator={props.navigator}>
 
-  const onBackButton = () => {
-    props.navigator.popPage();
-  }
+      {props.children}
 
-  return (
-    <Page className={props.className}>
-      <Splitter>
-        <SplitterContent>
-          <Page 
-            onDeviceBackButton={onBackButton}
-            renderToolbar={() => 
-              <Toolbar>
-                { props.backButton &&
-                  <BackButton />
-                }
-                <div className="center">
-                  { props.title }
-                </div>
-                <div className="right">
-                  <ToolbarButton onClick={() => setMenuOpen(true)}>
-                    <Icon icon="md-menu" />
-                  </ToolbarButton>
-                </div>
-              </Toolbar>
-            }>
+    </PageWithMenuDesktop> :
 
-            { props.children }
+    <PageWithMenuMobile
+      backButton={props.backButton}
+      className={props.className}
+      title={props.title}
+      navigator={props.navigator}>
+      
+      {props.children}
 
-          </Page>
-        </SplitterContent>
-        <SplitterSide
-          animation="overlay"
-          mode="collapse"
-          side="right"
-          collapse={true}
-          width="300px"
-          isOpen={isMenuOpen}
-          onClose={() => setMenuOpen(false)}>
-
-          <SideMenu 
-            navigator={props.navigator} 
-            onClose={() => setMenuOpen(false)} />
-
-        </SplitterSide>
-      </Splitter>
-    </Page>
-  )
+    </PageWithMenuMobile>
 
 }
 
-export default PageWithMenu;
+export default PageWithenu;

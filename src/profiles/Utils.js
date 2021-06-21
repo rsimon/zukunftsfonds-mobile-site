@@ -1,6 +1,5 @@
 import ActorProfile from './ActorProfile';
 import PlaceProfile from './PlaceProfile';
-import PlaceProfileDesktop from './PlaceProfileDesktop';
 import CRM from '../CRM';
 
 const PROFILE_COMPONENTS = {
@@ -9,17 +8,9 @@ const PROFILE_COMPONENTS = {
   [CRM.E74_Group]: ActorProfile
 }
 
-const PROFILE_COMPONENTS_DESKTOP = {
-  [CRM.E18_Physical_Thing]: PlaceProfileDesktop,
-  [CRM.E21_Person]: ActorProfile,
-  [CRM.E74_Group]: ActorProfile
-}
-
 /** Returns the right JSX profile component for this item **/
-export const getProfileComponent = (item, isDesktop) => 
-  isDesktop ? 
-    PROFILE_COMPONENTS_DESKTOP[item.crmClass] :  
-    PROFILE_COMPONENTS[item.crmClass];
+export const getProfileComponent = item => 
+  PROFILE_COMPONENTS[item.crmClass];
 
 /** Returns a handler function for navigating to the view appropriate to the given item **/
 export const navigateTo = (item, navigator) => _ =>

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Button } from 'react-onsenui';
 import { useI18N, useBilingual } from '../i18n';
-import { SPLASH_MESSAGE } from './SplashPage';
-import DesktopPageWithMenu from '../DesktopPageWithMenu';
-import SerbsInVienna from '../pages/projects/SerbsInVienna';
-import CampOberhollabrunn from '../pages/projects/CampOberhollabrunn';
+import { SPLASH_MESSAGE } from './SplashPageMobile';
+import PageWithMenuDesktop from '../PageWithMenuDesktop';
+import SerbsInVienna from '../projects/SerbsInVienna';
+import CampOberhollabrunn from '../projects/CampOberhollabrunn';
 
-const DesktopSplashPage = props => {
+const SplashPageDesktop = props => {
 
   const i18n = useI18N();
 
@@ -16,7 +16,7 @@ const DesktopSplashPage = props => {
     props.navigator.pushPage({ component });
 
   return (
-    <DesktopPageWithMenu 
+    <PageWithMenuDesktop 
       className="splashpage"
       current="SplashPage"
       navigator={props.navigator}>
@@ -65,9 +65,9 @@ const DesktopSplashPage = props => {
           <a href="mailto:mihailop@hotmail.com">mihailop@hotmail.com</a>
         </footer>
       </div>
-    </DesktopPageWithMenu>
+    </PageWithMenuDesktop>
   )
 
 }
 
-export default DesktopSplashPage;
+export default SplashPageDesktop;

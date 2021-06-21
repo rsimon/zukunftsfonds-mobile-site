@@ -1,12 +1,12 @@
 import React from 'react';
-import { BackButton, Icon, Page, Input, Toolbar, ToolbarButton } from 'react-onsenui';
+import { Input } from 'react-onsenui';
 import ResultList from './ResultList';
 import SearchInstructions from './SearchInstructions';
 import { getProfileComponent } from '../profiles/Utils';
 import { useRecoilState } from 'recoil';
 import { searchQueryState, searchResultState } from '../store/State';
 import { useI18N }from '../i18n';
-import DesktopPageWithMenu from '../DesktopPageWithMenu';
+import PageWithMenuDesktop from '../PageWithMenuDesktop';
 
 import './SearchPage.scss';
 
@@ -38,7 +38,7 @@ const DesktopSearchPage = props => {
     });
 
   return (
-    <DesktopPageWithMenu 
+    <PageWithMenuDesktop 
       className="search"
       current="Search"
       navigator={props.navigator}>
@@ -54,7 +54,7 @@ const DesktopSearchPage = props => {
         <ResultList
           results={results} 
           onSelect={onSelectResult} /> : <SearchInstructions /> }
-    </DesktopPageWithMenu>
+    </PageWithMenuDesktop>
   )
 
 }

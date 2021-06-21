@@ -1,6 +1,5 @@
 import React from 'react';
 import PageWithMenu from '../PageWithMenu';
-import DesktopPageWithMenu from '../DesktopPageWithMenu';
 import { useLang } from '../i18n';
 
 import './Help.scss';
@@ -80,24 +79,20 @@ const Help = props => {
 
   const lang = useLang();
 
-  return props.isDesktop ?
-    <DesktopPageWithMenu
+  return (
+    <PageWithMenu
+      backButton
+      className="app-help"
+      title={TITLE[lang]}
       current="Help"
-      navigator={props.navigator}>
+      {...props}>
+        
       <div className="page-container">
         {CONTENT[lang]}
       </div>
-    </DesktopPageWithMenu> :
 
-    <PageWithMenu
-      className="app-help"
-      title={TITLE[lang]}
-      navigator={props.navigator}
-      backButton>
-      <div className="page-container">
-          {CONTENT[lang]}
-      </div>
     </PageWithMenu>
+  )
 
 }
 
