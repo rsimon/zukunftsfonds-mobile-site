@@ -24,9 +24,7 @@ const DesktopSplashPage = props => {
       <div className="splash-page-container">
         <div className="splash-image-container">
           <img className="splash-image" src="images/OrthodoxyInEurope.png" alt="Orthodoxy in Europe - Map" />
-        </div>
 
-        <div className="content">
           <div className="splash-message">
             <h1>
               {i18n('Digital Geoportal of the History of the Orthodox in Austria')}
@@ -35,7 +33,9 @@ const DesktopSplashPage = props => {
               {getTranslation(SPLASH_MESSAGE)}
             </p>
           </div>
+        </div>
 
+        <div className="content">
           <div className="projects">
             <h2>{i18n('Projects')}</h2>
             <ol>
@@ -53,8 +53,18 @@ const DesktopSplashPage = props => {
             </ol>
           </div>
         </div>
-      </div>
 
+        <footer>
+          <strong>{i18n('Imprint')}</strong><br/>
+          Digitales Geoportal der Geschichte der Orthodoxen in Österreich<br/>
+          Vertreten durch:<br/>
+          Priv.-Doz. Mag. Dr. Mihailo Popović, Projektleiter<br/>
+          Kiningergasse 12/2/7<br/>
+          1120 Wien<br/>
+          Österreich<br/>
+          <a href="mailto:mihailop@hotmail.com">mihailop@hotmail.com</a>
+        </footer>
+      </div>
     </DesktopPageWithMenu>
   )
 

@@ -33,14 +33,9 @@ const DesktopSearchPage = props => {
 
   const onSelectResult = result =>
     props.navigator.pushPage({ 
-      component: getProfileComponent(result),
+      component: getProfileComponent(result, true),
       item: result 
     });
-
-  const onClearSearch = () => {
-    setSearch('');
-    setResults([]);
-  }
 
   return (
     <DesktopPageWithMenu 
