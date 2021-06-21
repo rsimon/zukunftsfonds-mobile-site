@@ -66,7 +66,7 @@ const ActorProfile = props => {
       backButton
       className="profile actor"
       title={item.properties.title}
-      navigator={props.navigator}>
+      {...props}>
 
       <div className="map-container">
         <Map 

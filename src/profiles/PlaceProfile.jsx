@@ -46,7 +46,7 @@ const PlaceProfile = props => {
       backButton
       className="profile place"
       title={item.properties.title}
-      navigator={props.navigator}>
+      {...props}>
 
       <div className="map-container">
         <Map 
