@@ -4,13 +4,11 @@ import SideMenu from './SideMenu';
 
 const PageWithMenuDesktop = props => {
 
-  if (props.isDesktop && props.title) {
-    console.log('title');
+  if (props.isDesktop && props.title)
     window.document.title = `Orthodox Europe | ${props.title}`;
-  } else {
+  else
     window.document.title = "Orthodox Europe";
-  }
-
+  
   return (
     <Page className={`${props.className} desktop`}>
       <header>

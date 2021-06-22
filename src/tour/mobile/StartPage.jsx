@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
-import PageWithMenu from '../../PageWithMenu';
 import { Button, Icon } from 'react-onsenui';
 import { GeoJSON, Map, TileLayer } from 'react-leaflet';
 import { useI18N } from '../../i18n';
 import { loadTour } from '../Tour';
-import GPSModePage from '../gps/GPSModePage';
+import PageWithMenuMobile from '../../PageWithMenuMobile';
+import WaypointPage from '../mobile/WaypointPage';
 
-import './TourStartPage.scss';
+import './StartPage.scss';
 
 const PATH_STYLE = {
   color: '#000',
@@ -34,17 +34,17 @@ const TourStartPage = props => {
 
   const onStartTour = (tour, useGPS) => () =>
     props.navigator.pushPage({ 
-      component: GPSModePage,
+      component: WaypointPage,
       tour,
       useGPS
     });
 
   return (
-    <PageWithMenu 
+    <PageWithMenuMobile
       backButton
       className="tour-startpage"
       title={i18n('GPS Walking Tours')}
-      navigator={props.navigator}>
+      {...props}>
 
       { tour &&
         <>
@@ -86,7 +86,7 @@ const TourStartPage = props => {
           </div>
         </>
       }
-    </PageWithMenu>
+    </PageWithMenuMobile>
   )
 
 }

@@ -15,7 +15,8 @@ import CampOberhollabrunn from './projects/CampOberhollabrunn';
 
 import Help from './help/Help';
 
-import TourStartPage from './tour/start/TourStartPage';
+import MobileTour from './tour/mobile/StartPage';
+import DesktopTour from './tour/desktop/StartPage';
 
 import './SideMenu.scss';
 
@@ -99,8 +100,8 @@ const SideMenu = props => {
           <label>{i18n('Walking Tours')}</label>
         </ListHeader>
         
-        <ListItem onClick={goTo(TourStartPage)}>
-          <label className={setSelected('TourStartPage')}>Oberhollabrunn</label>
+        <ListItem onClick={goTo(MobileTour, DesktopTour)}>
+          <label className={setSelected('Tour')}>Oberhollabrunn</label>
         </ListItem>
       </List>
 

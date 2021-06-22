@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { GeoJSON, Map, TileLayer } from 'react-leaflet';
 import PageWithMenu from '../../PageWithMenu';
-import MyPosition from './MyPosition';
-import NextStop from './NextStop';
+import MyPosition from '../map/MyPosition';
+import NextStop from '../map/NextStop';
 import InfoPanel from './InfoPanel';
 
-import './GPSModePage.scss';
+import './WaypointPage.scss';
 
 const PATH_STYLE = {
   color: '#000',
