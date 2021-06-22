@@ -33,10 +33,7 @@ const StartPage = props => {
   }, [ tour ]);
 
   const onStartTour = tour => () =>
-    props.navigator.pushPage({ 
-      component: WaypointPage,
-      tour
-  });
+    props.navigator.pushPage({ component: WaypointPage, tour });
 
   return (
     <PageWithMenuDesktop

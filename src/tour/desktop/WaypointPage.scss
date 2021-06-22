@@ -1,0 +1,20 @@
+#root ons-page.tour-desktop main {
+
+  .map-container .leaflet-container {
+    height:300px;
+  }
+
+  .waypoint-description {
+    padding:30px;
+
+    h1 {
+      font-size:22px;
+    }
+
+    p {
+      padding:10px 0;
+    }
+
+  }
+
+}

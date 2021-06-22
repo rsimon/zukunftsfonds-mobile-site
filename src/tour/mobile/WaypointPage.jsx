@@ -12,7 +12,7 @@ const PATH_STYLE = {
   dashArray: '6 6'
 }
 
-const GPSModePage = props => {
+const WaypointPage = props => {
 
   const [ waypoint, setWaypoint ] = useState(props.tour.waypoints.features[0]);
 
@@ -115,4 +115,4 @@ const GPSModePage = props => {
 
 }
 
-export default GPSModePage;
+export default WaypointPage;
