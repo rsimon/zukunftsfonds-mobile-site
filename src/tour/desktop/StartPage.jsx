@@ -4,6 +4,7 @@ import { Button, Icon } from 'react-onsenui';
 import { useI18N } from '../../i18n';
 import { loadTour } from '../Tour';
 import PageWithMenuDesktop from '../../PageWithMenuDesktop';
+import WaypointPage from './WaypointPage';
 
 import './StartPage.scss';
 
@@ -30,6 +31,12 @@ const StartPage = props => {
       map.fitBounds(tour.bounds, { padding: [ 15, 15 ]});
     }
   }, [ tour ]);
+
+  const onStartTour = tour => () =>
+    props.navigator.pushPage({ 
+      component: WaypointPage,
+      tour
+  });
 
   return (
     <PageWithMenuDesktop
@@ -63,7 +70,7 @@ const StartPage = props => {
           }} />
 
           <div className="start-tour">
-            <Button>
+            <Button onClick={onStartTour(tour)}>
               <Icon icon="md-walk" /> <label>{i18n('Start the tour')}</label>
             </Button>
           </div>

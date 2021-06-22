@@ -73,7 +73,7 @@ const ActorProfile = props => {
           ref={mapRef}
           zoomControl={false}
           attributionControl={false}
-          style={{height:'200px'}}>
+          style={props.isDesktop ? { height:'400px' }: { height:'200px' }}>
           <TileLayer
             url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}"
           />

@@ -21,6 +21,7 @@
 
   .related {
     padding-bottom:30px;
+    background:none;
 
     ons-list-header {
       background:none;
@@ -78,10 +79,10 @@
 
 }
 
-.profile.place.desktop {
+.profile.desktop {
 
   .map-container .leaflet-container {
-    height:300px;
+    height:400px;
   }
 
   .description {
