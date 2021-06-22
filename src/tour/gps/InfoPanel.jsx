@@ -3,7 +3,7 @@ import { Button, Icon } from 'react-onsenui';
 import distance from '@turf/distance';
 import { CSSTransition } from 'react-transition-group';
 import { useI18N, useBilingual } from '../../i18n';
-import ImageSlider from '../../profiles/ImageSlider';
+import ImageGroup from '../../ImageGroup';
 
 import './InfoPanel.scss';
 
@@ -113,7 +113,7 @@ const InfoPanel = props => {
               {getTranslation(props.waypoint.properties.description)}
             </p>
 
-            <ImageSlider depictions={props.waypoint.properties.images} />
+            <ImageGroup depictions={props.waypoint.properties.images} />
 
             <div className="buttons">
               {props.isEnd ?

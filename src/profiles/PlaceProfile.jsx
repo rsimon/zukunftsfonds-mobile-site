@@ -6,7 +6,7 @@ import { getRelatedItems } from './RelatedItems';
 import { navigateTo, hasGeometry } from './Utils';
 import PageWithMenu from '../PageWithMenu';
 import { useI18N, useBilingual } from '../i18n';
-import ImageSlider, { hasDepictions } from './ImageSlider';
+import ImageGroup, { hasDepictions } from '../ImageGroup';
 
 import 'leaflet/dist/leaflet.css';
 
@@ -65,7 +65,7 @@ const PlaceProfile = props => {
       )}
 
       { hasDepictions(item) && 
-        <ImageSlider depictions={item.depictions} />
+        <ImageGroup depictions={item.depictions} />
       }
 
       <List

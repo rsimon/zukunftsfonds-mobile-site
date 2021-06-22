@@ -61,6 +61,43 @@
     
     }
 
+    .image-group {
+      padding: 10px 20px 20px 20px;
+
+      .image-wrapper {
+        margin:8px;
+        position:relative;
+        display:inline-block;
+    
+        img {
+          width:180px;
+          height:180px;
+          object-fit:cover;
+          border-radius:2px;
+          cursor:pointer;
+          display:block;
+        }
+
+        .dim-mask {
+          position:absolute;
+          top:0;
+          left:0;
+          width:100%;
+          height:100%;
+          pointer-events:none;
+          background-color:#000;
+          opacity:0;
+          border-radius:2px;
+        }
+
+      }
+
+      .image-wrapper:hover .dim-mask {
+        opacity:0.25;
+      }
+
+    }
+
   }
   
   .clicktrap {

@@ -4,8 +4,6 @@ import SideMenu from './SideMenu';
 
 const PageWithMenuDesktop = props => {
 
-  console.log(props);
-
   if (props.isDesktop && props.title) {
     console.log('title');
     window.document.title = `Orthodox Europe | ${props.title}`;

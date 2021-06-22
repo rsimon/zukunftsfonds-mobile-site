@@ -7,7 +7,7 @@ import { hasGeometry, navigateTo } from './Utils';
 import { getRelatedItems } from './RelatedItems';
 import PageWithMenu from '../PageWithMenu';
 import { useI18N, useBilingual } from '../i18n';
-import ImageSlider, { hasDepictions } from './ImageSlider';
+import ImageGroup, { hasDepictions } from '../ImageGroup';
 import Curve from '../map/Curve';
 
 import './Profile.scss';
@@ -88,7 +88,7 @@ const ActorProfile = props => {
       )}
 
       { hasDepictions(item) && 
-        <ImageSlider depictions={item.depictions} />
+        <ImageGroup depictions={item.depictions} />
       }
 
       <List
