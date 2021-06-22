@@ -60,10 +60,11 @@ const OverviewMap = props => {
 
   return (
     <PageWithMenu 
+      backButton
+      title="Map"
       className="overview-map"
       title={i18n('Map')}
-      backButton
-      navigator={props.navigator}>
+      {...props}>
 
       <div className="overview-map-container">
         <Map 

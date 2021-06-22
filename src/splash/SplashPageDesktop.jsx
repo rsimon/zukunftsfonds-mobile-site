@@ -1,8 +1,11 @@
 import React from 'react';
-import { Button } from 'react-onsenui';
+import { Button, Icon } from 'react-onsenui';
 import { useI18N, useBilingual } from '../i18n';
 import { SPLASH_MESSAGE } from './SplashPageMobile';
 import PageWithMenuDesktop from '../PageWithMenuDesktop';
+
+import SearchPageDeskop from '../search/SearchPageDesktop';
+import OverviewMap from '../map/OverviewMap';
 import SerbsInVienna from '../projects/SerbsInVienna';
 import CampOberhollabrunn from '../projects/CampOberhollabrunn';
 
@@ -33,6 +36,17 @@ const SplashPageDesktop = props => {
               {getTranslation(SPLASH_MESSAGE)}
             </p>
           </div>
+        </div>
+
+        <div className="buttons">
+          <Button onClick={goTo(OverviewMap)}>
+            <Icon icon="md-globe" />
+            <label>{i18n('Map')}</label>
+          </Button>
+          <Button onClick={goTo(SearchPageDeskop)}>
+            <Icon icon="md-search" />
+            <label>{i18n('Search')}</label>
+          </Button>
         </div>
 
         <div className="content">

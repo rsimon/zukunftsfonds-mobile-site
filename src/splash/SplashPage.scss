@@ -120,12 +120,19 @@ ons-page.splashpage ons-toolbar div.center {
 
     }
 
-    .projects {
-      padding:70px 40px 60px 40px;
+    .buttons {
+      display:block;
+      text-align:center;
+      border:none;
+      padding:20px;
 
       ons-button {
-        cursor:pointer;
+        width:220px;
       }
+    }
+
+    .projects {
+      padding:70px 40px 60px 40px;
 
       ons-button:hover {
         text-decoration:underline;

@@ -10,20 +10,15 @@ const PageWithenu = props => {
 
   return props.isDesktop ?
     <PageWithMenuDesktop
-      className={props.className}
       current={props.title}
-      title={props.title}
-      navigator={props.navigator}>
+      {...props}>
 
       {props.children}
 
     </PageWithMenuDesktop> :
 
     <PageWithMenuMobile
-      backButton={props.backButton}
-      className={props.className}
-      title={props.title}
-      navigator={props.navigator}>
+      {...props}>
       
       {props.children}
 

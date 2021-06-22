@@ -77,6 +77,19 @@
 
 #root ons-page.page.desktop {
 
+  .subtitle {
+    font-weight:normal;
+  }
+
+  ons-button {
+    cursor:pointer;
+
+    * {
+      cursor:pointer;
+    }    
+
+  }
+
   .fill-height {
     min-height:100%;
     display:flex;
