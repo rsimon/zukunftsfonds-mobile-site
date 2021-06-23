@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { Button, Icon } from 'react-onsenui';
 import { GeoJSON, Map, TileLayer } from 'react-leaflet';
 import NextStop from '../map/NextStop';
 import { useI18N, useBilingual } from '../../i18n';
@@ -33,6 +34,16 @@ const WaypointPage = props => {
   const isStart = currentIdx === 0;
   const isEnd = currentIdx === props.tour.waypoints.features.length - 1;
 
+  const onNextWaypoint = () => {
+    const nextIdx = Math.min(currentIdx + 1, props.tour.waypoints.features.length - 1);
+    setWaypoint(props.tour.waypoints.features[nextIdx]);
+  }
+
+  const onPrevWaypoint = () => {
+    const prevIdx = Math.max(0, currentIdx - 1);
+    setWaypoint(props.tour.waypoints.features[prevIdx]);
+  }
+
   return (
     <PageWithMenuDesktop
       className="tour-desktop"
@@ -48,6 +59,24 @@ const WaypointPage = props => {
           <GeoJSON { ...{...PATH_STYLE, data: props.tour.track }} />  
           <NextStop waypoint={waypoint} />
         </Map>
+
+        <div className="buttons map">
+          {!isStart &&
+            <span>
+              <Button className="prev-stop" onClick={onPrevWaypoint}>
+                <Icon icon="md-chevron-left" />
+              </Button>
+            </span>
+          }
+
+          {!isEnd &&
+            <span>          
+              <Button className="next-stop" onClick={onNextWaypoint}>
+                <Icon icon="md-chevron-right" />
+              </Button>
+            </span>
+          }
+        </div>
       </div>
 
       <div className="waypoint-description">
@@ -59,12 +88,36 @@ const WaypointPage = props => {
           }
         </h1>
 
+        <h2>{waypoint.properties.title}</h2>
+
         <p>
           {getTranslation(waypoint.properties.description)}
         </p>
+
+        <ImageGroup depictions={waypoint.properties.images} />
+
+        <div className="buttons">
+          {isEnd ?
+            <>
+              <p><strong>{i18n('You have reached the end of our tour.')}</strong></p>
+            </> :
+
+            <Button 
+              className="next-waypoint" 
+              onClick={onNextWaypoint}>
+
+              <Icon icon="md-walk" /> {i18n('Continue to Next Stop')}
+            </Button>
+          }
+
+          {!isStart &&
+            <button 
+              className="prev-waypoint"
+              onClick={onPrevWaypoint}>{i18n('Back to previous stop')}</button>
+          }
+        </div>
       </div>
 
-      <ImageGroup depictions={waypoint.properties.images} />
     </PageWithMenuDesktop>
   )
 

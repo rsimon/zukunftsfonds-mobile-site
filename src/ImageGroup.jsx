@@ -31,9 +31,8 @@ const ImageGroup = props => {
   }
 
   const images = depictions.map((d, idx) =>
-    <div className="image-wrapper" onClick={() => setSelected(idx)}>
+    <div key={d.url} className="image-wrapper" onClick={() => setSelected(idx)}>
       <Image 
-        key={d.url}
         src={d.url}
         alt={d.title} 
         style={{ backgroundColor: 'grey' }} />
