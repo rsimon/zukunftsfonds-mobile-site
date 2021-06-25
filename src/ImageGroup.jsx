@@ -52,6 +52,7 @@ const ImageGroup = props => {
           mainSrc={depictions[selected].url} 
           prevSrc={getPrev()}
           nextSrc={getNext()}
+          imageCaption={depictions[selected].title}
           onMovePrevRequest={() => setSelected((depictions.length + selected - 1) % depictions.length)}
           onMoveNextRequest={() => setSelected((selected + 1) % depictions.length)}
           onCloseRequest={() => setSelected(null) } />
