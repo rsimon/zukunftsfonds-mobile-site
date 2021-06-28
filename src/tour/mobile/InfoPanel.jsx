@@ -110,7 +110,7 @@ const InfoPanel = props => {
           </div>
           <div className="waypoint-description">
             <p>
-              {getTranslation(props.waypoint.properties.description)}
+              {getTranslation(props.waypoint.properties.description).replace('\n', '\n\n')}
             </p>
 
             <ImageGroup depictions={props.waypoint.properties.images} />

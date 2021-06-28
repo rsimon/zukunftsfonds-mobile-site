@@ -91,7 +91,7 @@ const WaypointPage = props => {
         <h2>{waypoint.properties.title}</h2>
 
         <p>
-          {getTranslation(waypoint.properties.description)}
+          {getTranslation(waypoint.properties.description).replace('\n', '\n\n')}
         </p>
 
         <ImageGroup depictions={waypoint.properties.images} />
