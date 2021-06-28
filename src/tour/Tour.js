@@ -48,8 +48,9 @@ class Tour {
     return this.track.features[0].properties[name];
   }
 
-  get description() {
-    return this.getProp('description');
+  getDescription(language) {
+    return language === 'en' ?
+      this.getProp('description_en') : this.getProp('description_de');
   }
 
   get duration() {
