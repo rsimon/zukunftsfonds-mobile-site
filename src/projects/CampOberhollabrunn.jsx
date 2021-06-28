@@ -26,6 +26,12 @@ const DESCRIPTION_GERMAN =
       Schicksals vor unseren Augen. Dieses holen wir mit digitalen Karten und datenbankbasierten 
       Suchfunktionen aus der Vergessenheit und machen es der interessierten Öffentlichkeit zugänglich.
     </p>
+    <p className="project-description">
+      Wir danken dem Zukunftsfonds der Republik Österreich für die finanzielle Projektförderung,
+      der griechisch-orthodoxen Metropolis von Austria für die infrastrukturelle und 
+      wissenschaftliche Unterstützung, dem Austrian Institute of Technology (AIT) für die technische 
+      Zusammenarbeit und dem Stadtarchiv Hollabrunn für die archivische Beratung.
+    </p>
     <table className="project-meta">
       <tbody>
         <tr>
@@ -73,6 +79,12 @@ const DESCRIPTION_ENGLISH =
       fate before our eyes. By means of digital maps and database-related search 
       functions we bring this picture out of oblivion and make it accessible to the 
       interested public.  
+    </p>
+    <p className="project-description">
+      We are grateful to the Future Fund of the Republic of Austria for the funding of the project, 
+      the Greek-Orthodox Metropolis of Austria for the infrastructural and scholarly support, 
+      the Austrian Institute of Technology (AIT) for the technical cooperation and the Municipal 
+      Archive Hollabrunn for the archival assistance.
     </p>
     <table className="project-meta">
       <tbody>
