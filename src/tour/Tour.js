@@ -15,7 +15,10 @@ const buildWaypointFeatures = (waypoints, store) => ({
   type: 'FeatureCollection',
   features: waypoints.map(waypoint => {
     const record = store.findById(waypoint.id);
-    return {
+    const latlon = centroid(record.geometry);
+    const hasValidGeometry = latlon.geometry.coordinates.every(coord => !isNaN(coord));
+
+    return hasValidGeometry && record.description && {
       type: 'Feature',
       properties: {
         title: record.properties.title.replace('Oberhollabrunn, Flüchtlingslager,', '').trim(),
@@ -24,7 +27,7 @@ const buildWaypointFeatures = (waypoints, store) => ({
       },
       geometry: centroid(record.geometry).geometry
     }
-  })
+  }).filter(f => f)
 })
 
 class Tour {
