@@ -27,7 +27,16 @@ const InfoPanel = props => {
     }
   } : null;
 
-  const dist = currentPos ? Math.round(distance(currentPos, props.waypoint) * 1000) : null;
+  const next = {
+    type: 'Feature',
+    properties: {},
+    geometry: {
+      type: 'Point',
+      coordinates: props.waypoint.properties.viewpoint
+    }
+  }
+
+  const dist = currentPos ? Math.round(distance(currentPos, next) * 1000) : null;
   
   const proximity = props.useGPS ? (dist !== null && dist < 25 ? 'ARRIVED' : 'FAR') : 'NO-GPS';
 

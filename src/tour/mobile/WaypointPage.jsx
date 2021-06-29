@@ -30,8 +30,8 @@ const WaypointPage = props => {
 
       if (props.useGPS && pos) {
         // When using GPS, fit map to waypoint + current location
-        const lons = [ pos.coords.longitude, waypoint.geometry.coordinates[0] ];
-        const lats = [ pos.coords.latitude, waypoint.geometry.coordinates[1] ];
+        const lons = [ pos.coords.longitude, waypoint.properties.viewpoint[1] ];
+        const lats = [ pos.coords.latitude, waypoint.properties.viewpoint[0] ];
 
         bounds = [
           [ Math.min(...lats), Math.min(...lons) ],

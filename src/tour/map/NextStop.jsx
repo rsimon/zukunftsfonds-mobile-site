@@ -1,5 +1,5 @@
 import React from 'react';
-import { CircleMarker, LayerGroup } from 'react-leaflet';
+import { CircleMarker, GeoJSON, LayerGroup, Pane } from 'react-leaflet';
 
 const OUTER_STYLE = {
   radius: 12,
@@ -18,18 +18,24 @@ const INNER_STYLE = {
 
 const NextStop = props => {
 
-  const [ longitude, latitude ] = props.waypoint.geometry.coordinates;
-
-  const center = [ latitude, longitude ];
+  const { viewpoint } = props.waypoint.properties;
 
   return (
-    <LayerGroup>
-      <CircleMarker 
-        {...{ ...OUTER_STYLE, center }} />
+    <>
+      <Pane style={{ zIndex: 99999 }}>
+        <LayerGroup>
+          <CircleMarker 
+            {...{ ...OUTER_STYLE, center: viewpoint }} />
 
-      <CircleMarker
-        {...{ ...INNER_STYLE, center }} />
-    </LayerGroup>
+          <CircleMarker
+            {...{ ...INNER_STYLE, center: viewpoint }} />
+        </LayerGroup>
+      </Pane>
+
+      <Pane style={{ zIndex: 99998 }}>
+        <GeoJSON key={JSON.stringify(props.waypoint.geometry.coordinates)} data={props.waypoint} />
+      </Pane>
+    </>
   )
 
 }

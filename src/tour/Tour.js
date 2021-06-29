@@ -23,9 +23,10 @@ const buildWaypointFeatures = (waypoints, store) => ({
       properties: {
         title: record.properties.title.replace('Oberhollabrunn, Flüchtlingslager,', '').trim(),
         images: record.depictions,
-        description: record.description.map(d => d.value).join('\n\n')
+        description: record.description.map(d => d.value).join('\n\n'),
+        viewpoint: waypoint.lonlat.slice().reverse()
       },
-      geometry: centroid(record.geometry).geometry
+      geometry: record.geometry
     }
   }).filter(f => f)
 })

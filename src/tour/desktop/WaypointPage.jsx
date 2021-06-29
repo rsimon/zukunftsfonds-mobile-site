@@ -56,7 +56,7 @@ const WaypointPage = props => {
           zoomControl={false}
           attributionControl={false}>
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-          <GeoJSON { ...{...PATH_STYLE, data: props.tour.track }} />  
+          <GeoJSON { ...{...PATH_STYLE, data: props.tour.track }} /> 
           <NextStop waypoint={waypoint} />
         </Map>
 
