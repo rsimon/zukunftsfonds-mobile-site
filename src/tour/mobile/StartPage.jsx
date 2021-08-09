@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Button, Icon } from 'react-onsenui';
 import { GeoJSON, Map, TileLayer } from 'react-leaflet';
-import { useI18N } from '../../i18n';
+import { useI18N , useLang } from '../../i18n';
 import { loadTour } from '../Tour';
 import PageWithMenuMobile from '../../PageWithMenuMobile';
 import WaypointPage from '../mobile/WaypointPage';
@@ -16,6 +16,8 @@ const PATH_STYLE = {
 const TourStartPage = props => {
 
   const i18n = useI18N();
+
+  const lang = useLang();
 
   const mapRef = useRef();
 
@@ -59,7 +61,7 @@ const TourStartPage = props => {
           </div>
 
           <div className="tour-description" dangerouslySetInnerHTML={{
-            __html: tour.description
+            __html: tour.getDescription(lang)
           }} />
 
           <div className="tour-overview-map">

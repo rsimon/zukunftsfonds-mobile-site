@@ -67,9 +67,10 @@ const InfoPanel = props => {
       props.onPreviousWaypoint();
   }
 
-  const headerImage = props.waypoint.properties.images[0].url.startsWith('http') ? 
-    props.waypoint.properties.images[0].url :
-    `tours/images/${props.waypoint.properties.images[0].url}`;
+  const headerImage = props.waypoint.properties.images && 
+    (props.waypoint.properties.images[0].url.startsWith('http') ? 
+      props.waypoint.properties.images[0].url :
+        `tours/images/${props.waypoint.properties.images[0].url}`);
 
   return (
     <CSSTransition in={expanded} timeout={200}>
