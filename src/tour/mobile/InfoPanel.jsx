@@ -72,6 +72,9 @@ const InfoPanel = props => {
       props.waypoint.properties.images[0].url :
         `tours/images/${props.waypoint.properties.images[0].url}`);
 
+  const toParagraphs = description =>
+    description.split(/(\r|\n)+/g).filter(para => para.trim());
+
   return (
     <CSSTransition in={expanded} timeout={200}>
       <div className="tour-map-infopanel">
@@ -119,10 +122,10 @@ const InfoPanel = props => {
             style={{ backgroundImage: `url('${headerImage}')` }}>
           </div>
           <div className="waypoint-description">
-            <p>
-              {getTranslation(props.waypoint.properties.description).replace('\n', '\n\n')}
-            </p>
-
+            {toParagraphs(getTranslation(props.waypoint.properties.description)).map((p, idx) => 
+              <p key={idx}>{p}</p>
+            )}
+            
             <ImageGroup depictions={props.waypoint.properties.images} />
 
             <div className="buttons">
