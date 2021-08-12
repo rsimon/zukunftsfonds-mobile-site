@@ -35,7 +35,8 @@ const ImageGroup = props => {
       <Image 
         src={`${d.url}?image_size=thumbnail`}
         alt={d.title} 
-        style={{ backgroundColor: 'grey' }} />
+        placeholder="images/wait.svg"
+        style={{ backgroundColor: '#dfdfdf' }} />
 
       <div className="dim-mask" />
     </div>
