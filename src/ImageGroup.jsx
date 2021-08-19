@@ -19,14 +19,14 @@ const ImageGroup = props => {
   const getPrev = idx => {
     if (selected !== null && depictions.length > 1) {
       const prevIdx = (depictions.length + selected - 1) % depictions.length;
-      return depictions[prevIdx].url
+      return depictions[prevIdx].url + '?image_size=webview'
     }
   }
 
   const getNext = idx => {
     if (selected !== null && depictions.length > 1) {
       const nextIdx = (selected + 1) % depictions.length;
-      return depictions[nextIdx].url;
+      return depictions[nextIdx].url + '?image_size=webview';
     }
   }
 
@@ -50,7 +50,7 @@ const ImageGroup = props => {
 
       {selected !== null && 
         <Lightbox 
-          mainSrc={depictions[selected].url} 
+          mainSrc={`${depictions[selected].url}?image_size=webview`} 
           prevSrc={getPrev()}
           nextSrc={getNext()}
           imageCaption={depictions[selected].title}
