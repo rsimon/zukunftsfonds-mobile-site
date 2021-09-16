@@ -46,15 +46,17 @@ const OverviewMap = props => {
     navigateTo(path.actor, props.navigator);
 
   useEffect(() => {
-    if (mapRef.current && props.isDesktop) {
+    if (mapRef.current) {
       const map = mapRef.current.leafletElement;
       map.fitBounds(props.store.geoBounds);
 
-      const curveLayer = L.layerGroup().addTo(map);
-      const markerLayer = L.layerGroup().addTo(map);
+      if (props.isDesktop) {
+        const curveLayer = L.layerGroup().addTo(map);
+        const markerLayer = L.layerGroup().addTo(map);
 
-      getDistinctPaths(props.store.lifePaths)
-        .forEach(l => drawArrow(l, curveLayer, markerLayer, onClick(l)));
+        getDistinctPaths(props.store.lifePaths)
+          .forEach(l => drawArrow(l, curveLayer, markerLayer, onClick(l)));
+      }
     }
   });
 
