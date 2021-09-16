@@ -46,7 +46,7 @@ const OverviewMap = props => {
     navigateTo(path.actor, props.navigator);
 
   useEffect(() => {
-    if (mapRef.current) {
+    if (mapRef.current && props.isDesktop) {
       const map = mapRef.current.leafletElement;
       map.fitBounds(props.store.geoBounds);
 
