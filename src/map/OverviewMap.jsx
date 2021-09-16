@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react';
-import { Map, TileLayer } from 'react-leaflet';
+import { Map, CircleMarker, TileLayer } from 'react-leaflet';
 import centroid from '@turf/centroid';
 import PageWithMenu from '../PageWithMenu';
 import { useI18N } from '../i18n';
-import { navigateTo } from '../profiles/Utils';
+import { hasGeometry, navigateTo } from '../profiles/Utils';
 import Curve from './Curve';
 import L from 'leaflet';
 
@@ -58,6 +58,31 @@ const OverviewMap = props => {
     }
   });
 
+  const placeStyle = {
+    stroke: true,
+    weigth: 2,
+    color: '#8a6100',
+    fillColor: '#8a6100',
+    fillOpacity: 0.75,
+    radius: 5
+  }
+
+  const places = props.store.places.map(feature => {
+      if (hasGeometry(feature))
+        return {
+          feature,
+          centroid: centroid(feature.geometry).geometry.coordinates.slice().reverse()
+        }
+    })
+    .filter(lonLat => lonLat) // Remove unlocated
+    .map(({ feature, centroid}) =>
+      <CircleMarker 
+        key={feature['@id']} 
+        center={centroid} 
+        onClick={navigateTo(feature, props.navigator)}
+        {...placeStyle} />
+    );
+
   return (
     <PageWithMenu 
       backButton
@@ -76,6 +101,9 @@ const OverviewMap = props => {
           <TileLayer
             url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}"
           />
+
+          { places }
+
         </Map>
       </div>
     </PageWithMenu>
