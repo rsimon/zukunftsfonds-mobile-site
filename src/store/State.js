@@ -14,3 +14,8 @@ export const searchResultState = atom({
   key: 'searchResults',
   default: []
 });
+
+export const overviewMapState = atom({
+  key: 'overviewMap',
+  default: { zoom: null, center: null }
+});

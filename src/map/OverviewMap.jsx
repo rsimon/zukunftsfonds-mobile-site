@@ -1,11 +1,14 @@
 import React, { useEffect, useRef } from 'react';
+import { useRecoilState } from 'recoil';
 import { Map, CircleMarker, TileLayer } from 'react-leaflet';
 import centroid from '@turf/centroid';
+import L from 'leaflet';
+
+import { overviewMapState } from '../store/State';
 import PageWithMenu from '../PageWithMenu';
 import { useI18N } from '../i18n';
 import { hasGeometry, navigateTo } from '../profiles/Utils';
 import Curve from './Curve';
-import L from 'leaflet';
 
 import './OverviewMap.scss';
 
@@ -42,6 +45,8 @@ const OverviewMap = props => {
 
   const mapRef = useRef();
 
+  const [ mapState, setMapState ] = useRecoilState(overviewMapState);
+
   const onClick = path =>
     navigateTo(path.actor, props.navigator);
 
@@ -49,8 +54,13 @@ const OverviewMap = props => {
     if (mapRef.current) {
       const map = mapRef.current.leafletElement;
 
-      // Fit bounds to bbox of all geometries in the store
-      map.fitBounds(props.store.geoBounds);
+      // Restore map state or fit to initial bounds 
+      if (mapState.center) {
+        console.log('reset', mapState);
+        map.setView(mapState.center, mapState.zoom);
+      } else {
+        map.fitBounds(props.store.geoBounds);
+      }
 
       // "Lifepath" layers - show/hide depending on zoom level
       const curveLayer = L.layerGroup().addTo(map);
@@ -60,9 +70,11 @@ const OverviewMap = props => {
         .forEach(l => drawArrow(l, curveLayer, markerLayer, onClick(l)));
 
       map.on('zoomend', function() {
-        const zoomlevel = map.getZoom();
+        const zoom = map.getZoom();
+        const center = map.getCenter();
+        setMapState({ zoom, center });
 
-        if (zoomlevel > 12) {
+        if (zoom > 12) {
           // Remove lifepaths, unless hidden
           if (map.hasLayer(curveLayer)) {
             map.removeLayer(curveLayer);
@@ -75,6 +87,12 @@ const OverviewMap = props => {
             map.addLayer(markerLayer);
           }
         }
+      });
+
+      map.on('moveend', function() {
+        const zoom = map.getZoom();
+        const center = map.getCenter();
+        setMapState({ zoom, center });
       });
     }
   }, []);
