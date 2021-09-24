@@ -48,17 +48,36 @@ const OverviewMap = props => {
   useEffect(() => {
     if (mapRef.current) {
       const map = mapRef.current.leafletElement;
+
+      // Fit bounds to bbox of all geometries in the store
       map.fitBounds(props.store.geoBounds);
 
-      if (props.isDesktop) {
-        const curveLayer = L.layerGroup().addTo(map);
-        const markerLayer = L.layerGroup().addTo(map);
+      // "Lifepath" layers - show/hide depending on zoom level
+      const curveLayer = L.layerGroup().addTo(map);
+      const markerLayer = L.layerGroup().addTo(map);
 
-        getDistinctPaths(props.store.lifePaths)
-          .forEach(l => drawArrow(l, curveLayer, markerLayer, onClick(l)));
-      }
+      getDistinctPaths(props.store.lifePaths)
+        .forEach(l => drawArrow(l, curveLayer, markerLayer, onClick(l)));
+
+      map.on('zoomend', function() {
+        const zoomlevel = map.getZoom();
+
+        if (zoomlevel > 12) {
+          // Remove lifepaths, unless hidden
+          if (map.hasLayer(curveLayer)) {
+            map.removeLayer(curveLayer);
+            map.removeLayer(markerLayer);
+          }
+        } else {
+          // Add lifepaths, unless shown
+          if (!map.hasLayer(curveLayer)) {
+            map.addLayer(curveLayer);
+            map.addLayer(markerLayer);
+          }
+        }
+      });
     }
-  });
+  }, []);
 
   const placeStyle = {
     stroke: true,
