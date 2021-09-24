@@ -101,12 +101,12 @@ const OverviewMap = props => {
   }, []);
 
   const placeStyle = {
-    stroke: true,
+    stroke: props.isDesktop,
     weigth: 2,
     color: '#8a6100',
     fillColor: '#8a6100',
     fillOpacity: 0.75,
-    radius: 5
+    radius: props.isDesktop ? 5 : 12
   }
 
   const places = props.store.places.map(feature => {
