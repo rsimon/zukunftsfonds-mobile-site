@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'react-cool-img';
 import Lightbox from 'react-image-lightbox';
 
@@ -12,14 +12,21 @@ export const hasDepictions = item =>
 
 const ImageGroup = props => {
 
-  const [ selected, setSelected ] = useState(null);
-
   const depictions = getValidDepictions(props.depictions);
+
+  const [ selected, setSelected ] = useState(props.open ? 0 : null);
+
+  useEffect(() => {
+    if (props.open)
+      setSelected(0);
+    else 
+      setSelected(null);
+  }, [ props.open ]);
 
   const getPrev = idx => {
     if (selected !== null && depictions.length > 1) {
       const prevIdx = (depictions.length + selected - 1) % depictions.length;
-      return depictions[prevIdx].url + '?image_size=webview'
+      return depictions[prevIdx].url + '?image_size=webview';
     }
   }
 
@@ -30,7 +37,7 @@ const ImageGroup = props => {
     }
   }
 
-  const images = depictions.map((d, idx) =>
+  let images = depictions.map((d, idx) =>
     <div key={d.url} className="image-wrapper" onClick={() => setSelected(idx)}>
       <Image 
         src={`${d.url}?image_size=thumbnail`}
@@ -41,6 +48,15 @@ const ImageGroup = props => {
       <div className="dim-mask" />
     </div>
   );
+
+  if (props.hideFirst) 
+    images = [...images.slice(1) ];
+
+
+  const onClose = () => {
+    setSelected(null);
+    props.onClose();
+  }
 
   return (
     <>
@@ -56,7 +72,7 @@ const ImageGroup = props => {
           imageCaption={depictions[selected].title}
           onMovePrevRequest={() => setSelected((depictions.length + selected - 1) % depictions.length)}
           onMoveNextRequest={() => setSelected((selected + 1) % depictions.length)}
-          onCloseRequest={() => setSelected(null) } />
+          onCloseRequest={onClose} />
       }
     </>
   )

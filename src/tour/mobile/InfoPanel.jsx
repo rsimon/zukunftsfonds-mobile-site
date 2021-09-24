@@ -13,6 +13,8 @@ const InfoPanel = props => {
 
   const [ expanded, setExpanded ] = useState(false);
 
+  const [ zoomHeaderImage, setZoomHeaderImage ] = useState(false);
+
   const i18n = useI18N();
 
   const getTranslation = useBilingual();
@@ -69,7 +71,7 @@ const InfoPanel = props => {
 
   const headerImage = props.waypoint.properties.images && 
     (props.waypoint.properties.images[0].url.startsWith('http') ? 
-      props.waypoint.properties.images[0].url :
+      `${props.waypoint.properties.images[0].url}?image_size=webview` :
         `tours/images/${props.waypoint.properties.images[0].url}`);
 
   const toParagraphs = description =>
@@ -119,14 +121,20 @@ const InfoPanel = props => {
         <main ref={main}>
           <div 
             className="waypoint-image"
-            style={{ backgroundImage: `url('${headerImage}')` }}>
+            style={{ backgroundImage: `url('${headerImage}')` }}
+            onClick={() => setZoomHeaderImage(true)}>
           </div>
+
           <div className="waypoint-description">
             {toParagraphs(getTranslation(props.waypoint.properties.description)).map((p, idx) => 
               <p key={idx}>{p}</p>
             )}
             
-            <ImageGroup depictions={props.waypoint.properties.images} />
+            <ImageGroup 
+              open={zoomHeaderImage}
+              hideFirst
+              depictions={props.waypoint.properties.images} 
+              onClose={() => setZoomHeaderImage(false) } />
 
             <div className="buttons">
               {props.isEnd ?
