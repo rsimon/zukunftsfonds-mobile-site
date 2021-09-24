@@ -2,16 +2,17 @@ import React, { useEffect, useRef, useState } from 'react';
 import { GeoJSON, Map, TileLayer } from 'react-leaflet';
 import { Button, Icon } from 'react-onsenui';
 import { useI18N, useLang } from '../../i18n';
-import { loadTour } from '../Tour';
+import { loadTour, loadJourney, getBounds } from '../Tour';
 import PageWithMenuDesktop from '../../PageWithMenuDesktop';
 import WaypointPage from './WaypointPage';
 
 import './StartPage.scss';
 
-const PATH_STYLE = {
-  color: '#000',
-  dashArray: '6 6'
-}
+const JOURNEY_STYLE = feature => ({
+  color: feature.properties.color,
+  weight: 5,
+  dashArray: '8 8'
+});
 
 const StartPage = props => {
 
@@ -23,16 +24,19 @@ const StartPage = props => {
 
   const [ tour, setTour ] = useState();
 
-  useEffect(() => {
-    loadTour('oberhollabrunn', props.store).then(setTour);
-  }, []);
+  const [ journey, setJourney ] = useState();
 
   useEffect(() => {
-    if (mapRef.current && tour) {
+    if (mapRef.current && journey) {
       const map = mapRef.current.leafletElement;
-      map.fitBounds(tour.bounds, { padding: [ 15, 15 ]});
+      map.fitBounds(getBounds(journey), { padding: [ 15, 15 ]});
     }
-  }, [ tour ]);
+  }, [ journey ]);
+
+  useEffect(() => {
+    loadTour('oberhollabrunn', props.store).then(setTour);
+    loadJourney('oberhollabrunn').then(setJourney);
+  }, []);
 
   const onStartTour = tour => () =>
     props.navigator.pushPage({ component: WaypointPage, tour });
@@ -44,7 +48,7 @@ const StartPage = props => {
       current="Tour"
       {...props}>
 
-      {tour &&
+      {tour && journey &&
         <>
           <div className="tour-desktop-header">
             <div className="tour-image">
@@ -58,7 +62,7 @@ const StartPage = props => {
                 attributionControl={false}
                 style={{height:'350px'}}>
                 <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                <GeoJSON data={tour.track} {...PATH_STYLE} />
+                <GeoJSON data={journey} style={JOURNEY_STYLE} />
               </Map>
               <div className="clicktrap" />
             </div>

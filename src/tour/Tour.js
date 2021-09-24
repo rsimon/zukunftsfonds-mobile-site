@@ -3,7 +3,7 @@ import bbox from '@turf/bbox';
 import distance from '@turf/distance';
 import centroid from '@turf/centroid';
 
-const getBounds = geojson => {
+export const getBounds = geojson => {
   const corners = bbox(geojson);
   return [
     [ corners[1], corners[0] ],
@@ -94,3 +94,7 @@ export const loadTour = (name, store) => {
   const tour = new Tour();
   return tour.load(name, store).then(() => tour);
 }
+
+export const loadJourney = name =>
+  axios.get(`tours/${name}-journey.json`)
+    .then(response => response.data);

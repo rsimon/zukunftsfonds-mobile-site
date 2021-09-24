@@ -2,16 +2,17 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Button, Icon } from 'react-onsenui';
 import { GeoJSON, Map, TileLayer } from 'react-leaflet';
 import { useI18N , useLang } from '../../i18n';
-import { loadTour } from '../Tour';
+import { loadTour, loadJourney, getBounds } from '../Tour';
 import PageWithMenuMobile from '../../PageWithMenuMobile';
 import WaypointPage from '../mobile/WaypointPage';
 
 import './StartPage.scss';
 
-const PATH_STYLE = {
-  color: '#000',
-  dashArray: '6 6'
-}
+const JOURNEY_STYLE = feature => ({
+  color: feature.properties.color,
+  weight: 4,
+  dashArray: '2 6'
+});
 
 const TourStartPage = props => {
 
@@ -23,16 +24,19 @@ const TourStartPage = props => {
 
   const [ tour, setTour ] = useState();
 
-  useEffect(() => {
-    loadTour('oberhollabrunn', props.store).then(setTour);
-  }, []);
+  const [ journey, setJourney ] = useState();
 
   useEffect(() => {
-    if (mapRef.current && tour) {
+    if (mapRef.current && journey) {
       const map = mapRef.current.leafletElement;
-      map.fitBounds(tour.bounds, { padding: [ 15, 15 ]});
+      map.fitBounds(getBounds(journey), { padding: [ 15, 15 ]});
     }
-  }, [ tour ]);
+  }, [ journey ]);
+
+  useEffect(() => {
+    loadTour('oberhollabrunn', props.store).then(setTour);
+    loadJourney('oberhollabrunn').then(setJourney);
+  }, []);
 
   const onStartTour = (tour, useGPS) => () =>
     props.navigator.pushPage({ 
@@ -48,7 +52,7 @@ const TourStartPage = props => {
       title={i18n('GPS Walking Tours')}
       {...props}>
 
-      { tour &&
+      { tour && journey && 
         <>
           <div className="tour-start-header-image">
             <img src={tour.image} alt="GPS walk header decoration" />
@@ -71,7 +75,7 @@ const TourStartPage = props => {
               attributionControl={false}
               style={{height:'200px'}}>
               <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-              <GeoJSON data={tour.track} {...PATH_STYLE} />
+              <GeoJSON data={journey} style={JOURNEY_STYLE} />
             </Map>
             
             <div className="clicktrap" />
