@@ -6,7 +6,7 @@
       "type": "Feature",
       "properties": {
         "name": "Hauptplatz",
-        "color": "#e1272e"
+        "color": "#2d2db9"
       },
       "geometry": {
         "type": "LineString",
@@ -28,7 +28,7 @@
       "type": "Feature",
       "properties": {
         "name": "Doktor-Kutscher-Gasse I",
-        "color": "#e1272e"
+        "color": "#2d2db9"
       },
       "geometry": {
         "type": "LineString",
@@ -165,7 +165,7 @@
       "type": "Feature",
       "properties": {
         "name": "Doktor-Kutscher-Gasse II",
-        "color": "#ffbb3e"
+        "color": "#ff3131"
       },
       "geometry": {
         "type": "LineString",
