@@ -55,16 +55,19 @@ const OverviewMap = props => {
       const map = mapRef.current.leafletElement;
 
       // Restore map state or fit to initial bounds 
-      if (mapState.center) {
-        console.log('reset', mapState);
+      if (mapState.center)
         map.setView(mapState.center, mapState.zoom);
-      } else {
+      else
         map.fitBounds(props.store.geoBounds);
-      }
-
+      
       // "Lifepath" layers - show/hide depending on zoom level
-      const curveLayer = L.layerGroup().addTo(map);
-      const markerLayer = L.layerGroup().addTo(map);
+      const curveLayer = L.layerGroup(); 
+      const markerLayer = L.layerGroup();
+
+      if (map.getZoom() < 13) {
+        map.addLayer(curveLayer);
+        map.addLayer(markerLayer);
+      }
 
       getDistinctPaths(props.store.lifePaths)
         .forEach(l => drawArrow(l, curveLayer, markerLayer, onClick(l)));
