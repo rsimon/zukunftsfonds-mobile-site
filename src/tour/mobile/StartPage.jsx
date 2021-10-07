@@ -129,7 +129,6 @@ const TourStartPage = props => {
               style={{height:'100%'}}>
               <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
               <GeoJSON data={journeyPath} style={JOURNEY_STYLE} />
-              {journeyPOIs}
             </Map>
           </div>
 
@@ -138,7 +137,9 @@ const TourStartPage = props => {
               <div className="tour-overview-map fullscreen">
                 <button 
                   className="toggle-fullscreen"
-                  onClick={() => setJourneyFullscreen(!isJourneyFullscreen)}>Fullscreen</button>
+                  onClick={() => setJourneyFullscreen(!isJourneyFullscreen)}>
+                  <Icon icon="md-fullscreen" />
+                </button>
 
                 <Map 
                   ref={fullscreenMapRef}
