@@ -5,6 +5,128 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "Bahnhof Hollabrunn",
+        "icon": "railway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.072547323997021,
+          48.562913434988623
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hauptplatz",
+        "color": "yellow"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.0785817,
+          48.5624749
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pestsäule mit Marienstatue"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.078859416586312,
+          48.562677389234082
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Florianibrunnen",
+        "color": "yellow"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.0787846,
+          48.5623737
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rathaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.079135404266861,
+          48.56187767435425
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Öffentliche Toiletten",
+        "icon": "restroom"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.079701485638239,
+          48.56184747583869
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Katholische Kirche Hollabrunn (St. Ulrich)",
+        "color": "yellow"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.0804988,
+          48.5616592
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dreifaltigkeitssäule"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.0802173632555,
+          48.559641426033899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Start der GPS Tour"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.079280263096869,
+          48.54937392291955
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "Hauptplatz",
         "color": "#2d2db9"
       },
