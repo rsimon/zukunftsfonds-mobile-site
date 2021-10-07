@@ -111,8 +111,6 @@ const TourStartPage = props => {
               <GeoJSON data={journeyPath} style={JOURNEY_STYLE} />
               {journeyPOIs}
             </Map>
-            
-            <div className="clicktrap" />
           </div>
 
           <div className="start-buttons">
