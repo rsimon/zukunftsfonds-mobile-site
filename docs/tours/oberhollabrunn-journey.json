@@ -114,7 +114,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Start der GPS Tour"
+        "name": "Start der GPS Tour",
+        "icon": "walk"
       },
       "geometry": {
         "type": "Point",
