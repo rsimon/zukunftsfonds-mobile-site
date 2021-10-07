@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Button, Icon } from 'react-onsenui';
+import { Button, Icon, Modal } from 'react-onsenui';
 import { GeoJSON, Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import { useI18N , useLang } from '../../i18n';
 import { loadTour, loadJourney, getBounds } from '../Tour';
@@ -40,9 +40,13 @@ const TourStartPage = props => {
 
   const mapRef = useRef();
 
+  const fullscreenMapRef = useRef();
+
   const [ tour, setTour ] = useState();
 
   const [ journey, setJourney ] = useState();
+
+  const [ isJourneyFullscreen, setJourneyFullscreen ] = useState(false);
 
   useEffect(() => {
     if (mapRef.current && journey) {
@@ -50,6 +54,15 @@ const TourStartPage = props => {
       map.fitBounds(getBounds(journey), { padding: [ 15, 15 ]});
     }
   }, [ journey ]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (fullscreenMapRef.current) {
+        const map = fullscreenMapRef.current.leafletElement;
+        map.fitBounds(getBounds(journey), { padding: [ 15, 15 ]});
+      }
+    });
+  }, [ isJourneyFullscreen ]);
 
   useEffect(() => {
     loadTour('oberhollabrunn', props.store).then(setTour);
@@ -101,17 +114,41 @@ const TourStartPage = props => {
             __html: tour.getDescription(lang)
           }} />
 
-          <div className="tour-overview-map">
+          <div
+            className="tour-overview-map">
+            <button 
+              className="toggle-fullscreen"
+              onClick={() => setJourneyFullscreen(!isJourneyFullscreen)}>Fullscreen</button>
+
             <Map 
               ref={mapRef}
               zoomControl={false}
               attributionControl={false}
-              style={{height:'200px'}}>
+              style={{height:'100%'}}>
               <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
               <GeoJSON data={journeyPath} style={JOURNEY_STYLE} />
               {journeyPOIs}
             </Map>
           </div>
+
+          {isJourneyFullscreen && 
+            <Modal isOpen={true}>
+              <div className="tour-overview-map fullscreen">
+                <button 
+                  className="toggle-fullscreen"
+                  onClick={() => setJourneyFullscreen(!isJourneyFullscreen)}>Fullscreen</button>
+
+                <Map 
+                  ref={fullscreenMapRef}
+                  zoomControl={false}
+                  attributionControl={false}
+                  style={{height:'100%'}}>
+                  <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+                  <GeoJSON data={journeyPath} style={JOURNEY_STYLE} />
+                  {journeyPOIs}
+                </Map>
+              </div>
+            </Modal>}
 
           <div className="start-buttons">
             <Button onClick={onStartTour(tour, true)}>

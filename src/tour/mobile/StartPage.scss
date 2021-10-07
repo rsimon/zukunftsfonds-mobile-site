@@ -41,10 +41,6 @@
     line-height:150%;
   }
 
-  .tour-overview-map {
-    position:relative;
-  }
-
   .start-buttons {
     padding:20px;
     text-align:center;
@@ -67,4 +63,30 @@
 
   }
 
+}
+
+.tour-overview-map {
+  position:relative;
+  height:200px;
+
+  button.toggle-fullscreen {
+    position:absolute;
+    top:20px;
+    right:20px;
+    z-index:9999;
+  }
+
+}
+
+.tour-overview-map.fullscreen {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+
+  .leaflet-pane {
+    width:100%;
+    height:100%;
+  }
 }
