@@ -71,9 +71,22 @@
 
   button.toggle-fullscreen {
     position:absolute;
-    top:20px;
-    right:20px;
+    top:14px;
+    right:14px;
     z-index:9999;
+    background-color:#fff;
+    border:none;
+    outline:none;
+    width:34px;
+    height:34px;
+    border-radius:3px;
+    box-shadow:0 0 8px rgba(0, 0, 0, 0.3);
+    font-size:20px;
+    cursor:pointer;
+
+    ons-icon {
+      vertical-align:bottom;
+    }
   }
 
 }

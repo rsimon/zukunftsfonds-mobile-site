@@ -118,7 +118,9 @@ const TourStartPage = props => {
             className="tour-overview-map">
             <button 
               className="toggle-fullscreen"
-              onClick={() => setJourneyFullscreen(!isJourneyFullscreen)}>Fullscreen</button>
+              onClick={() => setJourneyFullscreen(!isJourneyFullscreen)}>
+              <Icon icon="md-fullscreen" />
+            </button>
 
             <Map 
               ref={mapRef}
