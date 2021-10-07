@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { GeoJSON, Map, TileLayer } from 'react-leaflet';
+import { GeoJSON, Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import { Button, Icon } from 'react-onsenui';
 import { useI18N, useLang } from '../../i18n';
 import { loadTour, loadJourney, getBounds } from '../Tour';
 import PageWithMenuDesktop from '../../PageWithMenuDesktop';
 import WaypointPage from './WaypointPage';
+import L from 'leaflet';
 
 import './StartPage.scss';
 
@@ -13,6 +14,23 @@ const JOURNEY_STYLE = feature => ({
   weight: 5,
   dashArray: '8 8'
 });
+
+const POIIcon = feature => {
+  const color = feature.properties.color || 'blue';
+  const icon = feature.properties.icon || 'flat';
+
+  return L.icon({
+    iconUrl: `images/leaflet/marker-${icon}-${color}.png`,
+    iconRetinaUrl: `images/leaflet/marker-${icon}-${color}-2x.png`,
+    shadowUrl: 'images/leaflet/marker-shadow.png',
+    shadowRetinaUrl: 'images/leaflet/marker-shadow-2x.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [0, -43],
+    shadowSize: [25, 41],
+    shadowAnchor: [12, 41]
+  });
+}
 
 const StartPage = props => {
 
@@ -41,6 +59,21 @@ const StartPage = props => {
   const onStartTour = tour => () =>
     props.navigator.pushPage({ component: WaypointPage, tour });
 
+  const journeyPath = journey && {
+    type: 'FeatureCollection',
+    features: journey.features.filter(f => f.geometry.type !== 'Point')
+  }
+
+  const journeyPOIs = journey && journey.features
+    .filter(f => f.geometry.type === 'Point')
+    .map((f, idx) => 
+      <Marker
+        key={idx}
+        position={f.geometry.coordinates.slice().reverse()}
+        icon={POIIcon(f)}>
+        <Popup>{f.properties.name}</Popup>
+      </Marker>);
+
   return (
     <PageWithMenuDesktop
       className="tour-startpage-desktop"
@@ -62,9 +95,9 @@ const StartPage = props => {
                 attributionControl={false}
                 style={{height:'350px'}}>
                 <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                <GeoJSON data={journey} style={JOURNEY_STYLE} />
+                <GeoJSON data={journeyPath} style={JOURNEY_STYLE} />
+                {journeyPOIs}
               </Map>
-              <div className="clicktrap" />
             </div>
           </div>
 
