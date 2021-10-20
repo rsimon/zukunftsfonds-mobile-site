@@ -41,7 +41,7 @@ export const useBilingual = () => {
 
   // Helper to remove trailing + leading whitespace and dashes
   const trim = str =>
-    str.replace(/^[-,\s]+ | [-,\s]+$/g, '');
+    str.replace(/^[-,\s]+|[-,\s]+$/g, '').trim();
  
   return description => {
     // Project convention is to use 12 dash characters as separators. Anyways,
