@@ -36,7 +36,7 @@ const DESCRIPTION_GERMAN =
       <tbody>
         <tr>
           <td>Laufzeit des Projekts:</td>
-          <td>1. Juli 2020 bis 1. August 2021</td>
+          <td>1. Juli 2020 bis 31. Oktober 2021</td>
         </tr>
 
         <tr>
@@ -90,7 +90,7 @@ const DESCRIPTION_ENGLISH =
       <tbody>
         <tr>
           <td>Duration of the Project:</td>
-          <td>1 July 2020-1 August 2021</td>
+          <td>1 July 2020-31 October 2021</td>
         </tr>
 
         <tr>

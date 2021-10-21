@@ -69,7 +69,7 @@ const SplashPageDesktop = props => {
         </div>
 
         <footer>
-          <strong>{i18n('Imprint')}</strong><br/>
+          <strong>{i18n('Legal Notice')}</strong><br/>
           Digitales Geoportal der Geschichte der Orthodoxen in Österreich<br/>
           Vertreten durch:<br/>
           Priv.-Doz. Mag. Dr. Mihailo Popović, Projektleiter<br/>
