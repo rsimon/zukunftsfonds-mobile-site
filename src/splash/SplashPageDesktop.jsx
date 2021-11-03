@@ -72,7 +72,7 @@ const SplashPageDesktop = props => {
           <strong>{i18n('Legal Notice')}</strong><br/>
           Digitales Geoportal der Geschichte der Orthodoxen in Österreich<br/>
           Vertreten durch:<br/>
-          Priv.-Doz. Mag. Dr. Mihailo Popović, Projektleiter<br/>
+          Doz. Mag. Dr. Mihailo Popović, Projektleiter<br/>
           Kiningergasse 12/2/7<br/>
           1120 Wien<br/>
           Österreich<br/>
