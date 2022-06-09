@@ -12,6 +12,7 @@ import SplashPageDesktop from './splash/SplashPageDesktop';
 
 import SerbsInVienna from './projects/SerbsInVienna';
 import CampOberhollabrunn from './projects/CampOberhollabrunn';
+import OrthodoxRomanians from './projects/OrthodoxRomanians';
 
 import Help from './help/Help';
 
@@ -88,6 +89,13 @@ const SideMenu = props => {
                 className={setSelected('CampOberhollabrunn')}>
                   
                 {i18n('Orthodox Refugees in Hollabrunn 1914-1918')}
+              </li>
+
+              <li 
+                onClick={goTo(OrthodoxRomanians)}
+                className={setSelected('OrthodoxRomanians')}>
+                  
+                {i18n('The Orthodox Romanians (1683-1918)')}
               </li>
             </ul>
           </div>

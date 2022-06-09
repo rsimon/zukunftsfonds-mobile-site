@@ -42,6 +42,10 @@ const ActorProfile = props => {
 
   const geometries = relatedPlaces.filter(p => hasGeometry(p));
 
+  console.log('geometry', geometries);
+
+  console.log('item', item);
+
   const centroids = geometries.map(geom =>
     // GeoJSON - extract just coords, and flip to Leaflet order
     centroid(geom).geometry.coordinates.reverse());
@@ -83,7 +87,7 @@ const ActorProfile = props => {
         </Map>
       </div>
 
-      { item.description.map((d, idx) => 
+      { item.descriptions.map((d, idx) => 
         <div key={idx} className="description">{getTranslation(d.value)}</div>
       )}
 
