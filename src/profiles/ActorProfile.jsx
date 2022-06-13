@@ -87,7 +87,7 @@ const ActorProfile = props => {
         </Map>
       </div>
 
-      { item.descriptions.map((d, idx) => 
+      {item.descriptions?.map((d, idx) => 
         <div key={idx} className="description">{getTranslation(d.value)}</div>
       )}
 
