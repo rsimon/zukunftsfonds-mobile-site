@@ -18,12 +18,12 @@ const buildWaypointFeatures = (waypoints, store) => ({
     const latlon = centroid(record.geometry);
     const hasValidGeometry = latlon.geometry.coordinates.every(coord => !isNaN(coord));
 
-    return hasValidGeometry && record.description && {
+    return hasValidGeometry && record.descriptions && {
       type: 'Feature',
       properties: {
         title: record.properties.title.replace('Oberhollabrunn, Flüchtlingslager,', '').trim(),
         images: record.depictions,
-        description: record.description.map(d => d.value).join('\n\n'),
+        description: record.descriptions.map(d => d.value).join('\n\n'),
         viewpoint: waypoint.lonlat.slice().reverse()
       },
       geometry: record.geometry
