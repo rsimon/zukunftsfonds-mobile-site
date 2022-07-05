@@ -8,6 +8,7 @@ import SearchPageDeskop from '../search/SearchPageDesktop';
 import OverviewMap from '../map/OverviewMap';
 import SerbsInVienna from '../projects/SerbsInVienna';
 import CampOberhollabrunn from '../projects/CampOberhollabrunn';
+import OrthodoxRomanians from '../projects/OrthodoxRomanians';
 
 const SplashPageDesktop = props => {
 
@@ -62,6 +63,12 @@ const SplashPageDesktop = props => {
               <li>
                 <Button modifier="large--quiet" onClick={goTo(CampOberhollabrunn)}>
                   {i18n('Orthodox Refugees in Hollabrunn 1914-1918')}
+                </Button>
+              </li>
+
+              <li>
+                <Button modifier="large--quiet" onClick={goTo(OrthodoxRomanians)}>
+                  {i18n('The Orthodox Romanians (1683-1918)')}
                 </Button>
               </li>
             </ol>
